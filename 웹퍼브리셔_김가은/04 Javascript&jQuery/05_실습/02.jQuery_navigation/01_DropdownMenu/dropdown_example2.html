@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dropdown_example1</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.gnb > li').hover(function () {
+                //mouseenter
+                $(this).find('.lnb').stop().slideDown();
+
+            }, function () {
+                //mouseleave
+                $('.lnb').stop().slideUp();
+
+            });
+
+        });
+
+
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        /***** 전체너비에 양쪽 고정된 여백을 사용한 레이아웃 *****/
+        header {
+            width: 100%;
+            padding: 0 100px;
+            box-sizing: border-box;
+
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.8);
+
+            /* position: relative; /* nav 의 기준 */
+            position: fixed;
+            /* fixed여도 절대요소의 기준이 될 수 있음! 상위요소 중 position속성을 가지고 있는 것이 중요 */
+            left: 0;
+            top: 0;
+        }
+
+        /*   header .inner {
+            background-color: blueviolet;
+            width: calc(100%-200px);
+            width: 90%;
+            max-width: 1720px;
+            margin: 0 auto;
+        } */
+
+        header h1.logo {
+            float: left;
+            line-height: 100px;
+
+            /*  outline: 2px solid red; */
+        }
+
+        header nav {
+            /*  float: right; */
+            /*  outline: 2px solid blue; */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            /* top: 50%; */
+        }
+
+        header .inner {}
+
+        header nav .gnb {
+            /*  margin-top: 20px; */
+        }
+
+        header nav .gnb>li {
+
+            float: left;
+            /*  outline: 2px solid red; */
+        }
+
+        header nav .gnb>li~li {
+            margin-left: 20px;
+
+        }
+
+        header .gnb>li>a {
+            line-height: 100px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            padding: 0 10px;
+
+        }
+
+        header nav .lnb {
+            /*   background-color: #ccc; */
+            background-color: #fff;
+            box-shadow: 0 2px 8px #d9d9d9;
+            width: 140px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            position: absolute;
+            top: 70%;
+            transform: translateX(-10px);
+
+            display: none;
+        }
+
+        header nav .lnb li {}
+
+        header nav .lnb li a {
+            padding: 16px 12px;
+            color: #666;
+            font-size: 15px;
+            letter-spacing: -1px;
+
+        }
+
+        header nav .lnb a:hover {
+            background-color: #8b5dff;
+            color: #fff;
+        }
+
+        main {
+            /* 부모 body를 기준으로 width, height 값 설정! */
+            width: 100%;
+            height: 100%;
+        }
+
+        main a {
+            /*   background-color: yellow; */
+
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+
+            background: url(img/brunchBean.png) no-repeat top/cover;
+
+        }
+
+        section {
+            margin-top: 60px;
+            margin-bottom: 60px;
+
+        }
+
+        section .inner {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            /* outline: 2px solid red; */
+
+        }
+
+        section .sec-tit {
+            font-size: 2.0rem;
+            margin-bottom: 20px;
+        }
+
+        section .brand-slogan {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        section .brand-des {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        section .brand-des p {
+            margin-bottom: 20px;
+
+        }
+
+        footer {
+            background-color: #333;
+            color: rgba (255, 255, 255, 0.5);
+            padding: 60px 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="inner clear">
+            <h1 class="logo"><a href="#"></a>LOGO</h1>
+
+            <nav>
+                <ul class="gnb clear">
+                    <li>
+                        <a href="#">대메뉴1</a>
+                        <ul class="lnb">
+                            <li><a href="#">-서브메뉴1-</a></li>
+                            <li><a href="#">-서브메뉴2-</a></li>
+                            <li><a href="#">-서브메뉴3-</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">대메뉴2</a>
+                        <ul class="lnb">
+                            <li><a href="#">-서브메뉴1-</a></li>
+                            <li><a href="#">-서브메뉴2-</a></li>
+                            <li><a href="#">-브랜드스토리-</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">대메뉴3</a>
+                        <ul class="lnb">
+                            <li><a href="#">-서브메뉴1-</a></li>
+                            <li><a href="#">-서브메뉴2-</a></li>
+                            <li><a href="#">-플래그쉽스토어-</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">퍼플멤버쉽</a>
+                        <ul class="lnb">
+                            <li><a href="#">-서브메뉴1-</a></li>
+                            <li><a href="#">-고객참여후기모음-</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">대메뉴5</a>
+                        <ul class="lnb">
+                            <li><a href="#">-서브메뉴1-</a></li>
+                            <li><a href="#">-서브메뉴2-</a></li>
+                            <li><a href="#">-서브메뉴3-</a></li>
+                            <li><a href="#">-서브메뉴4-</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+        <a href="#">브런치의 새로운 문화, 브런치빈이 시작합니다.</a>
+    </main>
+
+    <section>
+        <div class="inner">
+            <h2 class="sec-tit">brand identity</h2>
+            <p class="brand-slogan">브런치의 새로운 문화<br>
+                브런치의 새로운 기준</p>
+            <div class="brand-des">
+                <p>
+                    밥대신 브런치를, 먹을수 있는 그날까지<br>
+                    브런치빈은 매일 고민하며 연구합니다.
+                </p>
+                <p>
+                    신선한 재료와 특별한 조리방법, 그리고 깊은 소스<br>
+                    누구나 즐길수 있는 한국식 브런치 메뉴 개발까지
+                    <br><br>
+                    우리나라 브런치의 새로운 문화를 <br>
+                    선도합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright2024</p>
+    </footer>
+
+
+</body>
+
+</html>

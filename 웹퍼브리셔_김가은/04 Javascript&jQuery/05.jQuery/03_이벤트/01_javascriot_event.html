@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_javascriot_event</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+    // 자바스크립트 이벤트
+    /*
+    *마우스이벤트
+    1. click - 클릭했을 때
+    2.dblclick - 더블클릭했을 때
+    3.mousemove - 마우스가 요소 안에서 움질일때
+    4.mousedown
+    5. mouseup
+    6.mousewheel - 마우스휠을 움직일때
+
+    *키보드 이벤트
+    1. keypress - 키보드가 눌려졌을 때
+    2. keydown - 키보드가 눌려서 내려 갔을때
+    3. keyup - 키보드가 눌렸다가 올라올 때
+
+    *폼태그 관련 이벤트
+    1. focus - 요소를 마우스로 클릭하여 커서가 발생했을 때
+    (ex. input 태그의 입력란을 클릭하여 입력란에 커서가 있을때)
+
+    2. blur - 요소가 마우스로 클릭되었다가(focus) 다른 곳을 클릭하여 요소의
+    포커스가 벗어났을 때
+    (ex. input 태그의 입력란에서 커서가 벗어났을 때!)
+
+    3. change - select 요소, input 체크박스, 라디오버튼 등의 선택 상태가 변경될 때 발생
+
+    ** html 에서 이벤트를 속성으로 사용할 때는 이벤트명 앞에 on을 붙여서 사용
+    EX) click -> onclick  /  mouseover  ->  onmouseover
+    */
+    // 함수만들기
+
+   /* function hello (){
+        alert('안녕하세요');
+    }; */
+    // hello();
+    // 이벤트 등록 메서드
+    // addEventListener('이벤트명', function(){});
+
+    window.addEventListener('load',function(){
+       /* document.getElementById('box').addEventListener('click',function(){
+            hello();
+        }); */
+        document.getElementById('box').addEventListener('click',hello);
+
+    });
+
+
+    </script>
+</head>
+<body>
+    <div id="box" onclick="hello();">클릭하세요~</div>
+
+    <style>
+    #box {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+
+    }
+    </style>
+</body>
+</html>

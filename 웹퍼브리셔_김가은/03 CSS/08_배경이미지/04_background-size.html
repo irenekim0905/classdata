@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04_background-size</title>
+    <style>
+        div {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #999;
+            background-image: url(/08_배경이미지/images/bg-size.png);
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-size: contain;
+            /* 짧은축을 기준으로 이미지채움 */
+            background-size: left top;
+            /* 긴축을 기준으로 이미지채움 */
+            background-size: auto 50%;
+
+        }
+
+        /* background-size 속성값
+            - auto : 기본값, 자동맞춤 (원래 이미지 크기 그대로 사용)
+            - contain : (배경이미지가 적용되는 공간의) 짧은 축 기준, 이미지가 주어진 공간에 잘리지 않고 보여짐
+            - cover : (배경이미지가 적용되는 공간의) 긴 축 기준, 박스가 가지고 있는 크기에서 긴 축을 채워주므로 이미지가 잘리는 경우가 발생
+            *직접 px, % 수치 입력 가능
+            background-size: width(너비) height(높이); 
+             */
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video_resizing</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 보이는 화면 기준으로!!! */
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: rgba(255,0,0,0.7);
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        header h1 {
+            line-height: 80px;
+            color: #fff;
+            text-align: center;
+        }
+
+
+        section {
+            width: 100%;
+            height: 100%;
+
+            outline: 3px solid lime;
+        }
+        section .video-box {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            position: relative;
+        }
+        section .video-box video {
+            /* 
+            1. width, height값을 100%로 설정하면
+            영상이 잘리지 않고 주어진 영역의 가운데 나오게 된다
+            (background-size: contain; 처럼 보여짐)
+            */
+            /* width: 100%;
+            height: 100%; */
+
+            height: calc(100% + 200px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+
+
+        footer {
+            width: 100%;
+            padding: 50px 0;
+            background-color: navy;
+        }
+        footer p {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>premera</h1>
+    </header>
+
+    <section>
+        <div class="video-box">
+            <video autoplay muted loop>
+                <source src="media/premera.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright 2024</p>
+    </footer>
+    
+</body>
+</html>

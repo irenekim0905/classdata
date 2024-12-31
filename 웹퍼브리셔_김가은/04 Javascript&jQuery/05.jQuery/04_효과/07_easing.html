@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_easing</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery-ui-1.8.23.custom.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                //  $('#box').slideToggle(1000);
+                var easing = $(this).text();
+                console.log(easing);
+
+                $('#box').slideUp(1000, easing, function () {
+                    $(this).slideDown(1000, easing);
+                });
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box">
+            <img src="image/cat.jpg" alt="고양이사진">
+        </div>
+    </div>
+
+    <!-- easing 버튼 -->
+    <div class="btngrp">
+        <button>easeInQuad</button>
+        <button>easeOutQuad</button>
+        <button>easeInOutQuad</button>
+        <button>easeInCubic</button>
+        <button>easeOutCubic</button>
+        <button>easeInOutCubic</button>
+        <button>easeInQuart</button>
+        <button>easeOutQuart</button>
+        <button>easeInOutQuart</button>
+        <button>easeInQuint</button>
+
+        <button>easeOutQuint</button>
+        <button>easeInOutQuint</button>
+        <button>easeInSine</button>
+        <button>easeOutSine</button>
+        <button>easeInOutSine</button>
+        <button>easeInExpo</button>
+        <button>easeOutExpo</button>
+        <button>easeInOutExpo</button>
+        <button>easeInCirc</button>
+        <button>easeOutCirc</button>
+
+        <button>easeInOutCirc</button>
+        <button>easeInElastic</button>
+        <button>easeOutElastic</button>
+        <button>easeInOutElastic</button>
+        <button>easeInBack</button>
+        <button>easeOutBack</button>
+        <button>easeInOutBack</button>
+        <button>easeInBounce</button>
+        <button>easeOutBounce</button>
+        <button>easeInOutBounce</button>
+    </div>
+
+
+    <style>
+        #container {
+            height: 350px;
+        }
+
+        .btngrp {
+            width: 600px;
+        }
+
+        button {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+    </style>
+
+</body>
+
+</html>

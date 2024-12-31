@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/*** RESET **************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+/* float을 해제하는 가상요소 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*** COMMON(공통 디자인!!!) *******************************************************************/
+.title {
+    font-size: 30px;
+}
+/* (영역 '내부'에서) 컨텐츠 너비를 잡아주는 공통 클래스!! */
+.inner {
+    width: 960px;
+    margin: 0 auto;
+    /* outline: 2px solid lime; */
+}
+
+
+
+/*** MAIN *******************************************************************/
+body {
+    background-image: url(../images/bg.jpg);
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/bg-header.jpg);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+header .logo {
+    float: left;
+    height: 100px; /* header의 높이와 동일하게! */
+
+    /* background-color: yellow; */
+    background-image: url(../images/header-triangle.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    padding-right: 120px;
+    margin-left: 32px;
+}
+header .logo a {
+    margin-top: 50px;
+    display: block;
+}
+header .logo a img {}
+
+header .gnb {
+    float: right;
+}
+header .gnb ul {}
+header .gnb ul li {
+    display: inline-block;
+    margin-left: 14px;
+    line-height: 100px;
+    position: relative; /* 가상요소 before의 기준!!! */
+
+    /* outline: 1px solid plum; */
+}
+header .gnb ul li::before {
+    content: "/";
+    position: absolute;
+    left: -12px;
+    color: silver;
+}
+header .gnb ul li:first-child::before {
+    display: none;
+}
+
+header .gnb ul li a {
+    color: silver;
+}
+header .gnb ul li a:hover {
+    text-decoration: underline;
+    color: greenyellow;
+}
+
+section {
+    width: 960px;
+    margin: 0 auto 50px;
+    background: url(../images/bg-triangle.png) no-repeat;
+    
+}
+section .about {
+    height: 550px;
+    background: url(../images/triangles.png) no-repeat 124px 142px;
+    position: relative; /* .title 과 .txt-box의 기준!!! */
+
+    border-bottom: 1px solid silver;
+    margin-bottom: 15px;
+
+    /* outline: 2px solid lime; */
+}
+section .about .title { 
+    position: absolute;
+    right: 180px;
+    top: 156px;
+}
+section .about .txt-box {
+    width: 250px;
+    font-size: 14px;
+
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+section .about .txt-box p {
+    margin-bottom: 10px;
+}
+section .about .txt-box p:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: yellow;
+}
+section .about .txt-box p a {
+    color: #fff;
+}
+section .about .txt-box p a:hover {
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+}
+
+
+
+section .content {
+    /* outline: 2px solid lime; */
+}
+section .content .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+section .content .box-wrap {
+    /* background-color: pink; */
+}
+
+.box-wrap .box {
+    width: 220px;
+    float: left;
+}
+/* 형제요소 선택자(~) : 첫째 요소를 제외한 나머지 형제요소 선택!! */
+.box-wrap .box ~ .box {
+    margin-left: 26.66px;
+}
+
+.box-wrap .box img {
+    width: 100%;
+}
+.box-wrap .box p, .box-wrap .box ul li {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    letter-spacing: -0.6px;
+}
+
+.box-wrap .box p:last-child, .box-wrap .box ul li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    width: 100%;
+    background-image: url(../images/bg-header.jpg);
+    padding: 20px 0 30px;
+}
+footer a {
+    color: silver;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul.links {
+    width: 960px;
+    margin: 0 auto;
+
+    text-align: right;
+    /* outline: 2px solid plum; */
+}
+footer ul li {
+    display: inline-block;
+    margin-right: 12px;
+    position: relative; /* 가상요소 before 기준! */
+    
+    /* outline: 1px solid yellow; */
+}
+footer ul li::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 14px;
+    background-color: silver;
+    position: absolute;
+    left: -10px;
+    top: 4px;
+}
+footer ul li:first-child::before {
+    display: none;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+    color: silver;
+}
+

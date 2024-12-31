@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+/* 메인페이지 Mobile.css 모바일 버전   */
+
+
+header {
+    width: 100%;
+    max-width: 767px;
+    /* position: relative; */
+
+    height: 80px;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    background-color: #fff;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header .logo h1 {
+    font-family: "Chonburi", serif;
+    font-size: 2rem;
+    /* margin: 20px auto; */
+}
+
+/**************** 삼선모양 css 20241223 추가  **************/
+
+header .m-menu {
+    /* outline: 2px solid red; */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+header .m-menu span {
+    display: block;
+    width: 36px;
+    height: 2px;
+    background-color: #666;
+}
+
+header .m-menu .ct2 {
+    margin: 8px 0px;
+}
+
+header .m-menu p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+/*    삼선누르면  menu 카테고리 하단으로 펼쳐짐  20241224 추가  */
+
+header .show-menu {
+    position: absolute;
+    /* header 기준!!! */
+    left: 0;
+    top: 100%;
+    width: 100%;
+    outline: 1px sold #838181;
+    display: none;
+}
+
+header .show-menu ul {
+    background-color: #fff;
+}
+
+header .show-menu ul li {
+    /* outline: 1px solid #dad8d8; */
+    border-top: 1px solid #dad8d8;
+    padding: 10px 5px;
+}
+
+
+/************* 모바일 본문css ************/
+
+section {
+    width: 100%;
+    max-width: 767px;
+    margin-top: 78px;
+    /* header의 높이만큼! */
+}
+
+main .slide-box {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    position: relative;
+}
+
+main .slide-box .gallery {
+    width: 400%;
+    position: relative;
+    left: 0;
+}
+
+main .slide-box .gallery li {
+    width: 25%;
+    float: left;
+    transition: all 1s ease-in-out;
+}
+
+main .slide-box ul li img {
+    width: 100%;
+    display: block;
+}
+
+main h2 {
+    position: absolute;
+    /* right: 0; */
+    width: 50%;
+    left: 50%;
+    top: 25%;
+}
+
+main h2 img {
+    /* width: 60%; */
+    /* height: 160px; */
+    width: 90%;
+    display: block;
+}
+
+main h3 {
+    width: 100%;
+    position: absolute;
+    /* left: 20%; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    bottom: 7%;
+
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+article.artnlife {
+    background-color: #e6f3d3;
+    /* margin: 0 auto; */
+    padding-top: 70px;
+    padding-bottom: 10px;
+}
+
+article.artnlife h2 {
+    text-align: center;
+    font-family: "Chonburi", serif;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    /* padding: 20px 0; */
+}
+
+/**************  skicker menu  20241224 스티커 고정하단메뉴추가 **********/
+
+article.artnlife .sticker {
+    width: 100%;
+    max-width: 767px;
+    background-color: #d9d9d9;
+
+    position: fixed;
+    top: 90%;
+    left: 0;
+    z-index: 998;
+}
+
+article.artnlife .sticker .sticker-menu {
+    width: 92%;
+    margin: 0 auto;
+    margin-left: 5%;
+
+}
+
+article.artnlife .sticker .sticker-menu li {
+    width: 18%;
+    height: 56px;
+    float: left;
+    margin-left: 2px;
+    /* outline: 1px solid red; */
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+article.artnlife .sticker .sticker-menu li a {
+    font-size: 12px;
+    font-weight: 500;
+    /* outline: 1px solid red; ; */
+}
+
+article.artnlife .sticker .sticker-menu li a img {
+    width: 40%;
+}
+
+/**************  아트앤리빙 쇼핑몰 css **********/
+
+article.artnlife .life_mall {
+    padding: 0 5%;
+}
+
+article.artnlife .life_mall ul {
+    /*   outline: 2px solid blue; */
+}
+
+article.artnlife .life_mall ul li {
+    /* width: 45%;
+    margin-left: 3.5%; */
+
+    width: 48%;
+
+    float: left;
+
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+article.artnlife .life_mall ul li~li {
+    margin-left: 4%;
+}
+
+article.artnlife .life_mall ul li:nth-child(2n+1) {
+    margin-left: 0;
+}
+
+
+article.artnlife .life_mall .img-box {
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px 0.3px rgb(181, 187, 185);
+}
+
+article.artnlife .life_mall .img-box img {
+    width: 100%;
+    display: block;
+}
+
+article.artnlife .life_mall li .txt-box {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 0.3px rgb(181, 187, 185);
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+    outline: 1px solid #d8d5d5;
+
+}
+
+article.artnlife .life_mall li .txt-box p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+article.artnlife .life_mall li .txt-box span {
+    color: #f1602c;
+}
+
+article.artnlife .button {
+    width: 80%;
+    height: 40px;
+    background-color: #605678;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 40px;
+}
+
+article.artnlife .button a {
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+}
+
+
+/********* 아티스트영역  **********/
+article.artist {
+    background-color: #f5efec;
+    padding-bottom: 50px;
+}
+
+article.artist h2 {
+    text-align: center;
+    font-family: "Chonburi", serif;
+    font-size: 2rem;
+    padding: 50px 0;
+
+}
+
+article.artist .tab-menu ul {
+    width: 100%;
+    max-width: 767px;
+}
+
+article.artist .tab-menu ul li {
+    width: 42%;
+    height: 40px;
+    line-height: 35px;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #54473F;
+    border-radius: 5px;
+}
+
+/* 선택된 탭메뉴 디자인 */
+article.artist .tab-menu ul li.on {
+    background-color: #FF885B;
+}
+
+article.artist .tab-menu ul li a {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* 선택한 탭메뉴의 내용이 보여질 공간 -> .tab-content */
+article.artist .tab-content {
+    width: 100%;
+    max-width: 767px;
+
+}
+
+article.artist .tab-content>div {
+    /* 각 컨텐츠 덩어리! */
+    width: 100%;
+    display: none;
+}
+
+article.artist .tab-content>div.on {
+    width: 100%;
+    display: block;
+}
+
+article.artist .tab-content img {
+    width: 100%;
+    display: block;
+}
+
+article.artist .tab-content li {
+    float: left;
+    width: 30%;
+
+}
+
+article.artist .tab-content li.artist {
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border: 0.3px solid #b9a396;
+}
+
+article.artist .tab-content li.icon {
+    width: 15%;
+    margin-left: 5%;
+    margin-top: 40%;
+}
+
+article.artist .tab-content li.art {
+    width: 90%;
+    margin-left: 5%;
+    border: 0.2px solid #806658;
+
+}
+
+/****** ABOUT US 영역  ******/
+article.aboutus {
+    width: 100%;
+    max-width: 767px;
+    background-color: #f0dbce;
+    padding: 50px 0;
+}
+
+article.aboutus h2 {
+    text-align: center;
+    font-family: "Chonburi", serif;
+    font-size: 2rem;
+    padding-bottom: 20px;
+
+}
+
+article.aboutus .vision h3 {
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: #54473F;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 40px auto;
+
+}
+
+article.aboutus .mission h3 {
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: #54473F;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    margin: 40px auto;
+}
+
+article.aboutus p {
+    text-align: center;
+}
+
+article.contact {
+    width: 100%;
+    max-width: 767px;
+    background-color: #eef8f5;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+article.contact h2 {
+    text-align: center;
+    font-family: "Chonburi", serif;
+    font-size: 2rem;
+    padding: 30px 0;
+}
+
+article.contact ul li {
+    background-color: #e9eef7;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+article.contact ul h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+article.contact ul p {
+    font-weight: 400;
+    margin: 30px 50px;
+    padding-bottom: 30px;
+}
+
+article.cs {
+    width: 100%;
+    max-width: 767px;
+    background-color: #e2e7f0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+article.cs .cs-box h3 {
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: #54473F;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    margin: 50px auto;
+}
+
+article.cs .cont_artbox {
+    width: 100%;
+    max-width: 767px;
+    margin: 20px 0;
+
+}
+
+article.cs .cont_artbox h4 {
+    font-weight: 600;
+    margin: 22px 50px;
+
+}
+
+article.cs .cont_artbox p {
+    margin-left: 50px;
+}
+
+footer {
+    width: 100%;
+    max-width: 767px;
+    padding: 50px 0;
+    background-color: #636262;
+    margin-bottom: 60px;
+}
+
+footer .cont_company {
+    padding: 0 5%;
+}
+
+footer .cont_company h4 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+footer .cont_company p {
+    color: #fff;
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 0.8rem;
+}

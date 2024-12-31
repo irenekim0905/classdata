@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        .slide-box {
+            width: 1280px;
+            height: 533px;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .slide-box .gallery {
+            width: 1280px;
+          /*  height: 1599px; */
+            position: absolute;
+            top: 0;
+        }
+
+        .slide-box .gallery li {
+            height: 533px;
+        }
+        .slide-box .gallery li img {
+            /* width: 1280px;
+            height: 533px; */
+            height: 100%;
+            display: block;
+        
+        }
+
+      
+    </style>
+</head>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/slider.js"></script>
+
+<body>
+
+        <div class="slide-box"> 
+            <ul class="gallery">
+                <li><img src="image/slide1.jpg" alt=""></li>
+                <li><img src="image/slide2.jpg" alt=""></li>
+                <li><img src="image/slide3.jpg" alt=""></li>
+            </ul>
+        </div>
+
+
+</html>

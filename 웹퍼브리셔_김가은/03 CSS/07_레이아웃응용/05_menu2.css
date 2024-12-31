@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol li {
+    list-style: none;
+}
+
+ul::after,
+ol::after {
+    content: "";
+    display: block;
+    clear: none;
+}
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 h4, h5, h6 {
+    font-size: 100%;
+}
+
+/**** float를 해제하는 가상 선택자 ****/
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+header .inner-header {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    border-bottom: 1px solid #ccc;
+    box-sizing: 100px;
+}
+
+header .inner-header h1 {
+    float: left;
+    padding: 30px 0;
+}
+header .inner-header nav {
+    float: right;
+    width: 70%;
+
+}
+header .inner-header nav ul {}
+header .inner-header nav ul li {
+    width: 12.5%;
+    text-align: center;
+    line-height: 100px;
+}
+header .inner-header nav ul li:hover {
+    background-color: greenyellow;
+}
+header .inner-header nav ul li a {
+    color: #333;
+    display: block;
+}
+header .inner-header nav ul li a:hover {
+    background-color: greenyellow;
+
+}
+
+main {
+    width: 90%;
+    height: 450px;
+    background-color: lemonchiffon;
+    margin: 0 auto;
+}
+main p {
+    text-align: center;
+}
+
+section {
+    width: 90%;
+    margin: 50px auto;
+}
+section .content {
+    width: 100%;
+    background-color: #d9d9d9;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+section .content h2 {
+    font-size: 24px;
+    height: 100px;
+    text-align: center;
+}
+section .content .con1 {
+    width: 20%;
+    height: 200px;
+    background-color: plum;
+    float: left;
+}
+section .content .con2 {
+    width: calc(60% - 48px);
+    margin: 0 24px;
+    height: 200px;
+    float: left;
+    background-color: mediumorchid;
+}
+section .content .con3 {
+    width: 20%;
+    height: 200px;
+    float: left;
+    background-color: mediumaquamarine;
+}
+section .banner {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    background-color: chartreuse;
+}
+
+footer {
+    width: 100%;
+    background-color: #d9d9d9;
+    padding: 40px 0 50px;
+}
+
+footer a {
+    color: #333;
+}
+
+footer .inner-footer {
+    width: 90%;
+    margin: 0 auto;
+}
+footer .inner-footer .logo_bottom {
+    float: left;
+}
+footer .inner-footer .links {
+    float: right;
+}
+footer .inner-footer .links li {
+   margin: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

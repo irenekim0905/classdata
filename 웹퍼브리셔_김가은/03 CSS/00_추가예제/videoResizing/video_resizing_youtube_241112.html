@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video_resizing_youtube</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#container').fitVids();
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1. css로 조절하기 */
+
+        /* html, body {
+            width: 100%;
+            height: 100%;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            background: plum;
+        }
+        #container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        } */
+
+
+        /* 2. fitVids 플러그인 사용하기 */
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+        }
+
+        /* 
+        fitVids() 플러그인 사용 시, 
+        기준 요소 하위에 iframe 태그를 담아주는 div 태그가 만들어짐 
+        보여지는 화면 높이를 채우기 위해 높잇값 설정이 되어야 할 경우,
+        아래와 같이 높잇값 설정!
+        */
+        #container>div {
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- <div> fitVids 플러그인 사용 시, 만들어지는 태그! -->
+            <iframe src="https://www.youtube.com/embed/jWQx2f-CErU?si=HqTYDNWoYz-djuha" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        <!-- </div> -->
+    </div>
+
+</body>
+
+</html>

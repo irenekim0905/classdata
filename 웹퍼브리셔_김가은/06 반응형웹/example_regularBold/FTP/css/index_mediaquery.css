@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/**************index_midiaquery.css    ***************/
+
+
+/*******  tablet UI ***********/
+/* @media all and (max-width: 1024px) {  */ /*  1024px 까지 적용  */
+
+ /*   header {
+        position: relative;
+    }
+
+    header .gnb {
+        display: none;
+    }
+
+    header .sns {
+        display: none;
+    }
+
+    header .m-menu {
+        display: block;
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+    }
+
+    header .m-menu a img {
+        width: 50px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    article.intro .txt-box p.des-en {
+        font-size: 18px;
+    }
+
+    article.intro .txt-box p.des-ko {
+        font-size: 16px;
+    }
+
+    article.intro {
+        background: url(../images/rb_logo.png) no-repeat right/auto 400px;
+    }
+
+    article.intro .btn {
+        bottom: 15%;
+    }
+
+    article.works .img-box-wrap .img-box {
+        width: 45%;
+    }
+
+    article.works .img-box-wrap .img-box~.img-box {
+        margin-left: 3%;
+
+    }
+
+    article.works .img-box-wrap .img-box:nth-child(4n+1) {
+        display: none;
+    }
+
+    article.about p {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    article.news>p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    article.news .box-wrap .box .title {
+        font-size: 14px;
+    }
+
+    article.news .box-wrap .box .date {
+        font-size: 14px;
+    }
+
+    section.contact .sec-tit {
+        font-size: 42px;
+    }
+
+    section.contact p {
+        font-size: 18px;
+    }
+
+    footer .footer-box h4 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    footer .footer-box p {
+        font-size: 12px;
+    }
+
+    footer .top {
+        right: 6%;
+        bottom: 113px;
+    }
+}*/
+
+/********** mobile UI ***************/
+/*
+@media all and (max-width: 767px) {
+    section {
+        margin-top: 20px;
+    }
+    article.intro {
+        height: 1080px;
+        background: url(../images/rb_logo.png) no-repeat bottom 300px;
+     }
+    article.intro .txt-box {
+        width: 100%;
+        padding-top: 5px; 
+    }
+    article.intro .txt-box p.des-en {
+         margin-top: 0px;
+    }
+    article.intro .txt-box p.des-ko {
+        margin-bottom: 20px;
+    }
+    article.intro .btn {
+        position: absolute;
+        bottom: 72%;
+    }  */
+
+     /*   영역2 사진 8장     */
+     /*
+     article.works {
+      
+     }
+     article.works .img-box-wrap {
+        width: 100%;
+     }
+     article.works .img-box-wrap .img-box {
+        width: 100%;
+    } */
+       /*   영역4 news     */
+       /*
+       article.news {
+        text-align: center;
+       }   
+    article.news .box-wrap .box {
+        width: 100%;
+    }
+    footer .footer-box h4 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    footer .footer-box p {
+        font: 10px;
+        font-weight: 300;
+    }
+    footer .top {
+        position: absolute;
+        right: 5%;
+        bottom: 140px;
+    }
+
+
+} */

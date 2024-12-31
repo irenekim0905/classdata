@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>04_z-index_layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 26px;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: dodgerblue;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            z-index: 999;
+        }
+
+        section {
+            margin-top: 100px;
+        }
+        section .slide {
+            width: 100%;
+            height: 600px;
+            background-color: #D7C3F1;
+            position: relative; /* a태그(이전, 다음)의 기준!!! */
+        }
+        section .slide a {
+            /* outline: 2px solid red; */
+            width: 60px;
+            height: 60px;
+            display: block;
+
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+        }
+        section .slide a:first-child {
+            left: 100px;
+        }
+        section .slide a:last-child {
+            right: 100px;
+        }
+
+        section .slide a img {
+            width: 100%;
+        }
+
+        section .content {
+            width: 100%;
+            height: 980px;
+            background-color: #BDE8CA;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        footer {
+            width: 100%;
+            height: 80px;
+            background-color: #41B3A2;
+            text-align: center;
+            line-height: 80px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- html 구조1 -->
+    <header>
+        <p>Header 고정</p>
+    </header>
+
+    <section>
+        <article class="slide">
+            <a href="#"><img src="img/left_icon.png" alt="이전 버튼"></a>
+            <a href="#"><img src="img/right_icon.png" alt="다음 버튼"></a>
+        </article>
+
+        <article class="content">
+            <p>Content</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright 2024</p>
+    </footer>
+
+
+    <!-- html 구조2 -->
+    <!-- <header></header>
+    <main></main>
+    <section></section>
+    <footer></footer> -->
+    
+</body>
+</html>

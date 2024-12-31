@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+
+/* 상단메뉴 로그인바 css */
+
+body {
+    width: 100%;
+   
+}
+.color {
+    background-image: url(../imgs/baza/color.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 55%;
+    background-position-x: 666px;
+
+}
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+     position: relative;
+}
+
+header .login_box {
+    position: absolute;
+    right: 0%;
+    margin-top: 20px;
+}
+
+header .login li {
+    float: left;
+    margin-left: 30px;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+header nav ul {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+header nav ul li {
+    float: left;
+    width: 16.6%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/***********  about_baza section 상단 css ***********/
+
+
+section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: rgba(216, 175, 145, 0.3);
+    border-top: 1px solid rgba(180, 162, 150, 0.5);
+
+    position: relative;
+    padding-bottom: 50px;
+}
+
+section .big-logo {
+    position: absolute;
+    right: 20%;
+    top: 38%;
+}
+
+article.title_01 {
+    width: 1280px;
+    height: 500px;
+    margin: 0 auto;
+/*    border: 2px solid red; */
+    padding-bottom: 30px;
+}
+
+section article.title_01 .box_01 {
+    width: 200px;
+    height: 40px;
+    background-color: #423630;
+    border-radius: 12px;
+    margin: 80px 0px 0px 50px;
+
+}
+
+article .box_01 h3 {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+}
+
+article .title_box01 .title01 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+article .title_box01 .title01 h2 {
+    font-size: 22px;
+    font-weight: 500;
+  
+}
+
+article .title_box01 .title02 {
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+
+article .title_box01 .title02 h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+article .title_box01 .title03 {
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+article .title_box01 .title03 h3 {
+    font-size: 16px;
+}
+
+/***********  about_baza article 중간 css ***********/
+
+article.title_02 {
+    width: 1280px;
+    height: 200px;
+    margin: 50px auto;
+/*    border: 2px solid red; */
+    position: relative;
+}
+
+article.title_02 .box_02 {
+    width: 150px;
+    height: 35px;
+    line-height: 30px;
+    background-color: #423630;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 0%;
+    left: 30%;
+}
+
+article.title_02 .box_02 h3 {
+    color: #fff;
+    text-align: center;
+   
+}
+
+article.title_02 .title_box02 {
+    text-align: center;
+    
+    position: absolute;
+    left: 20%;
+    top: 44%;
+}
+
+article.title_02 .title_box02 p {
+    
+}
+
+article.title_03 {
+    width: 1280px;
+    height: 200px;
+    margin: 0 auto;
+  /*  border: 2px solid red; */
+    position: relative;
+
+}
+
+article.title_03 .box_03 {
+    width: 150px;
+    height: 35px;
+    line-height: 30px;
+    background-color: #423630;
+    border-radius: 8px;
+    margin-bottom: 40px;
+
+    position: absolute;
+    top: 0%;
+    left: 30%;
+
+}
+
+article.title_03 .box_03 h3 {
+    color: #fff;
+    text-align: center;
+}
+
+article.title_03 .title_box03 {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+article.title_03 .title_box03 p {
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/*---------이미지박스 정리-------*/
+
+article.imgbox {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+article.imgbox .img_box {
+    width: 70%;
+    /* height: 300px; */
+    margin: 70px auto 0;
+   /* outline: 3px solid red; */
+    
+}
+
+article.imgbox ul li {
+    width: 13%;
+    float: left;
+    margin-left: 1%;
+    /* margin-top: 70px; */
+}
+
+article.imgbox ul li img {
+    width: 100%;
+    height: 160px;
+    display: block;
+    border: 1px solid rgb(218, 217, 215,0.5);
+    opacity: 0.5;
+}

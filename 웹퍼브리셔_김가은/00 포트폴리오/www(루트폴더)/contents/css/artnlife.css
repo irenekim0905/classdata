@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* 상단메뉴 로그인바 css */
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .login_box {
+    position: absolute;
+    right: 0%;
+    margin-top: 20px;
+}
+
+header .login li {
+    float: left;
+    margin-left: 30px;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+header nav ul {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+header nav ul li {
+    float: left;
+    width: 16.666%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/************   artnlife.css 본문  *******************/
+
+/* 상단이미지 박스 */
+section article.head {
+    background: url(../imgs/life_mall/life_bar.png) no-repeat;
+    background-size: cover;
+    height: 340px;
+    position: relative;
+}
+
+article.head .img-box {
+    position: absolute;
+    left: 20%;
+    top: 23%;
+}
+
+article.head .img-box img {
+    width: 80%;
+}
+
+article.head h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    position: absolute;
+    right: 25%;
+    bottom: 20%;
+}
+
+/* 상단 이벤트 상품 목록  */
+article.event {
+    background-color: #d5f7ed;
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+article.event h3 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fc6731;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+article.event .event-box {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+article.event .event-box .box {
+    width: 23%;
+    float: left;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 2%;
+}
+
+article.event .event-box .box img {
+    width: 100%;
+    height: 330px;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 1px 0px 10px 0.5px rgb(163, 172, 182);
+    /* 가로, 세로, 번짐, 크기, 색상  */
+}
+
+article.event .event-box .box p {
+    color: #222;
+
+}
+
+article.event .event-box .box span {
+    color: #fc6731;
+}
+
+/* 검색 버튼 */
+
+article.search {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+article.search ul li {
+    width: 150px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #605678;
+    border-radius: 5px;
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+}
+
+article.search ul li a {
+    color: #fff;
+}
+
+/* 하단 상품 전체목록  */
+
+article.product {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+article.product .box01 {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+article.product .box01 .box {
+    width: 23%;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+
+}
+
+article.product .box01 .box img {
+    width: 100%;
+    height: 330px;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 1px 0px 10px 0.5px rgb(163, 172, 182);
+}
+
+article.product .box01 .box p {
+    color: #333;
+}
+
+article.product .box01 .box p.bora {
+    color: #7458b6;
+}
+
+article.product .box01 .box p.blue {
+    color: rgb(79, 104, 214);
+}
+
+article.product .box01 .box span {
+    color: #fc6731;
+}
+
+article.product .box02 {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+article.product .box02 .box {
+    width: 23%;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+
+}
+
+article.product .box02 .box img {
+    width: 100%;
+    height: 330px;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 1px 0px 10px 0.5px rgb(163, 172, 182);
+}
+
+article.product .box02 .box p {
+    color: #333;
+}
+
+article.product .box02 .box p.bora {
+    color: #7056ad;
+}
+
+article.product .box02 .box p.blue {
+    color: rgb(79, 104, 214);
+}
+
+article.product .box02 .box span {
+    color: #fc6731;
+}
+
+article.product .box03 {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+article.product .box03 .box {
+    width: 23%;
+    float: left;
+    margin-left: 2%;
+    text-align: center;
+
+}
+
+article.product .box03 .box img {
+    width: 100%;
+    height: 330px;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 1px 0px 10px 0.5px rgb(163, 172, 182);
+}
+
+article.product .box03 .box p {
+    color: #333;
+}
+
+article.product .box03 .box p.bora {
+    color: #785abe;
+}
+
+article.product .box03 .box p.blue {
+    color: rgb(79, 104, 214);
+}
+
+article.product .box03 .box span {
+    color: #fc6731;
+}

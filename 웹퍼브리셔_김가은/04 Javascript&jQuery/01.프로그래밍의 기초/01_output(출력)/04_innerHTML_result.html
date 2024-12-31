@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>innerHTML</title>
+
+    <style>
+        #here {
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>"Hello world!"를 아래 p요소에 출력하세요.</h4>
+    <p id="here">text here!</p>
+
+    <script>
+        var msg;
+        msg = document.getElementById('here').innerHTML;
+        console.log(msg);
+
+        document.getElementById('here').innerHTML = 'Hello World';
+
+    </script>
+
+
+
+</body>
+
+</html>

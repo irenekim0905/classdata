@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_fadeIn_fadeOut()</title>
+    <SCRipt src="jquery-1.12.4.min.js"></SCRipt>
+
+    <SCRipt>
+
+        /*
+        *효과 메서드 기본형
+        $('요소선택').효과메서드(효과소요시간, 가속도, 콜백함수);
+
+        (1) 효과소요시간 : 효과메서드가 진행되는 동안 소요되는 시간
+        - 방법1 : 'SLOW', 'normal', 'fast'
+        - 방법2 : 밀리초(ms)사용, 1000(1초), 500(0.5초), 400(0.4초 기본)
+        (2) 가속도(ersing) : 효과가 적용되는 동안의 가속도 설정
+        - 'swing' : 기본값 시작과 끝은 느리게 중간은 빠른속도로 움직임
+        - 'limear' : 일정한 속도로 움직임
+
+        (3)콜백함수
+
+        - fadeIn : (소요시간, 가속도, 콜백함수) - fade 효과를 적용하여 서서히 보여지도록 하는것
+          display를 none 이 아닌 상태로 변경한후 opacity값을 0에서 1로 변경
+
+        - fadeOut : (소요시간, 가속도, 콜백함수) - fade 효과를 적용해서 서서히 사라지도록 하는것
+            opacity값을 1에서 0으로 변경한 후 display:none; 으로 변경 요소가 점점 투명해짐
+
+        */
+
+        $(document).ready(function(){
+            $('#box1, #box2, #box3').hide();
+         //   $('#box1').fadeIn();
+            $('.btn1').click(function(){
+                $('#box1').fadeIn( ); // 400, swing, 콜백함수 없음
+                $('#box2').fadeIn(2000);
+                $('#box3').delay(2000).fadeIn(2000);
+
+            });
+
+            // fadeOut()
+            $('#box5').fadeOut(2000, 'linear', function(){
+                alert('바이바이~~~~');
+            });
+
+        });
+
+    </SCRipt>
+</head>
+<body>
+    <h2>fadIn()</h2>
+    <button class="btn1">fadeIn boxs</button>
+
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+    <h2>fadOut()</h2>
+    <button class="btn2">fadeOut boxs</button>
+
+    <div id="box4"></div>
+    <div id="box5"></div>
+
+    <style>
+
+        #box1, #box2, #box3 {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+           /* display: none; */
+        }
+        #box1 {
+            background-color:red ;
+        }
+        #box2 {
+            background-color: yellow;
+        }
+        #box3 {
+            background-color: yellowgreen;
+        }
+
+        #box4, #box5, #box6 {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            
+        }
+
+        #box4 {
+            background-color:palevioletred ;
+        }
+        #box5 {
+            background-color: powderblue;
+        }
+     
+    </style>
+    
+    
+</body>
+</html>

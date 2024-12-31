@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_example</title>
+    <style>
+        body {
+            background-color: #eee;
+            color: #333;
+        }
+
+        h1 {
+            color: dimgray;
+        }
+
+        h1+p {
+            color: dimgray;
+        }
+
+        .title+p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-image: url(images/icon-plus.png);
+            margin-bottom: 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            /* line-height: 50px; */
+            /* height: 50px; */
+        }
+
+        table {
+            width: 760px;
+            text-align: center;
+            border-collapse: collapse;
+            border-radius: 30px;
+
+            /* border: solid #333; */
+        }
+
+        table th,
+        table td {
+            /* border-right: 1px solid gray;
+       border-bottom: 1px solid gray; */
+            border: 1px solid gray;
+            border-width: 0 1px 1px 0;
+            padding: 8px 10px;
+
+        }
+
+        table th {
+            text-align: left;
+        }
+
+        table td {
+            letter-spacing: -0.6px;
+        }
+
+        /*  tr태그 배경색1 - 클래스로 선택하기 */
+        /* table .odd {
+     background-color: #e0ecfe;
+     }
+
+     table .even {
+        background-color: rgb(171, 206, 228);
+     } */
+
+        /* tr태그 배경색2 - nth-child로 짝수번째 홀수번째 선택하기*/
+        /* thead와 tbody로 테이블 내의 내용을 구분할 경우 nth-child로 선택했을때 각각의 덩어리에서 짝수, 홀수번째 요소가 선태됨*/
+
+        /* table tr:nth-child(2n) {
+            background-color: aquamarine;
+        }
+
+        table tr:nth-child(2n+1) {
+            background-color: bisque;
+        } */
+
+        table tr:nth-child(odd) {
+            background-color: rgb(187, 215, 228);
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgb(222, 233, 245);
+        }
+
+        table tr.title {
+            background-color: #0078ca;
+            color: #fff;
+            border-bottom: 3px inset lightgray;
+        }
+
+        table tr.title th {
+            text-align: center;
+            letter-spacing: 2px;
+            border-color: #eee;
+        }
+
+        table tr.title th:first-child {
+            border-radius: 16px 0 0 0;
+        }
+
+        table tr.title th:last-child {
+            border-top-right-radius: 16px;
+            border-right: 0;
+        }
+
+        .box1 {
+            border: 2px solid gray;
+            width: 760px;
+            margin-top: 50px; 
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>시 워크샵 (Poetry Workshop)</h1>
+    <P>1년동안 다양한 시 워크샵과 심포지어을 실시 합니다 <br>다음과 같은 이벤트가 회원들에게 무료로 제공 되오니 참고하여 주시기 바랍니다. </P>
+
+    <ul class="image">
+        <li>A Poetic Perspective</li>
+        <li>Walt Whitman at War</li>
+        <li>Found Poems and Outsider Poetry</li>
+    </ul>
+
+    <table class="table">
+        <colgroup>
+            <col witdh="34%">
+            <col witdh="22%">
+            <col witdh="22%">
+            <col witdh="22%">
+        </colgroup>
+        <thead>
+            <tr class="title">
+                <th>구분</th>
+                <th>뉴욕</th>
+                <th>시카고</th>
+                <th>샌프란시스코</th>
+        </thead>
+        <tbody>
+            </tr>
+            <tr class="odd">
+                <th>A Poetic Perspective</th>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+            </tr>
+            <tr class="even">
+                <th>Walt Whitman at War</th>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+            </tr>
+            <tr class="odd">
+                <th>Found Poems &amp; Outsider Poetry</th>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+            </tr>
+            <tr class="even">
+                <th>Natural Death: An Exploration</th>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+                <td>2012년 3월 17일(토) <br>오전 11시 - 오후 2시</td>
+            </tr>
+        </tbody>
+    </table>
+
+     
+    <form action="#">
+        <fieldset>
+            <legend>관심 강좌 등록</legend>
+             <p>이  름: <input type="text" name="username"> </p>
+             <p>이메일: <input type="text" name="usermail"> </p>
+       
+
+        <p>가장 가까운 센터 : </p>
+            <select name="city" size="4" multiple="">
+                <option value="서울">서울</option>
+                <option value="부산">부산</option>
+                <option value="강릉">강릉</option>
+                <option value="경주">경주</option>
+                <option value="제주도">제주도</option>
+            </select>
+
+            <p>회원이십니까?</p>
+            <label><input type="radio" name="yes" value="예">예</label>
+            <label><input type="radio" name="no" value="아니오">아니오</label>
+            
+        </fieldset>
+        
+
+        <input type="submit" value="등록">
+
+
+    </form>
+
+</body>
+
+
+</html>

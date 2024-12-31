@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>02_tr-origin</title>
+        <style>
+        .origin {
+            width: 160px;
+            height: 240px;
+            border: 1px solid black;
+            float: left;
+            margin: 30px;
+        }
+        img {
+            -wibkit-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+            transform:rotate(10deg);
+        }
+        .ltop img {
+            transform-origin: left top;
+        }
+        .rtop img {
+            transform-origin: right top;
+        }
+        .lbottom img {
+            transform-origin: left bottom;
+        }
+        .rbottom img {
+            transform-origin: right bottom;
+        }
+        /* 
+        밴더프리픽스
+        :css 표준으로 지정되지 않은 기능, css 권고안에 포함되지 못한 기능들을 사용하고자 할 때 사용
+        -wibkit- : chrome, safari, ios, android
+        -ms- : internet explorer, edge
+        -moz- : firefox 
+        -o- : opera, 12.0이전 버전을 고려하는 경우에 사용(오페라 15.0이후는 -webkit-을 사용)
+        */
+
+        </style>
+    </head>
+    <body>
+        <div class="origin">
+            <div class="ltop">
+                <img src="images/rose.jpg" alt="장미"> ltop
+             </div>
+        </div>
+
+        <div class="origin">
+            <div class="rtop">
+                <img src="images/rose.jpg" alt="장미"> rtop
+             </div>
+        </div>
+
+        <div class="origin">
+            <div class="lbottom">
+                <img src="images/rose.jpg" alt="장미"> lbottom
+             </div>
+        </div>
+
+        <div class="origin">
+            <div class="rbottom">
+                <img src="images/rose.jpg" alt="장미"> rbottom
+             </div>
+        </div>
+
+    </body>
+</html>

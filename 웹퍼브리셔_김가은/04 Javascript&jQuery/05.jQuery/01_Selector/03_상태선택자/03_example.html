@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>03_example</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="jquery-ui-1.8.23.custom.min.js"></script>
+
+    <script>
+         /* 
+         animate()메서드
+         $(선택자).animate({
+               css설정
+         },소요시간(ms),가속도(easing),콜백함수);
+
+         -css 변경사항을 애니메이션 해주는 효과 메서드
+         -수치로 된 속성값이 적용 가능
+         - css에 트랜지션을 넣은 것과 같은 효과 구현
+
+         2. delay(소요시간)
+         : 효과 메서드 앞에서 사용
+         : 효과 메서드 시작을 지연시킬때 사용
+
+         */
+        /*
+          색상 버튼을 클릭하면,
+          1. 첫번째 액션
+          - p 태그를 사라지게 한뒤 >> hide()
+          - p 태그의 '색상'글자와 css 속성을 변경한 후 등장
+          >> 글자변경은 어떻게? text() -> 변경될 값은 ???
+          >> css 속성 변경은 어떻게? css()
+
+          2.두번째 액션
+          .img-box의 배경색을 클릭한 버튼 색상으로 적용 >> css(), 색상값은??
+          .img-box의 배경색이 변경된 후에 img 태그 등장!
+
+        */
+    
+         $(document).ready(function(){
+
+            $('button').click(function(){
+            
+                //클릭한 버튼의 버튼명 반환
+                var color = $(this).text();
+                console.log(color);
+                 // 액션 1번 
+
+                $('.select').hide(1000, function(){
+                    $(this).find('span').text(color).css('color', color);
+                }).show(1000);
+
+                // 액션 2번
+               /*  $('.img-box').css({
+                    backgroungColor: color, // 변수 color의 값!
+                    transition: 'all 0.5s'
+
+                 }); */
+
+                 $('.img-box').delay(2000).animate({
+                    backgroundColor: color
+                
+                 },800,function(){
+                    $(this).find('img').css({
+                         transform: 'scale(1)',
+                         transition: 'all 1s'
+                    });
+                 });
+
+            });
+
+         });
+
+
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>무지개색 버튼을 클릭해 보세요!</h1>
+        <p class="select"><span>색상</span>를(을) 선택하셨습니다!!</p>
+
+        <div class="btngrp">
+            <button>red</button>
+            <button>orange</button>
+            <button>yellow</button>
+            <button>green</button>
+            <button>blue</button>
+            <button>navy</button>
+            <button>purple</button>
+        </div>
+
+        <div class="img-box">
+            <img src="https://cat-lab.co.kr/data/editor/2211/59b20390d3e9627ce40b23c9e9984d23_1669243031_888.jpg" alt="아기고양이사진">
+        </div>
+
+    </div>
+
+    <style>
+        p {
+            font-size: 24px;
+        }
+        span {
+            font-weight: bold;
+        }
+        button {
+            font-size: 24px;
+        }
+        .btngrp {
+            margin-bottom: 20px;
+        }
+
+        .img-box {
+            width: 800px;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .img-box img {
+            width: 100%;
+            display: block;
+            transform: scale(0);
+        }
+
+    </style>
+
+
+</body>
+</html>

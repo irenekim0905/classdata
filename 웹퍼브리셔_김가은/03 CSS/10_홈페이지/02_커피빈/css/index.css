@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+body {}
+
+header {
+    width: 1920px;
+
+}
+
+header .login {
+    width: 100%;
+    height: 35px;
+    background-color: lightgray;
+}
+
+header nav {
+    position: relative;
+}
+
+header .login nav ul {
+    position: absolute;
+    right: 320px;
+
+}
+
+header .login nav ul li {
+    float: left;
+    padding: 5px 10px;
+}
+
+header .login nav ul li:last-child {
+    background-color: #333;
+
+}
+
+header .login ul li a {
+    color: #222;
+}
+
+header .menu {
+    width: 100%;
+    height: 60px;
+    margin: 10px auto;
+    position: relative;
+}
+
+header .menu h1 {
+    position: absolute;
+    left: 320px;
+    top: -5px;
+    line-height: 60px;
+
+}
+
+header .menu nav ul {
+    position: absolute;
+    left: 550px;
+}
+
+header .menu nav ul li {
+    float: left;
+    padding: 20px 20px;
+
+}
+
+header .menu nav ul li a {
+    color: black;
+}
+
+header .menu .input {
+    position: absolute;
+    right: 320px;
+    line-height: 60px;
+}
+
+section {
+    width: 1920px;
+}
+
+section .forest {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+section .event {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+section .pick h1 {
+    text-align: center;
+    color: chocolate;
+    margin: 50px auto;
+    font-size: 25px
+}
+
+section .pick .mdpick ul {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section .pick .mdpick ul li {
+    width: 25%;
+    float: left;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+section .new h1 {
+    text-align: center;
+    color: chocolate;
+    margin: 50px auto;
+    font-size: 25px
+}
+
+section .new ul {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section .new ul li {
+    width: 30%;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+section .sns {
+    width: 1920px;
+    background-color: blueviolet;
+    padding-bottom: 100px;
+}
+
+section .sns h2 {
+    text-align: center;
+    color: white;
+    margin: 50px auto;
+    font-size: 25px;
+    padding-top: 50px;
+}
+
+section .sns ul {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section .sns ul li {
+    width: 16%;
+    float: left;
+}
+
+section .sns ul li img {
+    width: 100%;
+}
+
+section .sns .insta h1 {
+    margin: 50px auto;
+    width: 350px;
+    background-color: chocolate;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+section .sns .insta h1 a {
+    color: white;
+}
+
+footer {
+    width: 1920px;
+    background-color: gainsboro;
+}
+footer .container {
+    width: 1280px;
+    font-size: 14px
+}
+
+footer .foorer-menu .f-menu {
+    border: 2px solid red;
+}
+
+footer .container .foorer-menu p {
+    color: chocolate;
+}
+

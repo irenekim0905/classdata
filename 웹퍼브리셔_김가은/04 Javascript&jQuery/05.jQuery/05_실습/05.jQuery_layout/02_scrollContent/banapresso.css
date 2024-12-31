@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    border-top: 3px solid rgb(241, 100, 138);
+    box-shadow: 0 1px 10px #d9d9d9;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header img {
+    height: 35px;
+    margin-top: 22.5px;
+}
+
+section {
+    /* outline: 2px solid blue; */
+    width: 100%;
+    padding-top: 216px;
+    background: url(images/introduce-top-visual.png) no-repeat top/auto 216px;
+    /* 배경이미지를 padding-top에 넣을 것이므로 padding 높이에 맞춰서 배경이미지 높이 설정*/
+}
+
+article.brand {
+    width: 1200px;
+    margin: 50px auto 100px;
+}
+
+article.brand h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+article.brand .content-box {
+    margin-top: 100px;
+}
+
+article.brand .content-box>div {
+    margin-bottom: 80px;
+    height: 280px;
+    position: relative;
+    /* .txt-box의 위치 기준! */
+    /* background-color: plum; */
+}
+
+article.brand .content-box .box .img-box {
+    /* width: 50%; */
+    max-width: 580px;
+
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+
+    /*제이쿼리 구현을 위한 초기설정!*/
+    width: 0;
+}
+
+article.brand .content-box .box .img-box img {
+    /* width: 100%; */
+    height: 100%;
+    display: block;
+}
+
+/* 짝수번째 .box */
+article.brand .content-box .even .img-box {
+    position: absolute;
+    left: 50%;
+}
+
+
+article.brand .content-box .box .txt-box {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+
+    /*제이쿼리 구현을 위한 초기설정!*/
+    display: none;
+}
+
+/* 짝수번째 .txt-box */
+article.brand .content-box .even .txt-box {
+    left: 0;
+}
+
+article.brand .content-box .box .txt-box h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+article.brand .content-box .box .txt-box p {
+    font-size: 20px;
+}
+
+article.brand .content-box .box .txt-box p span {
+    color: rgb(241, 100, 138);
+}
+
+
+footer {
+    background-color: rgb(241, 100, 138);
+    padding: 60px 0 60px;
+    text-align: center;
+    color: #fff;
+}

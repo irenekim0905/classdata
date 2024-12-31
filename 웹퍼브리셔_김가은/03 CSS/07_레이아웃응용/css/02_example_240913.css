@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+/* float 해제를 위한 클래스 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.best-recipe {
+    margin: 100px 0;
+}
+.best-recipe .title {
+    /* background-color: yellow; */
+    text-align: center;
+    margin-bottom: 60px;
+}
+.best-recipe .title h2 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+.best-recipe .title p {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+
+.best-recipe .content {
+    /* background-color: bisque; */
+
+    /* 1번 - 전체 너비 설정, 고정된 양쪽 패딩 설정 */
+    /* width: 100%;
+    padding: 0 100px;
+    padding: 0 5%;
+    box-sizing: border-box; */
+
+    /* 2번 - width, max-width 설정! */
+    /* width: 80%;
+    max-width: 1536px;
+    margin: 0 auto; */
+
+    /* 2번 응용 */
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.best-recipe .content .box {
+    /* outline: 3px solid red; */
+
+    width: 18.4%;
+    float: left;
+
+    position: relative; /* h3의 기준!!! */
+
+    overflow: hidden;
+    box-shadow: 0 4px 12px #999;
+    /* background-color: #000; */
+}
+.best-recipe .content .box ~ .box {
+    margin-left: 2%;
+}
+
+/* .box의 border-radius 개별설정 */
+.b1 {border-radius: 0 130px 0 0;}
+.b2 {border-radius: 0 0 0 130px;}
+.b3 {border-radius: 0 0 130px 0;}
+.b4 {border-radius: 0 0 0 130px;}
+.b5 {border-radius: 0 130px 0 0;}
+
+.best-recipe .content .box a {
+    /* outline: 5px solid blue; */
+
+    display: block;
+}
+.best-recipe .content .box a::before {
+    content: "";
+    display: block;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.best-recipe .content .box a img {
+    width: 100%;
+    display: block;
+    /* opacity: 0.5; */
+}
+.best-recipe .content .box a h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+
+    position: absolute;
+    /* left: 10%;
+    top: 10%; */
+
+    left: 30px;
+    top: 30px;
+
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>05_ex_for</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            padding: 20px;
+        }
+        #box {
+            background-color: black;
+            padding: 20px;
+            outline: 2px solid greenyellow;
+        }
+        #box::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box img {
+            width: 200px;
+            border-radius: 10px;
+            display: block;
+            float: left;
+        }
+        #box img~img {
+            margin-left: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>좋거나 나쁜 동재</h1>
+    <div id="box">
+      <!-- <img src="img/tving/dj_1.jpg" alt="좋거나 나쁜 동재 포스터1" title="동재1">
+        <img src="img/tving/dj_2.jpg" alt="좋거나 나쁜 동재 포스터2" title="동재1">
+        <img src="img/tving/dj_3.jpg" alt="좋거나 나쁜 동재 포스터3" title="동재1">
+        <img src="img/tving/dj_4.jpg" alt="좋거나 나쁜 동재 포스터4" title="동재1">
+        <img src="img/tving/dj_5.jpg" alt="좋거나 나쁜 동재 포스터5" title="동재1">
+        <img src="img/tving/dj_6.jpg" alt="좋거나 나쁜 동재 포스터6" title="동재1">
+        <img src="img/tving/dj_7.jpg" alt="좋거나 나쁜 동재 포스터7" title="동재1">
+        <img src="img/tving/dj_8.jpg" alt="좋거나 나쁜 동재 포스터8" title="동재1"> --> 
+    </div>
+    <script>
+     // 이미지 하나가 #box에 출력되도록 하기
+     /*
+     var box = ['img/tving/dj_1'];
+
+     document.getElementById('box').innerHTML = '<img src="img/tving/dj_1.jpg" alt="좋거나 나쁜 동재 포스터1" title="동재1">';
+      */
+     // #box에 8개의 이미지가 반복해서 출력되도록 하기
+     /*
+     for(var i=1; i<=8; i++){
+        document.getElementById('box').innerHTML += '<img src="img/tving/dj_' + i + '.jpg" alt="좋거나 나쁜 동재" title="동재' + i +'">';
+     }
+     */
+
+     // 이벤트 등록 메서드 - addEventListener
+      
+      window.addEventListener('load', function(){
+
+     var imgBox = ''; // 이미지 태그를 담는 변수
+     for(var i=1; i <= 8; i++){
+        imgBox += '<img src="img/tving/dj_' + i +  '.jpg" alt="좋거나 나쁜 동재 포스터8" title="동재' + i +'">';
+     }
+
+      document.getElementById('box').innerHTML = imgBox;
+    });
+
+    </script>
+
+    
+    
+</body>
+</html>

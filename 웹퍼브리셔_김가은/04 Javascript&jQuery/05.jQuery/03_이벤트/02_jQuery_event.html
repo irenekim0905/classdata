@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_jQuery_event</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+             // 함수 만들기
+             function bye (){
+                alert('안녕히계세요');
+             }
+
+            $(document).ready(function(){
+
+            /*    $('#box').click(function(){
+                    bye();
+
+                }); */
+
+                $('#box').click(bye);
+               
+            });
+
+
+    </script>
+</head>
+<body>
+    <div id="box" onclick="hello();">클릭하세요~</div>
+
+    <style>
+    #box {
+        width: 200px;
+        height: 200px;
+        background-color: greenyellow;
+        cursor: auto;
+
+    }
+    </style>
+</body>
+</html>

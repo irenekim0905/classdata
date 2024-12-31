@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>modal</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 보이는 화면 기분으로 !!! */
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 60px;
+        }
+        ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        ul {
+            list-style: none;
+            width: 640px;
+            border: 3px solid #ccc;
+            margin: 30px auto 0;
+        }
+        ul li {
+            float: left;
+            margin: 10px;
+
+        }
+
+        /* modal 실행 css */
+        #black {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            position: fixed;
+            left: 0;
+            top: 0;
+
+            display: none;
+
+        }
+        #big {
+            height: 50%;
+            position: absolute;  
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: none;
+
+            /* #big의 기준은 #black
+                  #black의 position 속성값이 fixed여도 
+                  position의 속성을 가지고 있기 때문에 
+                    */
+        }
+
+        #big img {
+            height: 100%;
+            display: block;
+        }
+
+    </style>
+
+    <script>
+        $(function(){
+            // 썸네일 이미지를 클릭했을때> 클릭대상 a 
+            // href값을 반환받고 , a의 기본 기능을 막기 위해 
+            // click() -> 모달창이 열리면서 -> #black의 display 상태변경
+            // 큰이미지가 보여짐 -> id big 의 display의 상태변경, img 태그추가(html()메서드 사용), 이미지경로 src값 설정 -> 클릭된 a 태그의 href 값!
+
+            $('a.modal').click(function(evt){
+                // 기본기능 막기
+                evt.preventDefault();
+
+                var imgSrc = $(this).attr('href');
+                console.log(imgSrc);
+                // 모달창 (#black) 열기
+                $('#black').show();
+                $('#big').show().html('<img src="'+ imgSrc + '" alt="">' );
+                
+            });
+            // 모달창 닫기
+            $('#black').click(function(){
+                $(this).hide();
+                $('#big').hide().find('img').remove();
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <h1>modal</h1>
+
+    <ul>
+        <li><a href="images/1.jpg" class="modal"><img src="images/thum/1.jpg" alt=""></a></li>
+        <li><a href="images/2.jpg" class="modal"><img src="images/thum/2.jpg" alt=""></a></li>
+        <li><a href="images/3.jpg" class="modal"><img src="images/thum/3.jpg" alt=""></a></li>
+        <li><a href="images/4.jpg" class="modal"><img src="images/thum/4.jpg" alt=""></a></li>
+        <li><a href="images/5.jpg" class="modal"><img src="images/thum/5.jpg" alt=""></a></li>
+        <li><a href="images/6.jpg" class="modal"><img src="images/thum/6.jpg" alt=""></a></li>
+        <li><a href="images/7.jpg" class="modal"><img src="images/thum/7.jpg" alt=""></a></li>
+        <li><a href="images/8.jpg" class="modal"><img src="images/thum/8.jpg" alt=""></a></li>
+    </ul> 
+    <!-- modal-->
+     <div id="black">
+        <div id="big">
+            <!-- <img src="images/1.jpg" alt=""> -->
+        </div>
+     </div>
+</body>
+</html>

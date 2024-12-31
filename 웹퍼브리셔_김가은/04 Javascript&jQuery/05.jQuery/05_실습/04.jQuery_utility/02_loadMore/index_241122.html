@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>loadMore</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 30px auto 60px;
+
+            /* background-color: greenyellow; */
+        }
+        .content::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .content .box {
+            width: 25%;
+            float: left;
+            margin-bottom: 30px;
+
+            /* text-align: center; */
+            /* outline: 2px solid red; */
+        }
+        .content .box img {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        .content .box p {
+            text-align: center;
+        }
+        .content .box p::first-line {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 2;
+        }
+
+        #loadMore {
+            text-decoration: none;
+            display: block;
+            background-color: #000;
+            color: #fff;
+            width: 150px;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 auto;
+        }
+
+        .totop {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: indianred;
+
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+
+            display: none;
+        }
+        .totop a {
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            font-size: 18px;
+        }
+
+    </style>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            //초기설정
+            $('.box').hide();
+            $('.box').slice(0,4).show();
+            //slice(start, end) : 시작 인덱스부터 종료 인덱스 이전까지
+            //slice(0,4) : 인덱스 0부터 4번 이전까지 >> 0,1,2,3
+
+            $('#loadMore').on('click',function(evt){
+
+                evt.preventDefault();
+
+                var hBox = $('.box:hidden').length;
+                console.log('숨겨진 box 갯수: ' + hBox); //12
+
+                //1) 숨겨진 상품이 없을 때, alert 안내창 띄우기
+                if(hBox === 0){
+                    alert('마지막 상품입니다!');
+                    return false;
+                }
+
+                $('.box:hidden').slice(0,4).slideDown();
+
+                //2) 숨겨진 상품이 없을 때, loadMore 버튼 숨기기
+                /* hBox = $('.box:hidden').length;
+                console.log('슬라이드 다운 후 남은 박스갯수: ' + hBox);
+
+                if(hBox === 0){
+                    $('#loadMore').fadeOut();
+                } */
+
+                //스크롤 애니메이션 
+                var offTop = $(this).offset().top;
+
+                $('html, body').animate({
+                    scrollTop: offTop
+                }, 1500);
+
+            }); //#loadMore click()
+
+
+            $('.totop > a').on('click',function(e){
+
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+
+            });
+
+        });
+
+        //스크롤 이벤트 
+        $(window).scroll(function(){
+
+            //console.log('스크롤 이벤트 발생!!!!');
+
+            //현재 스크롤 위치값 반환!
+            var scTop = $(this).scrollTop();
+            console.log(scTop);
+
+            if(scTop > 200) {
+                $('.totop').fadeIn();
+            } else {
+                $('.totop').fadeOut();
+            }
+        });
+
+    </script>
+</head>
+<body>
+
+    <!-- div[class=box]*16>img+p>br -->
+
+    <div class="container">
+        <div class="content">
+            <div class="box">
+                <img src="img/item1.jpg" alt="">
+                <p>제품 1<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item2.jpg" alt="">
+                <p>제품 2<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item3.jpg" alt="">
+                <p>제품 3<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item4.jpg" alt="">
+                <p>제품 4<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item5.jpg" alt="">
+                <p>제품 5<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item6.jpg" alt="">
+                <p>제품 6<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item7.jpg" alt="">
+                <p>제품 7<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item8.jpg" alt="">
+                <p>제품 8<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item9.jpg" alt="">
+                <p>제품 9<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item10.jpg" alt="">
+                <p>제품 10<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item11.jpg" alt="">
+                <p>제품 11<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item12.jpg" alt="">
+                <p>제품 12<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item13.jpg" alt="">
+                <p>제품 13<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item14.jpg" alt="">
+                <p>제품 14<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item15.jpg" alt="">
+                <p>제품 15<br>가격 : 120,000</p>
+            </div>
+            <div class="box">
+                <img src="img/item16.jpg" alt="">
+                <p>제품 16<br>가격 : 120,000</p>
+            </div>
+        </div>
+
+        <a href="#" id="loadMore">Load More</a>
+    </div>
+
+    <div class="totop">
+        <a href="#">TOP</a>
+    </div>
+    
+</body>
+</html>

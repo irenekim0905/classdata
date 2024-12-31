@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>02_else문</title>
+
+    <script>
+        /*
+        (2) else문 : 조건식을 만족할 경우(true)와 만족하지 않은 경우(false)에 따라 실행되는 코드가 달라짐, 즉 하나의 조건식 결과에 따라 두 가지 실행코드를 실행 할 수 있음
+
+        //// 기본형 ////////////////////////////
+
+            if(조건식){
+                실행코드;
+            } else {
+                실행코드;
+            }
+
+        ///////////////////////////////////////
+        
+        */
+
+        // 기본예제 - 입력받은 숫자가 짝수일 때 if문, 홀수일 때 else문 실행
+        /*
+
+        필요한 값 -> 입력받은 숫자 -> 어떻게 입력을 받지? -> prompt()
+        입력받은 값을 담을 곳 -> 변수
+
+
+        var 변수명 = prompt('좋아하는 숫자를 입력하시오');
+        >> 연산을 해야하니까 숫자형 데이터가 필요해! 
+        >> Number()
+
+        짝수, 홀수 구분 - 나머지 구하기! %
+        >> 짝수는 어떻게? 2로 나눈 나머지(%)가 0인 것! -> 조건식? -> 변수 % 2 === 0
+        >> 홀수는 어떻게? 2로 나눈 나머지(%)가 1인 것! -> 변수 % 2 === 1
+
+        */
+
+        /* var num = prompt('좋아하는 숫자는?');
+        var numResult = Number(num); */
+        
+
+        /* var num = Number(prompt('좋아하는 숫자는?')); 
+        console.log(num);
+
+        var result = num % 2;
+        console.log(result); //0 또는 1
+
+        if(result === 0){ //짝수일 때 실행!
+            document.write('당신이 좋아하는 숫자는 짝수입니다!');
+        } else {
+            //홀수일 때 실행!
+            document.write('당신이 좋아하는 숫자는 홀수입니다!');
+        } */
+
+        // 예제2
+
+        //window.alert('테스트');
+        //window.confirm('야옹!!!!');
+
+        //confirm() 메서드 - 확인(ok)를 누르면 true, 취소(cancel)를 누르면 false 반환
+
+        var result = confirm('정말로 구독서비스를 해지하시겠습니까?');
+        //확인 : true, 취소 : false
+        console.log(result);
+
+        if(result){
+            //확인을 눌렀을 때 실행, true
+            document.write('구독서비스가 해지 처리 되었습니다.');
+        } else {
+            //취소를 눌렀을 때 실행, false
+            document.write('구독서비스를 유지합니다.');
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

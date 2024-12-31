@@ -1,0 +1,113 @@
+@charset "utf-8";
+/*********** header  ************************/
+
+header {
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: 9999;
+}
+header a { /* header 하위의 모든 a 태그지정 */
+    color: #333;
+}
+
+header .header-top {
+    width: 100%;
+    background-color: lightgray;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+header .header-top ul {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    
+}
+header .header-top ul li {
+    float: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+header .header-top ul li:last-child a {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(47,28,17);
+    background-image: url(../img/ico_user_info_line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    text-align: left;
+}
+
+/**********  header-bottom  ***********/
+header .header-bottom {
+    width: 1280px;
+    margin: 0 auto;
+    height: 100px;
+}
+header .header-bottom .logo {
+    float: left;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+
+header .header-bottom .logo img {
+    height: 70px;
+    display: block;
+}
+
+header .header-bottom .gnb {
+    float: left;   
+}
+
+header .header-bottom .gnb ul li {
+    margin: 0 20px;
+}
+header .header-bottom .gnb ul a {
+    color: rgb(47, 28, 17);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 100px;
+}
+header .header-bottom .gnb ul li.active a {
+    color: rgb(207, 102, 26);
+}
+header .header-bottom .gnb ul a:hover {
+    color: rgb(207, 102, 26);
+}
+
+header .header-bottom .search {
+    float: right;
+    height: 100%;
+}
+.search input {
+    height: 30px;
+    border: 0;
+    outline: 0;
+    margin-top: 35px;
+    vertical-align: middle;
+}
+header .header-bottom .search input[type="text"] {
+   border-bottom: 1px solid #ccc;
+}
+header .header-bottom .search input[type="submit"] {
+   background-color: transparent;
+   background-image: url(../img/ico_search.png);
+   background-repeat: no-repeat;
+   background-position: right;
+   width: 24px;
+   font-size: 0;
+   cursor: pointer;
+}
+
+

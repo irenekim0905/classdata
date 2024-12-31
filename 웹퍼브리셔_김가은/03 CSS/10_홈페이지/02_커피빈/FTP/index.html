@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index_teacher</title>
+    <!-- 구글 웹폰트-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Nanum+Gothic:wght@400;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">단체 및 기업구매</a></li>
+                <li><a href="#">고객서비스</a></li>
+                <li><a href="project/kim'skichen/02_example-teacher.html" target="_blank">kim's kitchen</a></li>
+                <li><a href="/contents/coffeebeanstory.html" target="_blank">나의 프로젝트</a></li>
+            </ul>
+        </div>
+        <div class="header-bottom">
+            <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="로고"></a></h1>
+
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">BUY ONLINE</a></li>
+                    <li><a href="#">MEMBER'S CLUB</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">STORE</a></li>
+                    <li class="active"><a href="/contents/coffeebeanstory.html">THE COFFEE BEAN</a></li>
+                    <li><a href="#">CBTL</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <form name="seaarchform">
+                    <input type="text" placeholder="검색어 입력">
+                    <input type="submit" value="검색">
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- 메인 비주얼 배너(신제품) : 배경 이미지로 구현 -->
+    <main>
+        <article class="promotion">
+            <a href="#"><!-- <img src="img/main_forest.jpg" alt="포레스트이미지"> -->
+                <h2>spring makes forest</h2>
+                <p>봄을 맞이해 커피빈의 신메뉴가 출시 되었습니다.</p>
+                <ul>
+                    <li>크런치 카라멜크림 콜드브루</li>
+                    <li>포레스트 말차크림 오트라떼</li>
+                    <li>포레스트 그림애플 티</li>
+                </ul>
+            </a>
+        </article>
+        <!-- 메인 이미지 배너 : 이미지 태그 사용 -->
+        <article class="event">
+            <a href="#"><img src="img/main_event.jpg" alt="겨울 신메뉴출시 기념 프로모션">
+            </a>
+        </article>
+    </main>
+
+    <section>
+        <!-- MD's PICK -->
+        <article class="md-pick">
+            <h2 class="sec-tit">MD's PICK</h2>
+
+            <div class="md-wrap clearfix">
+                <div class="md-box">
+                    <div class="photo">
+                        <img src="img/MD01.jpg" alt="">
+                        <a href="#" class="quick">Quick view</a>
+                    </div>
+
+                    <div class="caption">
+                        <h3 class="name">[유통]모카웨하스 63g</h3>
+                        <p class="des">큐브 모카 웨하스</p>
+                        <p class="price">1,900원</p>
+                    </div>
+                </div>
+
+                <div class="md-box">
+                    <div class="photo">
+                        <img src="img/MD02.jpg" alt="">
+                        <a href="#" class="quick">Quick view</a>
+                    </div>
+                    <div class="caption">
+                        <h3 class="name">커피빈 바닐라 라떼 8T</h3>
+                        <p class="des">커피빈 바닐라 라떼 (21.6g*8T)</p>
+                        <p class="price">5,200원</p>
+                    </div>
+                </div>
+
+                <div class="md-box">
+                    <div class="photo">
+                        <img src="img/MD03.jpg" alt="">
+                        <a href="#" class="quick">Quick view</a>
+                    </div>
+                    <div class="caption">
+                        <h3 class="name">레드로텀블러(레드)500ml</h3>
+                        <p class="des">뚜겅은 컵으로도 사용 가능해요</p>
+                        <p class="price">25,200원</p>
+                    </div>
+                </div>
+
+                <div class="md-box">
+                    <div class="photo">
+                        <img src="img/MD04.jpg" alt="">
+                        <a href="#" class="quick">Quick view</a>
+                    </div>
+                    <div class="caption">
+                        <h3 class="name">레트로텀블러(크림)500ml</h3>
+                        <p class="des">뚜겅은 컵으로도 사용 가능해요</p>
+                        <p class="price">5,200원</p>
+                    </div>
+                </div>
+
+                <!-- ::after / float 해제!! -->
+            </div>
+
+        </article>
+
+        <!-- What's NEW -->
+        <article class="new clearfix">
+            <h2 class="sec-tit"> What's NEW</h2>
+            <div class="new-box">
+                <a href="#"><img src="img/new01.jpg" alt=""></a>
+                <h3><a href="#">2022 11 무화과 카피콜라 베이글 샌트위치</a></h3>
+            </div>
+            <div class="new-box">
+                <a href="#"><img src="img/new02.jpg" alt=""></a>
+                <h3><a href="#">2022 10 Mellow Yellow</a></h3>
+            </div>
+            <div class="new-box">
+                <a href="#"><img src="img/new03.jpg" alt=""></a>
+                <h3><a href="#">2022 09 케잌 2종</a></h3>
+            </div>
+
+        </article>
+        <!-- instagram -->
+        <article class="insagram">
+            <div class="inner">
+                <h2 class="sec-tit">
+                    <span>#커피빈코리아</span>
+                    <span>#커피빈맛있다</span>
+                    <span>#완벽한 한잔</span>
+                </h2>
+                <ul class="thumb-list">
+                    <li><a href="#"><img src="img/sns_img01.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img02.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img03.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img04.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img05.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img06.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img07.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img08.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img09.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img10.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img11.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/sns_img12.jpg" alt=""></a></li>
+                </ul>
+                <a href="#" class="follow-btn">ourinstagram-#coffeebeankorea</a>
+            </div>
+        </article>
+
+    </section>
+    <!--    footer    -->
+    <footer>
+        <div class="inner">
+            <div class="sitemap clearfix">
+                <div class="mapbox">
+                    <h3>Buy Online</h3>
+                    <ul>
+                        <li><a href="#">View All</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">티</a></li>
+                        <li><a href="#">CBTL 시스템</a></li>
+                        <li><a href="#">상품</a></li>
+                        <li><a href="#">멤버스몰</a></li>
+                    </ul>
+                </div>
+                <div class="mapbox">
+                    <h3>Member's Club</h3>
+                    <ul>
+                        <li><a href="#">커피빈 멤버스 클럽</a></li>
+                        <li><a href="#">나의 커피빈</a></li>
+                        <li><a href="#">멤버스 몰</a></li>
+                    </ul>
+                </div>
+                <div class="mapbox">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">상품</a></li>
+                        <li><a href="#">카드</a></li>
+                    </ul>
+                </div>
+                <div class="mapbox">
+                    <h3>Store</h3>
+                    <ul>
+                        <li><a href="#">매장찾기</a></li>
+                        <li><a href="#">신규매장</a></li>
+
+                    </ul>
+                </div>
+                <div class="mapbox">
+                    <h3>The Coffee Bean</h3>
+                    <ul>
+                        <li><a href="#">커피빈 코리아</a></li>
+                        <li><a href="#">커피빈 소식</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="#">제휴 마케팅 제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">신규 입점 제의</a></li>
+                        <li><a href="#">결산공고</a></li>
+                    </ul>
+                </div>
+                <div class="mapbox">
+                    <h3>CBTL</h3>
+                    <ul>
+                        <li><a href="#">CBTL 가이드</a></li>
+                        <li><a href="#">CBTL 가이드</a></li>
+                        <li><a href="#">AS 안내</a></li>
+                        <li><a href="#">AS 신청</a></li>
+                        <li><a href="#">CBTL FAQ</a></li>
+                        <li><a href="#">채용설명서</a></li>
+                        <li><a href="#">기업용 머신</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom clearfix">
+                <div class="links">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">영상정보처리기기운영방침</a>
+                    <a href="#">멤버스카드이용약관</a>
+                </div>
+
+
+                <p class="copy">&copy;2016 The Coffee Bean. All rights reserved.</p>
+
+                <div class="sns clearfix">
+                    <a href="#"><img src="img/ico_facebook.png" alt="페이스북바로가기"></a>
+                    <a href="#"><!--<img src="img/ico_instagram.png" alt="인스타그램아이콘">-->인스타그램 바로가기</a>
+                    <a href="#"><!--<img src="img/ico_blog.png" alt="블로그아이콘">-->블로그 바로가기</a>
+                    <a href="#"><!--<img src="img/ico_twitter.png" alt="트위터아이콘">-->트위터 바로가기</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

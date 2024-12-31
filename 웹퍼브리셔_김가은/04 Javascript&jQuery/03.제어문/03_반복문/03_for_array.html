@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_for_array</title>
+    <script>
+        // 배열 요소 출력
+        var green = ["강남", "역삼", "종로", "신촌", "대전", "부산"];
+        document.write(green[0], "<br>");
+        document.write(green[2], "<br>");
+        document.write(green[5], "<br>");
+        document.write("<hr>");
+
+        for (var i = 0; i < green.length; i++) {
+            // 변수 i는 반복횟수, 배열의 인덱스 번호로 사용
+            document.write(green[i], "<br>");
+        }
+
+        //배열 이미지 출력
+        document.write('<h2>배열이미지 출력</h2>');
+
+        var imgSrc = ['1.jpg', '2.jpg', '3.jpg'];
+        console.log(imgSrc);
+
+        var imgcount = imgSrc.length;
+        console.log('imgSrc길이:' + imgcount);
+
+        for (var k = 0; k < imgcount; k++) {
+          //  document.write('<img src="img/1.jpg" alt="">');
+          document.write('<img src="images/' + imgSrc[k] + '"alt="">');
+        }
+
+
+
+
+
+
+
+    </script>
+    <style>
+        img {width: 300px;}
+    </style>
+</head>
+
+<body>
+
+    <!-- <img src="img/1.jpg" alt=""> -->
+
+</body>
+
+</html>

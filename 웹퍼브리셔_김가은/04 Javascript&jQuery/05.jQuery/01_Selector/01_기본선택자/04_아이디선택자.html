@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04_아이디선택자</title>
+    <script src="jquery-1.7.2.min.js"></script>
+
+    <script>
+
+        /*
+ 
+       html() 메서드
+     (1) $(선택자).html();
+       -선택한 요소의 하위요소를 문자열로 반환
+ 
+     (2) $(선택자).html('새요소');
+       -선택한 요소의 하위요소를 전부 제거하고 지정한 새 요소를 삽입(생성)
+ 
+      *자바스크립트 innerHTML
+ 
+ 
+        */
+
+
+
+        // 좋아하는 계절을 클릭하면
+        // 계절에 대한 설명으로 내용을 바꾸고 css 변경
+
+
+
+        $(function () {
+
+            $('#spring').click(function () {
+                $(this).css({
+                    backgroundColor: 'yellow',
+                    fontSize: '20px',
+                    transition: 'all 0.5s'
+                });
+                $(this).text('봄이오면 예쁜꽃이 핍니다.');
+            });
+
+            $('#summer').click(function () {
+                $(this).css({
+                    backgroundColor: 'skyblue',
+                    fontSize: '20px',
+                    transition: 'all 0.5s'
+                });
+                $(this).text('여름에는 푸른 젊음이넘쳐요.');
+            });
+
+        }); //제이쿼리 시작코드 끝!!
+
+
+
+        // 제이쿼리 시작코드 다시 시작!!
+        $(function () {
+
+            $('#fall').click(function () {
+                /*    $(this).css({
+                     backgroundColor: 'red',
+                     fontSize: '20px',
+                     transition: 'all 0.5s',
+                     color: 'white'
+                    }).text('가을이오면 예쁜단풍이들어요.');
+    
+                    //$(this).text('가을이오면 예쁜단풍이들어요.'); */
+                $(this).html('<p>단품구경 갈 시간~~</p>');
+            });
+
+            $('#winter').click(function () {
+                $(this).html('<img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/cCcQ/image/GOb80v45pXYJM9wzpAKI45ZlTbs.png" alt="" title="겨울풍경">');
+            });
+
+        });
+
+
+
+        /* $(function(){
+            $('#winter').click(function(){
+                $(this).css({
+                 backgroundColor: 'black',
+                 color: 'white',
+                 fontSize: '20px',
+                 transition: 'all 0.5s'
+                });
+                $(this).text('겨울이오면 눈이 내립니다.');
+            })
+        }); */
+
+
+        $(function () {
+
+            // html() 반환
+            // 태그까지 문자열로 반환
+            var result = $('.msg').html();
+            console.log(result);
+            console.log($('.msg').text());
+
+        });
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1 class="title">한국의 4계절(클릭!)</h1>
+    <ul class="list">
+        <li id="spring">봄</li>
+        <li id="summer">여름</li>
+        <li id="fall">가을</li>
+        <li id="winter">겨울</li>
+    </ul>
+
+    <div class="msg">
+        <p>겨울이 오면 스키장으로!!!!</p>
+    </div>
+
+    <style>
+        .list li p {
+            color: red;
+            font-weight: bold;
+        }
+
+        .list li img {
+            width: 600px;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1cutslide-2</title>
+
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/1cutslide-2.js"></script>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul, ol, li {
+            list-style: none;
+        }
+        #slider {
+            width: 1200px;
+            border: 3px solid #997c70;
+            margin: 40px auto;
+            position: relative; /*  #pager의 기준  */
+
+            overflow: hidden;
+        }
+
+        #gallery {
+            width: 400%;
+            position: relative;
+        }
+        #gallery::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #gallery img {
+            display: block;
+            width: 25%;  /* 100% 기준으로 4등분 해야된다  */
+            float: left;
+      
+        }
+
+        #pager {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+        #pager::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #pager li {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+
+            overflow: hidden;
+
+          /*  outline: 1px solid red; */
+
+        }
+        #pager li~li {
+            margin-left: 6px;
+        } 
+        #pager li a {
+            text-decoration: none;
+            color: #000;
+            background-color: #ecdfcc;
+            display: block;
+        }
+        #pager li a:hover {
+            background-color: #ef5a6f;
+            color: #fff;
+        }
+        /* 클릭된 pager 티자인 적용  */
+        #pager li.active a {
+            background-color: #b6a28e;
+            color: #fff;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!--  
+      #slider : 실제 슬라이드가 보여질 공간
+      #gallery : 슬라이드 전체를 담는 부모
+      img : 각각의 슬라이드!
+    -->
+    <div id="slider">
+        <div id="gallery">
+            <img src="images/illom-slide1.jpg" alt="">
+            <img src="images/illom-slide2.jpg" alt="">
+            <img src="images/illom-slide3.jpg" alt="">
+            <img src="images/illom-slide4.jpg" alt="">
+        </div>
+
+        <ul id="pager">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+
+    
+    
+</body>
+</html>

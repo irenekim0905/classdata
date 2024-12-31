@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>06_example_slide</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*  
+        .title에 마우스를 올리면 이미지가아래로 펼처지고
+        .title에서 마우스를 벗어나면 이미지가 위로 숨겨지도록 구현 하시오.
+        */
+       /* $(function(){
+            $('.title').mouseover(function(){
+                $('.img_box').slideDown(1000, 'linear');
+            });
+
+            $('.title').mouseleave(function(){
+                $('.img_box').slideUp(1000, 'linear');
+
+            });
+
+        }); */
+
+       
+        $(function(){
+             // 구현을 위한 초기설정
+            $('.img_box').hide();
+            $('.title').on({
+                'mouseover' : function(){
+                    console.log('slide down')
+                    $('.img_box').slideDown(1000);
+                },
+                'mouseout' : function(){
+                    console.log('slide Up')
+                    $('.img_box').stop().slideUp(1000);
+                }
+            });
+        });
+       
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">여기에 마우스를 올려 보세요!</h2>
+    <div class="img_box">
+        <img src="image/suzy.jpg" alt="">
+    </div>
+
+    </div>
+
+    <style>
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h2.title {
+            background-color: lightcoral;
+            padding: 10px 0;
+            cursor: pointer;
+
+        }
+        .img_box {
+            outline: 3px solid tomato;
+        }
+
+        .img_box img {
+            width: 500px;
+            display: block;
+        }
+
+    </style>
+    
+</body>
+</html>

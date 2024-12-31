@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_scrollTop</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*
+          $('선택요소').scrollTop(값);
+        */
+
+        $(function(){
+            $('button').click(function(){
+                //scrollTop 값 구하기
+                var scTop = $('.box').scrollTop();
+                console.log(scTop);
+
+                // scrollTop 위치 지정하기
+                $('.box').scrollTop(150);
+
+            });
+            $('.box').scroll(function(){
+                var scTop2 = $(this).scrollTop();
+                console.log(scTop2);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.
+        this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.
+        this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.
+        this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.
+        this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.  this is some text.
+    </div>
+
+    <button>scrollTop</button>
+
+    <style>
+        div.box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+           overflow-y: scroll;
+        }
+    </style>
+</body>
+</html>

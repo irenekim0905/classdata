@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06-자식요소선택자</title>
+    <style>
+        /* 하위요소 선택자 */
+        .gnb li a {
+            background-color: yellow;
+        }
+
+        /* 자식요소 선택자 */
+        .gnb>li>a {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="gnb">
+        <li>
+            menu
+            <ul>
+                <li><a href="#">sub</a></li>
+                <li>sub</li>
+                <li><a href="#">sub</a></li>
+                <li>sub</li>
+                <li>sub</li>
+            </ul>
+
+        </li>
+        <li>
+            <a href="#">menu</a>
+        </li>
+    </ul>
+</body>
+
+</html>

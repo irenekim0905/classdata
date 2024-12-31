@@ -1,0 +1,22 @@
+*포토샵 단축키
+
+전체 선택영역 : ctrl+A
+선택영역 해제 : ctrl+D
+선택영역 반전 : ctrl+shift+i
+
+레이어복사 : ctrl+j / alt+드래그 
+
+전경색 채우기 : alt+delete
+배경색 채우기 : ctrl+delete
+기본색 변경 : D
+전경색/배경색 전환 : X
+
+전경색으로 칠하기 : alt+shift+delete
+배경색으로 칠하기 : ctrl+shift+delete
+
+자유변형 : ctrl+T (Transform)
+
+
+
+
+

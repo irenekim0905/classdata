@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/* artist.css */
+
+/* 상단메뉴 로그인바 css */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+header .login_box {
+    position: absolute;
+    right: 0%;
+    margin-top: 20px;
+}
+
+header .login li {
+    float: left;
+    margin-left: 30px;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+header nav ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+   
+}
+
+header nav ul li {
+    float: left;
+    width: 16.666%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/* artist 본문 css */
+
+section {
+    background-color: #f0e9dd;
+}
+article.back-img {
+    background-image: url(../imgs/artist_d/menu_bar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+    margin-bottom: 80px;
+    position: relative;
+}
+article.back-img .logo {
+    position: absolute;
+    left: 20%;
+    top: 23%;
+
+}
+article.back-img img {
+    width: 80%;
+}
+
+article.back-img .g-01 {
+    position: absolute;
+    right: 30%;
+    top: 35%;
+}
+article.back-img h1 {
+    font-family: "Chonburi", serif;
+    font-size: 80px;
+}
+article.back-img .g-02 {
+    position: absolute;
+    right: 25%;
+    top: 23%;
+}
+article.back-img p {
+    font-family: "Noto Sans KR", serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+article.back-img .g-03 {
+    position: absolute;
+    right: 20%;
+    bottom: 40%;
+}
+article.back-img .g-03 > p {
+    font-family: "Noto Sans KR", serif;
+    font-size: 48px;
+}
+
+article.artist ul {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+article.artist ul li {
+    float: left;
+    margin-left: 40px;
+    width: 260px;
+    height: 40px;
+    background-color: rgb(66, 55, 42);
+    border-radius: 10px;
+    position: relative;
+}
+
+article.artist ul li:hover {
+    background-color: rgb(243, 124, 14);
+}
+
+article.artist ul li a {
+    color: white;
+    padding-left: 65px;
+    position: absolute;
+    top: 5px;
+}
+
+/* artist 본문  사진들 정열 css */
+article.img {
+   padding-bottom: 80px;
+}
+article.img .img-box {
+    width: 1280px;
+    margin: 0 auto;
+}
+article.img .img-box li {
+    width: 45%;
+    float: left;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    overflow: hidden;
+}
+article.img .img-box img {
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+article.img .img-box li:hover img {
+    transform: scale(1.2);
+}
+
+
+
+
+

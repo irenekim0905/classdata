@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05_float_layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {}
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: blueviolet;
+
+        }
+
+        section .slide {
+            width: 90%;
+            height: 300px;
+            background-color: lightpink;
+            margin: 0 auto;
+
+        }
+        .float {
+            overflow: auto;
+        }
+        .float > p {
+            width: 33.33%;
+            height: 200px;
+            float: left;
+        }
+
+        .box1 {
+            background-color: cadetblue;
+        }
+        .box2 {         
+          background-color: brown;
+        }
+        .box3 {          
+            background-color: chocolate;
+        }
+
+       .content4 {
+        width: 100%;
+        height: 300px;
+        background-color: greenyellow;
+
+       }
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <p>header영역</p>
+
+    </header>
+
+    <section>
+
+        <article class="slide">
+            <p>메일슬라이더</p>
+        </article>
+
+        <article class="float">
+            <p class="box1">컨텐츠1</p>
+            <p class="box2">컨텐츠2</p>
+            <p class="box3">컨텐츠3</p>
+        </article>
+
+        <article class="content4">
+            <p>컨텐츠4</p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>footer영역</p>
+    </footer>
+
+</body>
+
+</html>

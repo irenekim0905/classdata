@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 100%;
+}
+
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    padding: 100px 0;
+}
+
+.recipe {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.title {
+    width: 1280px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.container .recipe .box {
+    width: 18%;
+    float: left;
+}
+
+.container .recipe .box {
+    margin-left: 2%;
+}
+
+.container .recipe .box img {
+    width: 100%;
+
+}
+
+.right {
+    border-radius: 0 80px 0 0;
+}
+
+.left {
+    border-radius: 0 0 0 80px;
+}
+
+.center {
+    border-radius: 0 0 80px 0;
+
+}
+
+.centertext {
+    position: absolute;
+    right: 620px;
+    top: 180px;
+}
+
+.leftttext {
+  
+}
+
+.righttext {
+ 
+   
+}
+
+.container .recipe .box a {
+    font-size: 22px;
+    font-weight: 600;
+    color: pink;
+}
+
+.container .recipe .box .right

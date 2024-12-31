@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_그룹선택자</title>
+    <script src="jquery-1.7.2.min.js"></script>
+
+    <script>
+       $(document).ready(function(){
+
+          //  $('h1, p').css('background-color','yellow');
+         $('li, p').click(function(){
+             $(this).text('야옹!!!').css({
+                backgroundColor: 'tomato',
+                color: '#fff',
+                fontSize: '20px',
+                fontWeight: 'bold',
+                transition: 'all 0.5s'
+                
+             });
+         });
+
+
+       });
+
+    </script>
+
+</head>
+<body>
+
+  <div id="container">
+       <h1>좋아하는 동물을 클릭해 보세요</h1>
+
+       <ul class="group1">
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+        <li>고양이</li>
+       </ul>
+
+       <ul class="group2">
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+        <li>강아지 딸을 슨 고양이</li>
+       </ul>
+
+       <div class="group3">
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+        <p>팬더 무위를 닮을 고양이</p>
+       </div>
+
+  </div>
+
+  <style>
+    ul, li {
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 6px;
+    }
+    li {
+        margin-bottom: 6px;
+    }
+  </style>
+
+    
+</body>
+</html>

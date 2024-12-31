@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>06_var_let-const_</title>
+
+    <script>
+        /* 변수선언 var 과 let의 다른 점
+        (1)변수 선언 및 변수값 재할당 방법
+        (2)변수 선연 위치에 따른 참조 에러 (Reference Error)
+        (3)지역변수 스코프(Scope, 유효범위)의 차이
+            var : 함수 내에서 선언된 var이 지역변수
+            let, const : 함수 내부는 물론 if문, for문 등의 코드블록에서 선언된 변수도
+            지역변수로 취급
+
+            1. 변수 - var, let
+            (1) var
+            - 변수 재선언, 변수값 재할당 가능
+            - 변수 선언 이전에 참조하면 undefined 출력, 에러X
+
+            (2) let
+             - 변수 재선언 불가, 변수값 재할당 가능
+               변수 선언 이전에 참조하면 참조에러 발생
+
+            2. 상수 - const (변하지 않는 값)
+              - 값을 재할당 할 수 없음
+              - 선언과 동시에 초기값을 할당해 주어야 함
+        */ 
+         // 1-1. 변수 var
+
+         var num = 10;
+         console.log(num);
+
+         // 변수 재선언, 변수값 재할당
+         var num = 20;
+         console.log(num);
+         
+         // 변수 선언문 이전에 참조
+         console.log(green);
+         var green = 'gangnam';
+         console.log(green);
+
+         // 1-2. 변수 let
+         text = "let's go!";
+         console.log(text);
+
+         // 변수 재선언
+         text = "let's gogogogog";
+         console.log(text);
+
+         // 변수 재선언 시 오류코드
+         // Uncaught SyntaxError: Identifier 'text' has already been declared 
+
+         // 변수 선언 이전에 참조!
+          let higreen = "hi green~~~~~";
+          console.log(higreen);
+         // 예제2. let의 전역변수와 지역변수
+          let a = 100; // 전역변수
+          if (true){
+            console.log(a); // 100, 전역변수
+          }
+
+          if(true){
+            // console.log(a);
+            let a = 200; // 지역변수
+            console.log(a); // 200
+          }
+         /* 
+         - let은 함수 뿐 아니라 제어문 안에서 ({}코드블록) 선언되는 변수도 지역 변수로 포함
+         - 전역변수 a가 있음에도 지역변수 a에서 참조오류 발생!
+         - 지역변수 a가 우선적용되므로 지역변수 a선언 이전에 사용하면  참조오류가 발행하게 됨!
+         */
+
+         // 2. 상수 - const (데이터 변경(재할당) 불가)
+           const number = 10; // 초기값을 받드시 설정해 주어야됨
+
+           console.log(number);
+
+         // 상수 재선언, 상수값 재할당 불가
+         // const number = 20;  상수 재선언 ! 오류 발생
+
+         console.log(number);
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>

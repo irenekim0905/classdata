@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/****** flow.css *********/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li, ol {
+   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+}
+
+h1.title {
+    margin: 20px 0 40px ;
+    padding: 50px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+h1.title span {
+    display: block;
+    font-size: 1rem;
+    color: #ff748b;
+}
+
+div.contents {
+/*  background-color: darksalmon; */
+  width: 100%;
+  height: 75%;
+  overflow-x: hidden;
+}
+
+.contents ul {
+    width: 200%;
+    position: relative;
+    left: 0;
+}
+
+.contents ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contents ul li {
+ /*   outline: 2px solid blue; */
+
+    width: 10%; /* 5개가 1세트, 최대 10개의 메뉴가 나열되는 것을 가정하여 부모공간의 1/10 사용  */
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative; /* .coption의 기준 */
+}
+
+.contents ul li img {
+  /*  width: 90%;
+    display: block;
+    margin: 0 auto;  */
+    width: 100%;
+    display: block;
+}
+
+.contents ul li .caption {
+  /*  background-color: darkseagreen; */
+  /*  padding: 0.5%; */
+  position: absolute;
+  left: 10px;
+  opacity: 0;
+  top: 50%;   /* 최초의 위치 */
+ /* top: 105%; */ /*  .coption이 등장했을 때 최종위치 */
+  width: calc(100% - 20px);
+}
+.contents ul li .caption h2 {
+    font-size: 1.3rem;
+    letter-spacing: -1.2px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;    /* 가상요소 after의 기준 */  
+}
+.contents ul li .caption h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    position: absolute;
+    top: calc(100% + 10px);
+}
+
+.contents ul li .caption p {
+    letter-spacing: -1px;
+    word-break: keep-all;
+}
+

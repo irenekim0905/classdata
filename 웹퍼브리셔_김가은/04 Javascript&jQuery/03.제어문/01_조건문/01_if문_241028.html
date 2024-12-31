@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>01_if문</title>
+
+    <script>
+        /*
+        *제어문 종류 
+        1. 조건문 (if문/else문/else if문)
+        - 조건에 따라 특정코드 실행 
+        - 코드를 실행하기 위한 조건식!
+
+        2. 선택문 (switch문)
+        - 일치하는 경우의 값이 있을 경우에 특정코드 실행 
+
+        3. 반복문 (while문/do while문/for문)
+        - 코드를 지정한 횟수만큼 반복해서 실행
+        - 반복을 위한 조건식 설정!
+        */
+
+        /*
+        1. 조건문 
+        - 조건식의 값이 참(true)인지 거짓(false)인지에 따라 코드 실행
+        
+        (1) if문 : 조건식을 만족(true)할 경우에만 코드 실행 
+
+        ///// 기본형 ////////////////////////
+
+            if(조건식){
+                실행코드;
+            }
+
+        /////////////////////////////////////
+        */
+
+        //if문 기본예제
+        var num = 10;
+
+        if(num < 500){ // 10<500 true -> 코드 실행
+            document.write("딩동댕<br>");
+        }
+
+        if(num > 500){ // 10>500 false -> 코드 실행x
+            document.write("실행될까요?");
+        }
+
+        if(0){ //숫자0은 무조건 false 반환!
+            document.write("앗 이런ㅠㅠ");
+        }
+
+        if("green"){
+            document.write("그린이입니다.<br>");
+        }
+
+        var result = Boolean("내이름");
+        console.log(result);
+
+        console.log(Boolean("")); //false
+        console.log(Boolean(1)); //true
+
+        //if문 예제1
+        /* var walkAmount = Number(prompt("하루 걷는 양은 몇 보인가요?", "0"));
+
+        if(walkAmount >= 8000){
+            document.write("매우 좋은 습관을 지니고 계시는군요!<br>");
+        } */
+
+        //if문 예제2
+        var userName = prompt("방문자의 이름을 입력해 주세요.");
+
+        if(userName){
+            document.write(userName + "님 반갑습니다!!!");
+        }
+
+        console.log(Boolean(userName));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

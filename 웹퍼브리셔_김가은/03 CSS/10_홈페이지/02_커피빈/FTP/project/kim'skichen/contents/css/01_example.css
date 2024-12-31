@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 1200px;
+    background-color: greenyellow;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 30px;
+    
+}
+.title h1 {
+   margin-left: 20px;
+  }
+
+.title p { 
+   margin-left: 20px;
+}
+
+
+section .menuall {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+ 
+    background-color: lightpink;
+
+}
+
+section .menuall > div {
+    width: 25%;
+    float: left;
+   
+    outline: 2px solid blue;
+}
+
+section .menuall > div img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: inset;
+}
+section .menuall > div h2 {
+
+}
+section .menuall > div p {
+
+}
+

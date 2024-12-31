@@ -1,0 +1,10 @@
+*html 웹표준 검사 
+https://validator.kldp.org/
+https://validator.w3.org/
+
+*css 웹표준 검사
+https://css-validator.kldp.org/ (이 사이트가 오류가 자주 나서 두번째 사이트 이용을 추천해요)
+https://jigsaw.w3.org/css-validator/
+
+*웹접근성 검사 
+https://accessibility.kr/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_font-em</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      #para {
+        font-size: 6em;
+        /*   1em=16px,
+        16px*6=96px  */
+      }
+      #para p {
+        font-size: 3em;
+        /* font-size: 3em; */
+        /* 48px / 96px = 0.5 */
+        font-size: 0.5em;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="para">
+        가변적인 폰트1
+        <p>가변적인 폰트2</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,582 @@
+@charset "utf-8";
+
+
+/* 상단메뉴 로그인바 웹버전 index.css */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .login_box {
+    position: absolute;
+    right: 0%;
+    margin-top: 20px;
+}
+
+header .login li {
+    float: left;
+    margin-left: 30px;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+header nav ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+header nav ul li {
+    float: left;
+    width: 16.666%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+/*********  본문 css ****************/
+
+main {
+    height: calc(100% - 163px);
+
+    /*  background-image: url(../imgs/main/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  */
+    position: relative;
+}
+main .slide-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main ul.gallery {
+    width: 400%;
+   
+    position: relative;
+    left: 0;
+}
+
+main ul li {
+    width: 25%;
+    float: left;
+    transition: all 1s ease-in-out;
+}
+main ul li img {
+    width: 100%;
+    display: block;
+}
+
+main .slide-box h2 img {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+main .slide-box h2 {
+    font-size: 32px;
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main .main_content h2 {
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+}
+main .main_content p {
+    position: absolute;
+    right: 20%;
+    bottom: 17%;
+    font-size: 18px;
+}
+
+/*  이벤트영역 css  */
+
+article .event {
+    margin: 0 auto;
+    background-color: rgba(135, 153, 170, 0.658);
+    border-top: 10px solid lightgray;
+    border-bottom: 10px solid lightgray;
+}
+
+article.artnlife {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(145, 194, 145, 0.3);
+
+}
+
+article.artnlife h2 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+article.artnlife P.news {
+    text-align: left;
+    color: white;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-left: 250px;
+
+}
+
+article.artnlife P.view {
+    text-align: right;
+    font-size: 12px;
+    padding-right: 50px;
+    margin-right: 300px;
+    margin-bottom: 10px;
+
+}
+
+article.artnlife P.view a {
+    color: white;
+}
+
+article.artnlife .event_news {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+article.artnlife .event_news li {
+    width: 22%;
+    float: left;
+    text-align: center;
+    margin-right: 3%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+article.artnlife .event_news img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+article.artnlife .event_news li a:hover img {
+    transform: scale(1.2);
+}
+
+article .life_mall {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom: 100px;
+}
+
+
+article .life_mall .mall_box {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+article .life_mall .mall_box .photo {
+    width: 100%;
+    display: block;
+   
+}
+article .life_mall a img {
+    box-shadow: 1px 0px 10px 0.5px rgb(163, 172, 182) ;
+}
+article .life_mall .mall_box .wordbox {
+    padding-top: 10px;
+}
+
+
+/*  영역3. artist 영역 css */
+
+article.artist {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(243, 217, 179, 0.5);
+    /* padding: 30px; */
+    padding: 30px 0 120px;
+
+}
+
+article.artist .logo_artist {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+article.artist .tab-menu ul {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+article.artist .tab-menu ul li {
+    float: left;
+    margin-left: 40px;
+    width: 260px;
+    height: 40px;
+    background-color: rgb(66, 55, 42);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 1px 1px 5px 0.3px rgb(148, 113, 83);  /* 가로, 세로, 번짐, 크기, 색상  */
+    /* position: relative; */
+}
+
+/* article.artist ul li:hover {
+    background-color: rgb(238, 121, 12);
+} */
+
+article.artist ul li a {
+    color: white; 
+ 
+} 
+
+/* 선택된 탭메뉴 디자인 */
+article.artist ul li.on {
+    background-color: #FF885B;
+    border: 2px solid #FF885B;
+}
+article.artist ul li.on a {
+    color: #fff;
+}
+
+
+/* 선택한 탭메뉴의 내용이 보여질 공간 -> .tab-content */
+article.artist .tab-content {
+   width: 1280px;
+   margin: 0 auto;
+}
+
+article.artist .tab-content > div{
+    /* 각 컨텐츠 덩어리! */
+    width: 100%;
+    display: none; 
+}
+article.artist .tab-content > div.on {
+    width: 100%;
+    display: block;
+}
+article.artist .tab-content img {
+    width: 100%;
+    display: block;
+}
+
+article.artist .tab-content > div img {
+    float: left;
+    width: 45%;
+    margin-left: 30px;
+    height: 500px;
+    border: 1px solid #999;
+}
+
+/***********  ai *******************/
+
+article.ai {
+    width: 100%;
+    height: 1000px;
+    background-image: url(../imgs/ai/ai01.jpg);
+    background-repeat: no-repeat;
+    /* margin: 0 auto; */
+    /* position: relative; */
+}
+
+article.ai h2 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/* 2024.11.15 */
+article.ai .content {
+    /* outline: 3px solid red; */
+    width: 100%;
+    height: calc(100% - 115px);
+
+    position: relative;
+    /* 하위요소의 기준!!! */
+}
+
+article.ai .content .gallery-list {
+
+    position: absolute;
+    right: 30%;
+    bottom: 38%;
+}
+
+article.ai .content .gallery-list h3 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+article.ai .content .gallery-list .ai_artist a {
+    color: white;
+}
+
+article.ai .ai-img {}
+
+article.ai .ai-img>div img {
+    width: 300px;
+}
+
+article.ai .ai-img .ai-img-1 {
+    position: absolute;
+    left: 8%;
+    top: 10%;
+}
+
+article.ai .ai-img .ai-img-2 {
+    position: absolute;
+    right: 230px;
+    top: 377px;
+}
+
+/* 투명박스 공통 디자인 */
+article.ai .ai-img .ai-box {
+    width: 300px;
+    height: 280px;
+    background-color: rgba(130, 138, 142, 0.3);
+    font-size: 0;
+
+    position: absolute;
+}
+
+article.ai .ai-img .ai-box.tb1 {
+    left: 457px;
+    top: 88px;
+}
+
+article.ai .ai-img .ai-box.tb2 {
+    left: 152px;
+    top: 372px;
+}
+
+article.ai .ai-img .ai-box.tb3 {
+    right: 230px;
+    top: 91px;
+}
+
+/**********************************************************/
+/* article.ai h3 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 700px;
+    bottom: 350px;
+
+}
+
+article.ai ul {
+    position: absolute;
+    right: 700px;
+    bottom: 260px;
+}
+
+article.ai ul a {
+    color: white;
+}
+
+article.ai .aiimg02 img {
+    width: 300px;
+    position: absolute;
+    left: 350px;
+    top: 180px;
+}
+
+article.ai .aiimg03 img {
+    width: 300px;
+    position: absolute;
+    right: 360px;
+    bottom: 100px;
+}
+
+article .ai_box li {
+    width: 300px;
+    height: 280px;
+    background-color: rgba(130, 138, 142, 0.3);
+    font-size: 0;
+}
+article .ai_box li.box1 {
+    position: absolute;
+    background-color: aqua;
+    top: 0px;
+    left: 0px;
+}
+article .ai_box li.box2 {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+article .ai_box li.box3 {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+} */
+
+/* ********  ourlife n phpto ***************/
+
+article.photo {
+    width: 100%;
+    background-color: #f7e0d4;
+    padding-top: 50px;
+}
+
+article.photo h2 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+article.photo .photo_content {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+article.photo .photo_content .photo_box {
+    width: 22%;
+    float: left;
+    margin-left: 3%;
+}
+
+article.photo .photo_content .photo_box .photo img {
+    width: 100%;
+    height: 210px;
+    border: 1px solid #FF885B;
+    border-radius: 10px;
+}
+
+article.photo .photo_content .photo_box .word {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+
+footer {
+    width: 100%;
+    background-color: rgba(223, 236, 246, 0.5);
+}
+
+footer .cont_logo h2 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+footer .contact {
+    width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+footer .contact .cont_artbox {
+    width: 300px;
+    height: 500px;
+    background-color: rgba(143, 169, 178, 0.2);
+    border: 1px solid #3c4c73;
+    border-radius: 10px;
+}
+
+footer .contact .cont_artbox h4 {
+    padding-left: 30px;
+    padding-top: 30px;
+    color: #333;
+
+}
+
+footer .contact .cont_artbox p {
+    color: #333;
+    padding-left: 30px;
+    padding-top: 8px;
+}
+
+footer .contact .cont_company {
+    width: 800px;
+    height: 210px;
+    background-color: rgba(143, 169, 178, 0.2);
+    border: 1px solid #3c4c73;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+footer .contact .cont_company h4 {
+    color: #333;
+    padding-left: 125px;
+    padding-top: 30px;
+
+}
+
+footer .contact .cont_company p {
+    color: #333;
+    padding-left: 280px;
+}
+
+footer .contact .cont_news {
+    width: 800px;
+    height: 210px;
+    background-color: rgba(143, 169, 178, 0.2);
+    border: 1px solid #3c4c73;
+    border-radius: 10px;
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+}
+
+footer .contact  h4 {
+    font-weight: 600;
+    color: #333;
+    padding-left: 125px;
+    padding-top: 30px;
+}
+
+footer .contact .cont_news .news {
+    color: #333;
+    padding-left: 300px;
+
+}
+
+footer .contact button img {
+    width: 70px;
+    background-color: rgb(67, 34, 173);
+    position: absolute;
+    left: 120px;
+    bottom: 40px;
+}
+
+footer .cont_box {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+    background-color: rgb(89, 87, 84);
+    text-align: center;
+}

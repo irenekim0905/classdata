@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09-속성선택자</title>
+    <style>
+        input {
+            padding: 10px;
+        }
+
+        /* 속성 선택자 */
+        input[placeholder] {
+            background-color: greenyellow;
+        }
+
+        /* 속성값 선택자 */
+        input[type="password"] {
+            background-color: pink;
+        }
+        /* 시작이 같은것 찾기 : ^= */
+        a[class^="link"] {
+            background-color: palevioletred;
+        }
+        /* 끝이 같은것 찾기 : $= */
+        a[href$="net"] {
+            border: 2px sold blue; 
+        }
+        /* 같은 값 모두 찾기 */
+        a[href*="www"] {
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="아이디 입력">
+    <input type="password">
+    <input type="email" placeholder="이메일 입력">
+    <ul>
+        <li><a href="http://wwww.naver.com" class="link1">네이버</a></li>
+        <li><a href="http://www.google.com" class="link2">구글</a></li>
+        <li><a href="http://www.daum.net" class="link3">다음</a></li>
+    </ul>
+</body>
+
+</html>

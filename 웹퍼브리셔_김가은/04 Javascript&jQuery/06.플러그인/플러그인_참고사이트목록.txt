@@ -1,0 +1,14 @@
+1. bx slider(가장 많이 사용됨/옵션이 다양)
+http://bxslider.com/
+
+2. flex slider
+http://flexslider.woothemes.com/
+
+3. colorbox
+http://www.jacklmoore.com/colorbox/
+
+4. Swiper(모바일에서 많이 사용되는 플러그인)
+http://idangero.us/swiper/#.WIay_lOLTcs
+
+5. HTML Drive 
+http://www.htmldrive.net

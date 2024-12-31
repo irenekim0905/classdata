@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_examp;e_append_prepend</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*
+         append(), appendTo()
+         선택한 요소의 '하위요소'로 맨 앞에 새 요소를 생성하거나 추가
+         기존 자식 요소를 맨 앞으로 이동
+
+         $('기준요소').prepend('새 요소');
+         $('새 요소').prependTo('기준요소');
+
+        */
+
+        $(document).ready(function(){
+            // 이전 또는 다음 버튼을 눌러서 이미지를 맨 앞으로 또는 맨 뒤로 이동 시키시오
+            $('#prepend').click(function(){
+              
+               // $('.img-box').prepend($('.img-box .box:last'));
+
+                $('.img-box .box').last().prependTo('.img-box');
+
+            });
+
+            $('#append').click(function(){
+                $('.img-box').append($('.img-box .box:first'));
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button id="prepend">prepend (이전)</button>
+        <button id="append">append (다음)</button>
+    </div>
+
+    <div class="img-box">
+
+        <div class="box">
+            <img src="image/cake1.jpg" alt="">
+            <h2>케이크 1</h2>
+        </div>
+        <div class="box">
+            <img src="image/cake2.jpg" alt="">
+            <h2>케이크 2</h2>
+        </div>
+        <div class="box">
+            <img src="image/cake3.jpg" alt="">
+            <h2>케이크 3</h2>
+        </div>
+
+    </div>
+
+    <style>
+     .container {
+        width: 750px;
+        margin: 50px auto;
+        text-align: center;
+     }
+     .container button {
+        font-size: 24px;
+
+     }
+     .img-box {
+        margin: 30px;
+        padding: 10px;
+        outline: 3px solid plum;
+     }
+     .img-box::after {
+        content: "";
+        display: block;
+        clear: both;
+     }
+
+     .img-box .box {
+        float: left;
+
+     }
+     .img-box .box~.box {
+        margin-left: 10px;
+     }
+     .img-box .box h2 {
+        margin: 0;
+     }
+
+
+    </style>
+    
+</body>
+</html>

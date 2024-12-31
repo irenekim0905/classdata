@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_toggleClass()</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+     /*
+      toggleClass()
+      :선택한 요소에 크래스가 없으면 클래스를 생성하고 >> addClass
+      클래스가 있을 경우에는 클래스를 삭제 >> removeClass()
+      기본형
+      &('요소선택').toggleClass('클래스명');
+     */
+    </script>
+</head>
+<body>
+    <button>toggleCLASS 'main'</button>
+    <p>This is a paragraph</p>
+    <p class="bold">This is a paragraph</p>
+
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+        .main {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+
+    <script>
+        $('button').click(function(){
+            // alert('이벤트발생!!');
+            // $('p').toffleClass('main');
+            // $('p').toggleClass('bold');
+            $('p').toggleClass('main bold');
+        });
+
+    </script>
+</body>
+</html>

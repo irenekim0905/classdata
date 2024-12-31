@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_before()_after()</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*
+        1. before(), insertBefore()
+        : 선택한 요소의 이전 위치에 새 요소를 생성
+        $('기준요소').before('새요소');
+        $('새 요소').insertBefore('기준요소');
+
+        2. after(), insertAfter()
+        : 선택한 요소의 다음 위치에 새 요소를 생성
+
+        */
+        $(function(){
+            //before
+            //$('#wrap p').before('<p>나는 before </p> '); // 모든 p태그 이전요소로 생성!
+            $('#wrap p').eq(1).before('<p>나도 beore!!!!!!!! </p>');
+            $('#wrap p').eq(1).css('background-color', "pink");
+
+            // after
+            $('#wrap p').eq(2).after('<p>너는 after!!!!!!!!</p>');
+            $('<p>너는 insertAfter!!!!!!!!</p>').insertAfter('#wrap p:eq(1)');
+
+            //요소가 추가되면 인텍스 번호가 바뀌게 된다!
+
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p class="red">내용1</p>
+        <p class="red">내용2</p>
+        <p class="red">내용3</p>
+    </div>
+<style>
+    #wrap {
+        border: 3px solid skyblue;
+    }
+
+    #wrap .red {
+        color: red;
+    }
+</style>
+
+</body>
+</html>

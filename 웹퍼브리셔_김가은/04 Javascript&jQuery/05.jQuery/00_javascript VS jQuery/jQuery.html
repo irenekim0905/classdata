@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        /* 
+
+        1. 제이쿼리 기본 환경 만들기
+           (1)CDN을 (Content Delivery Network)연결 
+           (2)JQuery 라이브러리 파일 연결
+           
+           *CDN 이란?
+           : 웹 콘텐츠(HTML페이지, Javascript 파일, 스타일시트, 이미지, 동영상 등을 다운로드할 때 자동으로 사용자와 가까운 서버에서
+           전송 )
+
+        2. 제이쿼리 시작코드 만들기
+           (1) jQuery(document).ready(function(){
+           실행코드;
+           });
+           (2) $(document).ready(function(){
+            실행코드;
+            });
+           $ == jQuery
+           $() >> 제이쿼리 함수를 호출했다!
+
+        3. 제이쿼리 기본 구분
+           &(selector).action();
+
+           $ : 제이쿼리를 정의/접근하기 위해 약속된 기호
+           (selector) : HTML 요소를 선택하는것 (css 선택자를 기반으로 함!)
+           action() : 
+
+        */
+
+        $(document).ready(function(){
+            $('#color').css('color','red');
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+            <li class="one">첫번째</li>
+            <li class="two">두번째</li>
+            <li class="three"><span id="color">세번째 (여기에 css속성 적용해 보네요.)</span></li>
+            <li class="four">네번째</li>
+        </ul>
+    
+    </div>
+
+     <script>
+
+     //  $('.three').css('color', 'blue');
+     //  $('#color').css('color','red');
+         $('li span').css('background-color','orange');
+     //  $('.four').css('color','red');
+
+     </script>
+
+   
+
+</body>
+
+
+</html>

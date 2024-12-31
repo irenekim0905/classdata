@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>05_backgroung-attachment</title>
+        <style>
+        /* 
+        attach 붙이다 <-> detach 분리하다
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: blueviolet;
+
+        }
+        .art1 {
+            width: 100% ;
+            height: 400px;
+            background-image: url(images/img01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+           
+        }
+        .art2 {
+            width: 100%;
+            height: 1000px;
+            background-color: chocolate;
+        }
+        .art3 {
+            width: 100%;
+            height: 400px;
+            background-image: url(images/img02.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        /* 
+        background-attachment로 배경이미지가 고정되었을 때는 
+        background-position 속성이 적용디지 않는다.
+        */
+        footer {
+            width: 100%;
+            height: 300px;
+            background-color: darkcyan;
+        }
+
+        </style>
+    </head>
+    <body>
+        <header>header</header>
+        <section>
+            <article class="art1">article1</article>
+            <article class="art2">article2</article>
+            <article class="art3">article3</article>   
+        </section>
+
+        <footer>footer</footer>
+        
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-menu2</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        header {
+            background-color: bisque;
+
+        }
+        header h1.logo {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        header #menu {
+            width: 100%;
+            height:calc(100% - 100px) ;
+            background-color: dodgerblue;
+        }
+       
+
+        #menu .gnb > li {
+            position: relative; /* .lnb의 기준*/
+            outline: 2px solid greenyellow;
+            line-height: 60px;
+            
+        }
+
+        #menu .gnb > li a:hover {
+            background-color: #ccc;
+            color: #f00 !important;
+        }
+
+        #menu .gnb > li:hover .lnb {
+            display: block;
+        }
+
+        .lnb {
+            background-color: #d9d9d9;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            display: none;
+            transition: all 3s, ease-out;
+
+        }
+        .lna a {
+        font-size: 18px;
+       }
+
+       .lnb 
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">LOGO</h1>
+            <nav id ="menu">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">빙그레</a>
+                    </li>
+
+                    <li>
+                        <a href="#">제품소개</a>
+                        <ul class="lnb">
+                            <li><a href="#">아이스크림</a></li>
+                            <li><a href="#">스낵/디저트</a></li>
+                            <li><a href="#">커피/주스</a></li>
+                            <li><a href="#">수출제품</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">뉴스룸</a>
+                        <ul class="lnb">
+                            <li><a href="#">새소식</a></li>
+                            <li><a href="#">보도자료</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </nav>
+        
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dropdown_menu1</title>
+    <script src="jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // mouseenter / mouseleave >> hover()
+            // mouseover / mouseout 
+            $('.depth01 > li').mouseenter(function(){
+
+                $(this).find('.depth02').slideDown();
+
+            });
+
+            $('.depth01 > li').mouseleave(function(){
+                $('.depth02').stop().slideUp();
+
+            });
+
+            //$('.depth01 > li').hover();
+            //$('.depth01 > li').mouseenter().mouseleaver();
+        }); // 마지막뚜껑
+
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #999
+        }
+
+        h1 {
+            width: 100%;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+
+        }
+
+        nav {
+            width: 100%;
+            background: #222;
+
+        }
+
+
+        nav ul.depth01 {
+            width: 1050px;
+            margin: 0 auto;
+            /* outline: 2px solid lime; */
+
+        }
+
+        nav ul.depth01::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        nav ul.depth01  > li {
+            float: left;
+            width: 14.28%;
+            text-align: center;
+            position: relative; 
+
+          /*  outline: 2px solid greenyellow; */
+        }
+
+        nav ul.depth01>li>a {
+            font-size: 18px;
+            line-height: 50px;
+            display: block;
+        }
+
+        nav ul.dept01>li>a:hover {
+            color: chartreuse;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        nav ul.depth01>li>ul.depth02 {
+            background-color: #333;
+            position: absolute;
+            width: 100%;
+
+            left: 0;
+            top: 50px;
+
+            display: none;
+        }
+
+        ul.depth02 > li {
+          /*  margin-bottom: 10px; */
+          padding: 5px 0;
+        
+        }
+        ul.depth02 > li a:hover {
+          /*  line-height: 30px; */
+        text-decoration: underline;
+        }
+
+    </style>
+
+   
+</head>
+
+<body>
+    <h1>jquery드롭다운 메뉴</h1>
+    <nav>
+        <ul class="depth01">
+            <li>
+                <a href="#">HOME</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Photoshop</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Profile</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Javascript</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Jquery</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Css</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">HTML</a>
+                <ul class="depth02">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+</body>
+
+</html>

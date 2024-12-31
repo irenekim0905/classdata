@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>04_아이디선택자</title>
+
+    <script src="jquery-1.7.2.min.js"></script>
+
+    <script>
+
+        /*
+        html() 메서드 
+        1) $(선택자).html();
+        - 선택한 요소의 하위요소를 문자열로 반환
+
+        2) $(선택자).html('새 요소');
+        - 선택한 요소의 하위요소를 전부 제거하고 지정한 새 요소를 삽입(생성)
+
+        *자바스크립트 innerHTML 속성과 유사
+        */
+
+        $(function(){
+
+            //좋아하는 계절을 클릭하면
+            //계절에 대한 설명으로 내용을 바꾸고 css 변경
+
+            $('#spring').click(function(){
+
+                $(this).text('예쁜 꽃이 만발한 봄이예요!').css({
+                    backgroundColor: 'plum',
+                    fontSize: '24px'
+                });
+
+            });
+
+            $('#summer').click(function(){
+                $('#summer').text('여름에는 물놀이!!!!').css({
+                    color: 'blue',
+                    fontSize: '30px'
+                });
+            });
+
+            $('#fall').click(function(){
+                $(this).html('<p>단풍 구경 갈 시간~~~</p>');
+            });
+
+            $('#winter').click(function(){
+                $(this).html('<img src="https://png.pngtree.com/thumb_back/fw800/background/20230901/pngtree-winter-landscape-in-winter-forest-in-winter-image_13135756.jpg" alt="" title="겨울풍경">');
+            });
+
+
+            // html() 반환
+            // 태그까지 문자열로 반환 
+            var result = $('.msg').html();
+            console.log(result);
+            console.log($('.msg').text());
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <h1 class="title">한국의 4계절</h1>
+    
+    <ul class="list">
+        <li id="spring"">봄</li>
+        <li id="summer">여름</li>
+        <li id="fall">가을</li>
+        <li id="winter">겨울</li>
+    </ul>
+
+    <div class="msg">
+        <p>겨울이 오면 스키장으로!!!!!</p>
+    </div>
+
+    <style>
+        .list li p {
+            color: red;
+            font-weight: bold;
+        }
+        .list li img {
+            width: 600px;
+        }
+    </style>
+
+    
+</body>
+</html>

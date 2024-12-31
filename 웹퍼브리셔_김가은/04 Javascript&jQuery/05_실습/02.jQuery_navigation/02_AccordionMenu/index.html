@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-menu1</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li {
+            list-style: none;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        #menu {
+            width: 250px;
+            /* width: 10%; */
+            height: 100%;
+
+            background-color: dodgerblue;
+            text-align: center;
+            font-size: 20px;
+        }
+        #menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+        #menu .gnb > li {
+            /* outline: 2px solid lime; */
+        }
+        #menu .gnb > li > a {
+            line-height: 60px;
+        }
+        #menu .gnb > li > a:hover {
+            background-color: lightblue;
+            color: dodgerblue;
+        }
+
+        /* 서브 메뉴 디자인 */
+        .lnb {
+            background-color: #d9d9d9;
+            line-height: 50px;
+
+            /* 구현을 위한 초기설정!
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s ease-out;
+            */
+        } 
+        .lnb a {
+            font-size: 18px;
+        }
+       .lnb > li > a:hover {
+            background-color: #ccc;
+            color: #f00 !important;
+            font-weight: bold;
+            text-decoration: underline !important;
+        }
+
+        #menu .gnb > li:nth-child(2):hover .lnb {
+            height: 200px;
+        }
+        #menu .gnb > li:nth-child(3):hover .lnb {
+            height: 100px;
+        }
+
+       
+
+    </style>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+
+            // 초기설정
+            $('.lnb').hide().first().show();
+            // 대메뉴를 클릭하면, 클릭된 대메뉴의 하위메뉴 나오기
+            // 클릭대상 : .gnb > li 또는 .gnb > li > a
+            $('.gnb > li > a').click(function(e){
+
+                // a의 기본기능 막기
+                e.preventDefault();
+
+                // 클릭된 대메뉴(a)의 서브메뉴(.lnb/형제요소)가 slideDown으로 보여지기
+                // 클릭된 대메뉴의 서브메뉴 외에 다른 서브메뉴는 slideUp()
+              //  $(this).next().slideDown().parent().siblings().find('.lnb').slideUp();
+
+                // slideToggle() 사용하기
+                $(this).next().slideToggle().parent().siblings().find('.lnb').slideUp();
+
+            });
+
+        }); 
+
+
+    </script>
+
+</head>
+<body>
+
+    <nav id="menu">
+        <ul class="gnb">
+            <li>
+                <a href="#">빙그레</a>
+                <ul class="lnb">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">BI</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">제품소개</a>
+                <ul class="lnb">
+                    <li><a href="#">아이스크림</a></li>
+                    <li><a href="#">스낵/디저트</a></li>
+                    <li><a href="#">커피/주스</a></li>
+                    <li><a href="#">수출제품</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">뉴스룸</a>
+                <ul class="lnb">
+                    <li><a href="#">새소식</a></li>
+                    <li><a href="#">보도자료</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+    </nav>
+
+    
+</body>
+</html>

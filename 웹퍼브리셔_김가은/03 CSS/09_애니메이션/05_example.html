@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05_example</title>
+    <style>
+    
+       /* * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .content .box {
+            float: left;
+            margin: 10px;
+        }
+
+        
+
+        .img-box {
+            width: 300px;
+            background-color: black;
+        
+        }
+
+        .img-box img:hover {
+            opacity: 0.5;
+        }
+
+        .box .info {
+            height: 150px;
+            color: white;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5); 
+        }
+        .box .info:hover {
+            transform: translateY(-200px);
+            transition: 2s;
+        }
+        .box .info h2 {
+           margin-top: 20px;
+        }
+        .box .info p {
+            margin-top: 20px;
+        } */
+
+        .item-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .item-list::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .item-list li {
+            outline: 2px solid red;
+            float: left;
+            margin-right: 20px;
+
+            position: relative; /* .caption의 기준 */
+            overflow: hidden;
+        }
+        .item-list li img {
+           display: block; 
+          /* float: left; */
+
+        }
+        .item-list li .caption {
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            text-align: center;
+            padding-top:  20px;
+            /* width: 300px;
+            height: 180px; */
+            width: 100%;
+            height: 90%;
+
+            position: absolute;
+            left: 0;
+            /* 1)아래에서 위로 올라오게 하기 위한 초기 설정 
+            top: 200px; */
+            /* top: 100%; */
+            /* 2)서서히 나타나기 초기설정 */
+            /* top: 0;
+            opacity: 0; */
+            top: 0;
+            transform: scale(0);
+
+            transition: all 0.7s;
+        }
+        .item-list li:hover .caption {
+             /* 1. 아래에서 위로 올라오기  */
+             /* top: 0; */
+             /* transform: translateY(-200px); */
+             /* 2. 서서히 나타나기 */
+            /*  opacity: 1; */
+            /* 가운데서 커지기 */
+            transform: scale(1);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="content clear">
+        <div class="box">
+            <div class="img-box"><img src="images/prod1.jpg" alt="인형사진"></div>
+
+            <div class="info">
+                <h2>상품1</h2>
+                <h2>상품1 설명 텍스트</h2>
+                <p>가격: 12,345원</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img-box"><img src="images/prod2.jpg" alt="가방진열장사진"></div>
+            <div class="info">
+                <h2>상품2</h2>
+                <h2>상품2 설명 텍스트</h2>
+                <p>가격: 12,345원</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img-box"><img src="images/prod3.jpg" alt="크리스마스분위기사진"></div>
+            <div class="info">
+                <h2>상품3</h2>
+                <h2>상품3 설명 텍스트</h2>
+                <p>가격: 122,345원</p>
+            </div>
+        </div>
+
+    </div> -->
+
+    <h1>신상품 목록</h1>
+    <ul class="item-list">
+        <li>
+            <img src="images/prod1.jpg" alt="상품1">
+            <div class="caption">
+            <h2>상품1</h2>
+            <p>상품1 설명 텍스트</p>
+            <p>123,456원</p>
+        </div>
+        </li>
+
+        <li>
+            <img src="images/prod2.jpg" alt="상품2">
+            <div class="caption">
+            <h2>상품2</h2>
+            <p>상품2 설명 텍스트</p>
+            <p>23,456원</p>
+        </div>
+        </li>
+
+        <li>
+            <img src="images/prod3.jpg" alt="상품3">
+            <div class="caption">
+            <h2>상품3</h2>
+            <p>상품3 설명 텍스트</p>
+            <p>13,456원</p>
+        </div>
+        </li>
+    </ul>
+
+
+
+
+
+
+</body>
+
+</html>

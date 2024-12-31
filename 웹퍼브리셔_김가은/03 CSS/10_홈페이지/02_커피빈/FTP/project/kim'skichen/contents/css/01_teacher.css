@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* 리셋 할때 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+{
+font-size: 100%;
+font-weight: normal;
+}
+
+/* 공통으로 사용할 디자인 
+float 해제를 위힌 클래스 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.container {
+    width: 100%;
+    background-color: rgb(216, 236, 243);
+    padding: 100px 0;
+}
+
+.recipe {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.recipe .title {
+    margin-bottom: 50px;
+}
+
+.recipe .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+.recipe .title p {
+    font-size: 20px;
+    color: #555;
+}
+
+.recipe .content .box {
+    
+   /* 전체공간의 1/4씩 사용 (여백까지 포함)
+   width: 25%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box; */
+   /* 여백을 제외한 너비설정 */
+   float: left;
+   width: 23.5%;
+
+}
+
+.recipe .content .box ~.box {
+    margin-left: 2%;
+}
+
+/* 
+float된 요소에 width값이 설정 되지 않았을경우 내용만큼의 너비를 갖는다. */
+.recipe .content .box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+
+}
+
+.recipe .content .box .info {
+    padding: 0 10px;
+}
+
+.recipe .content .box .info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.recipe .content .box .info p {
+ color: #666;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>teacher_0904</title>
+    <style>
+        .history h2 {
+            border: 1px solid #e1e1e1;
+            border-top: 3px solid black;
+            font-size: 1.4em;
+            padding: 20px 20px 30px;
+        }
+
+        .historylist {
+            padding: 0;
+            list-style: none;
+        }
+
+        .historylist li {
+            border: 1px solid #ccc;
+            border-top: 3px solid #333;
+            margin-bottom: 20px;
+            line-height: 60px;
+            text-indent: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .category {
+            border: 1px solid #999;
+            width: 300px;
+            padding: 30px 20px;
+        }
+
+        .category h2 {
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .category .links a {
+            line-height: 26px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* .category .links a {
+        color: #333;
+        text-decoration: none; 
+        border-right: 1px solid #999;
+        padding-right: 7px;
+      } */
+
+        /* .category .links a:last-child {
+        border-right: none ;
+        padding-right: 0; 
+      }*/
+
+        .category .links a~a {
+            color: #333;
+            border-left: 1px solid #555;
+            padding-left: 7px;
+        }
+
+        .category .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* tv box */
+        .tvbox {
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            margin-top: 40px;
+            padding: 100px 40px;
+        }
+
+        .tvbox h2, .tvbox p {
+           margin: 0;
+        }
+
+        .tvbox .cf {
+            border:2px solid #f47321;
+            color: #f47321;
+            text-transform: uppercase;
+            font-size: 14px;
+            /* 너비설정 1번
+            width: 70px;
+            text-align: center;
+            line-height: 30px; 
+            */
+            /* 너비설정 2번 인라인블럭 : 글짜의 크기만큼 자동 감지 
+            패딩 설정 : 위아래 6px 좌우 12px 
+            */
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 10px;
+        }
+
+       .tvbox h2 {
+        font-size: 24px;
+        line-height: 1.7;
+        margin-bottom: 30px; 
+       }
+
+      .tvbox h2 a {
+        color: #333;
+        text-decoration: none;
+      }
+      .tvbox h2 a:hover {
+        text-decoration: underline;
+      }
+      .tvbox p {
+        line-height: 1.6;
+        color: #6d6d6d;
+      }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="history">
+        <h2>2017 ~ 현재</h2>
+        <h2>2002 ~ 2017</h2>
+    </div>
+
+    <ul class="historylist">
+        <li>2021 ~ 현재</li>
+        <li>2017 ~ 2020</li>
+        <li>2010 ~ 2026</li>
+    </ul>
+
+    <div class="category">
+        <h2>세부 카테고리</h2>
+        <div class="links">
+            <a href="#">이혼 가정 </a>
+            <a href="#">상속</a>
+            <a href="#">금전</a>
+            <a href="#">형사 범죄</a>
+            <a href="#">교통사고</a>
+            <a href="#">노무</a>
+            <a href="#">부동산</a>
+            <a href="#">지적재산권</a>
+            <a href="#">세무</a>
+            <a href="#">국제.외국인</a>
+            <a href="#">의료</a>
+            <a href="#">기업법무</a>
+            <a href="#">행정사건</a>
+            <a href="#">재판 분쟁</a>
+            <a href="#">민사 기타</a>
+
+        </div>
+    </div>
+
+    <div class="tvbox">
+        <div class="cf">TV CF</div>
+
+        <h2><a href="#">2020 홀리데이 봄 컬렉션<br>Holiday by Barrel</a> </h2>
+        <p>
+            올드스쿨을 컨셉으로 캐주얼 무드의 룩을 선보이는<br>
+            2020홀리데이 <b>서퍼스 클럽(Sunfer's Club)</b>
+        </p>
+    </div>
+
+</body>
+
+</html>

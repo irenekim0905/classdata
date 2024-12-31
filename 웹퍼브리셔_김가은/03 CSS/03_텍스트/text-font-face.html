@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-font-face.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <style>
+        /* 구글 웹폰트 import로 가져오기 */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+        /*  웹폰트 변환 및 설정 
+          font-family */
+
+        @font-face {
+            font-family: "훈하늘보리R";
+            src: url('font/훈하늘보리R.eot')format('embedded-opentype'), url('font/훈하늘보리R.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: '1HoonSkybori R';
+            src: url('font/HoonSkybR.eot');
+            src: url('font/HoonSkybR.eot?#iefix') format('embedded-opentype'),
+                url('font/HoonSkybR.woff2') format('woff2'),
+                url('font/HoonSkybR.woff') format('woff');
+
+            font-family: '1HoonSkybori R';
+            src: url('font/HoonSkybR.eot');
+            src: url('HoonSkybR.eot?#iefix') format('embedded-opentype'),
+                url('HoonSkybR.woff2') format('woff2'),
+                url('HoonSkybR.woff') format('woff');
+
+        }
+
+        h2 {
+            color: red;
+        }
+
+        .serif {
+            font-family: Times, 'Times New Roman' serif;
+        }
+
+        .sans-serif {
+            font-family: '돋움', arial, jelvetica sans-serif;
+        }
+
+        .hun {
+            font-family: "훈하늘보리R";
+            font-size: 32px;
+        }
+
+        .hun2 {
+            font-family: '1HoonSkybori R';
+            font-size: 20px;
+        }
+
+        .hun3 {
+            font-family: '1HoonSkybori R';
+            color: red;
+        }
+
+        .nanum {
+            .nanum-myeongjo-regular {
+                font-family: "Nanum Myeongjo", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+        }
+
+        .dohyeon {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+        }
+
+        .dongle300 {
+            font-family: "Dongle", sans-serif;
+            font-weight: 300;
+            font-size: 40px;
+        }
+
+        .dongle400 {
+            font-family: "Dongle", sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+        }
+
+        .dongle700 {
+            font-family: "Dongle", sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+        }
+
+        .juaregular {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>font-family</h2>
+    <p class="serif">serif</p>
+    <p class="sans-serif">san-serif</p>
+
+    <h2>font-face</h2>
+    <p>기본폰트</p>
+    <p class="hun">훈하늘보리R</p>
+    <p class="hun2">훈하늘보리 두번째</p>
+    <p class="hun3">훈하늘보리 세번째</p>
+
+    <h2>구글웹폰트</h2>
+    <p class="dohyeon">배달의 민족</p>
+    <p class="nanum">나눔명조</p>
+
+    <p class="dongle300">폰트적용하기300</p>
+    <p class="dongle400">폰트적용하기400</p>
+    <p class="dongle700">폰트적용하기700</p>
+
+    <p class="juaregular">제이유에이 레귤러폰트</p>
+
+</body>
+
+</html>

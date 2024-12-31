@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+     <meta charset="UTF-8">
+     <title>02_position-absolute2</title>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+      .parent {
+       width: 100%;
+       height: 300px;
+       background-color: green;
+       position: relative; /*포지션 릴렉티브: .box의 기준이되는 상위요소에 position: relation; 선언 형제요소는 될수 없음 */
+
+      }  
+
+     .box {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(81, 212, 230);
+      position: absolute;
+      /* right: 0;
+      bottom: 0; */
+      left: 50%;
+      top: 50%;
+      margin-left: -100px;
+      margin-top: -100px;
+
+     }
+
+     </style>
+
+    </head>
+    <body>
+        
+        <div class="parent">
+            <div class="box">box</div>
+        </div>
+
+    </body>
+</html>

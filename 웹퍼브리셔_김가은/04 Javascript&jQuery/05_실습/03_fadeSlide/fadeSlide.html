@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeSlide</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: lemonchiffon;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* 실제 슬라이드가 보여지는 공간!! 슬라이드 전체를 담은 부모*/
+        .viewer {
+            width: 1420px;
+            height: 610px;
+            margin: 60px auto;
+            /* 위 아래 60px공간 주고 좌우 는 자동중앙정렬 */
+            border-radius: 30px;
+            overflow: hidden;
+            /*  위 공간 빼고 나머지 안보이게  */
+            position: relative;
+            /* 각 슬라이드의 기준 */
+
+            /*  outline: 2px solid red;  */
+        }
+
+        /* 각 슬라이드  */
+        .viewer .slide {
+            width: 100%;
+            position: absolute;
+        }
+
+        .viewer .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .viewer .active {
+            z-index: 1;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*  
+        (무한 )반복 슬라이드 구현 시
+         1. 한 번의 이동
+         2. 다음을 위한 준비!    
+         fade슬라이드 
+         현재 보인는 슬라이드 >> 1번
+         다음 보여질 슬라이드 >> 2번
+
+         fade 슬라이드의 변환 원리
+         1번 슬라이드가 보이도록 z-index설정 (active클래스 사용)
+         2번 슬라이드가 보이도록 fadIn 효과를 적용할수 있도록 display:none 설정, active 클래스 (z-index) 추가
+         2번 슬라이드 fadiIn
+         1번 슬라이드를 viewer의 맨뒤로 이동 (다음을 위한 준비!), active 클래스(z-index)제거
+
+         */
+
+        $(document).ready(function () {
+
+        // 1. 클릭할 때마다 함수 호출
+         /*   $('.viewer').click(function () {
+                fadeSlide();
+            }); */
+          //  $('.viewer').click(fadeSlide);
+
+        // 2. 3초 간격으로 함수 호출 (자동실행)
+            //setInterval(fadeSlide, 3000);
+
+        // 3.마우스를 올렷을때 자동실행 멈춤
+        // mouseover, mouseout
+        //   mouseenter , mouseleave
+           var autoCall; // 인터벌용 변수
+           autoCall = setInterval(fadeSlide, 3000);
+
+           $('.viewer').mouseover(function(){
+                clearInterval(autoCall);
+           });
+
+        });
+        
+
+        /*
+            
+       (1) setInterval() : 일정한 시간 간격으로 코드 실행하기
+       (2) clearInterval() : 인터벌을 제거하는 메서드
+
+        *기본형
+        setInterval(function(){
+               싷행코드;
+        }, 시간가격 ms);
+
+        (1) setInterval(함수명, 시간간격ms)
+        (2) clearInterval(참조변수)
+
+        */
+
+
+        // fadeSlide();
+
+        function fadeSlide() {
+            //1번 슬라이드
+            var firstSlide = $('.viewer .slide').first();
+
+            //2번 슬라이트
+            var nextSlide = firstSlide.next();
+
+            nextSlide.hide().addClass('active').fadeIn(800, function () {
+                //다음을 위한 준비!
+                //1번 슬라이드를 맨뒤로 이동!
+                //  firstSlide.appendTo('.viewer');
+                $('.viewer').append(firstSlide);
+
+                // 첫번째 슬라이드의 z-index 제거
+                firstSlide.removeClass('active');
+                
+                // 인터벌 재가동
+
+            });
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Knotted Donut</h1>
+
+    <div class="viewer">
+        <div class="slide active"><img src="slide1.jpg" alt=""></div>
+        <div class="slide"><img src="slide2.jpg" alt=""></div>
+        <div class="slide"><img src="slide3.jpg" alt=""></div>
+        <div class="slide"><img src="slide4.jpg" alt=""></div>
+        
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mc-artnliving</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="mc-css/common.css">
+    <link rel="stylesheet" href="mc-css/reset.css">
+    <link rel="stylesheet" href="mc-css/mc-artnliving.css">
+
+    <script src="mc-js/jquery-1.12.4.min.js"></script>
+    <script src="mc-js/index.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Art & Living</h1>
+        </div>
+
+        <div id="m-menu" class="m-menu">
+            <span class="ct1"></span>
+            <span class="ct2"></span>
+            <span class="ct3"></span>
+            <p>카테고리</p>
+        </div>
+
+        <!-- 삼선누르면  menu 카테고리 하단으로 펼쳐짐  20241224 추가 -->
+        <div class="show-menu">
+            <ul class="show-gallery">
+                <li><a href="#">About Baza</a></li>
+                <li><a href="#">Art & Living</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Baza Review</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+        </div>
+        <!-- 여기까지 드롭다운  -->
+
+    </header>
+
+    <section>
+
+        <article class="topimg">
+            <img src="mc-imgs/mc-living-top-img.png" alt="상단이미지사진">
+        </article>
+
+        <article class="event">
+            <h2>오후의 햇살같은 <span>이벤트</span></h2>
+            <h3>Event!</h3>
+        </article>
+
+        <article>
+            <div class="life_mall">
+                <ul class="box1 clearfix">
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-event01.png" alt="쿠사마인형포장"></div>
+
+                        <div class="txt-box">
+                            <p><b>[김미령 작가]</b></p>
+                            <p>쿠사마 오브제</p>
+                            <p>정상가 56,000원</p>
+                            <p><span>할인가 21,600원 </span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-event02.png" alt="발매트사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>곰두리 발매트</p>
+                            <p>정상가 56,000원</p>
+                            <p><span>할인가 18,300원</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-event03.png" alt="접시사진"></div>
+
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>두루뭉 메쏘드</p>
+                            <p>정상가 56,000원</p>
+                            <p><span>할인가 21,600원 </span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-event04.png" alt="발매트사진"></div>
+                        <div class="txt-box">
+                            <p><b>[김미령 작가]</b></p>
+                            <p>프리다 오브제</p>
+                            <p>정상가 56,000원</p>
+                            <p><span>할인가 18,300원 </span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+      <!-- skicker menu  20241227 스티커고정 픽스드로 구현 임 하단고정메뉴추가 -->
+       <article class="artnlife">
+        <div class="sticker">
+            <ul class="sticker-menu clearfix">
+                <li>
+                    <a href="#">
+                        <div><img src="mc-imgs/icon/login.png" alt="login">
+                            <p>로그인</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <div><img src="mc-imgs/icon/shopping.png" alt="장바구니">
+                            <p>장바구니</p>
+                        </div>
+                    </a></li>
+                <li><a href="#">
+                        <div><img src="mc-imgs/icon/home.png" alt="홈">
+                            <p>Home</p>
+                        </div>
+                    </a></li>
+                <li><a href="#">
+                        <div><img src="mc-imgs/icon/mail.png" alt="질문하기"></div>
+                        <p>1:1질문</p>
+                    </a></li>
+                <li><a href="#">
+                        <div><img src="mc-imgs/icon/mypage.png" alt="Mypage"></div>
+                        <p>Mypage</p>
+                    </a></li>
+            </ul>
+        </div>
+    </article>
+        <!------------------   여기까지 --------------------------->
+
+        <article class="search">
+            <div class="letters">
+                <img src="mc-imgs/logo_1.png" alt="사각로고">
+                <p class="txt">그들의 예술이 나의 일상이 된다</p>
+            </div>
+            <div class="search-box clearfix">
+                <ul>
+                    <li>
+                        <p><span>&</span> <br> 작가별 검색</p>
+                    </li>
+                    <li>
+                        <p><span>&</span> <br> 가격별 검색</p>
+                    </li>
+                    <li>
+                        <p><span>&</span> <br> 기능별 검색</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+        <article class="life_mall clearfix">
+            <div>
+                <ul class="box clearfix">
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont01.png" alt="접시사진"></div>
+
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>망글이 접시</p>
+                            <p><span>12%할인 </span> 21,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont02.png" alt="발매트사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>곰두리 발매트</p>
+                            <p><span>22%할인 </span> 18,300원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont03.png" alt="접시사진"></div>
+
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>두루뭉 메쏘드</p>
+                            <p><span>12%할인 </span> 21,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont04.png" alt="발매트사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>툭툭이 전등</p>
+                            <p><span>22%할인 </span> 18,300원</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class=" box clearfix">
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont05.png" alt="장난감사진"></div>
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>고양이의 보은</p>
+                            <p><span>8%할인 </span> 18,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont06.png" alt="전등사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>프리다 오브제</p>
+                            <p><span>20%할인 </span> 58,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont07.png" alt="장난감사진"></div>
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>고양이의 보은</p>
+                            <p><span>8%할인 </span> 18,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont08.png" alt="전등사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>프리다 오브제</p>
+                            <p><span>20%할인 </span> 58,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont09.png" alt="장난감사진"></div>
+                        <div class="txt-box">
+                            <p><b>[기무작가]</b></p>
+                            <p>고양이의 보은</p>
+                            <p><span>8%할인 </span> 18,600원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-box"><img src="mc-imgs/mc-cont10.png" alt="전등사진"></div>
+                        <div class="txt-box">
+                            <p><b>[아이린D]</b></p>
+                            <p>프리다 오브제</p>
+                            <p><span>20%할인 </span> 58,600원</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="next-bar">
+            <div class="next-box clearfix">
+            <ul>
+                <li><p>다음상품 보기</p></li>
+                <li id="on"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+            </ul>
+        </div>
+        <div class="icon"><a href="#"><img src="mc-imgs/icon.jpg" alt="맨위로가기아이콘"></a></div> 
+
+        </article>
+
+    </section>
+    <footer>
+        <div class="cont_company">
+            <h4>사업자정보</h4>
+            <p>(주)서울아트페어&리빙</p>
+            <p>대표 아린 킴</p>
+            <p>사업자등록번호 474-88-00931</p>
+            <p>서울시 강남구 도곡로3길27,(역삼동 동일빌딩)10층</p>
+            <p>통신판매업 제2022-서울강남-03517호</p>
+            <p>개인정보보호 책임자 오세현</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

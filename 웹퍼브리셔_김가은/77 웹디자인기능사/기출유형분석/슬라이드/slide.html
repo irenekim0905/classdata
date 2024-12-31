@@ -1,0 +1,79 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>slide</title>
+        
+        <link rel="stylesheet" href="slide.css">
+        
+        <script src="jquery-1.12.3.js"></script>
+        <script>
+            $(function(){
+                
+                var slider = $('.slider');
+                console.log(slider);
+                
+                
+                //슬라이드 함수 만들기1
+                /*function moveAfter (){
+                    slider.animate({
+                        'margin-left' : '-960px'
+                    }, 800, function(){
+                        $('.slider>div:first').insertAfter($('.slider>div:last'));
+                        slider.css('margin-left','0');
+                    });
+                }*/
+                
+                
+                //슬라이드 함수 만들기2
+                
+                //이전 슬라이드 이동을 위한 초기설정
+                $('.slider>div:last').insertBefore($('.slider>div:first'));
+                slider.css('margin-left', '-960px');
+                
+                function moveAfter(){
+                    slider.animate({
+                        marginLeft: '-1920px'
+                    }, 800, function(){
+                        $('.slider>div:first').insertAfter($('.slider>div:last'));
+                        slider.css('margin-left','-960px');
+                    });
+                }
+                
+                
+                //moveAfter(); //함수 최초 호출!
+                
+                //함수 자동실행
+                function autoplay(){
+                    setInterval(moveAfter, 3000);
+                }
+                
+                autoplay();
+                
+                
+            });
+        
+        
+        </script>
+        
+    </head>
+    <body>
+       <div class="slider_box">
+           <div class="slider">
+               <div class="slide">
+                   <img src="image/img1.jpg" alt="메인이미지1">
+                   <span>1 - 친환경 베이커리</span>
+               </div>
+               <div class="slide">
+                   <img src="image/img2.jpg" alt="메인이미지2">
+                   <span>2 - 건강한 베이커리</span>
+               </div>
+               <div class="slide">
+                   <img src="image/img3.jpg" alt="메인이미지3">
+                   <span>3 - 달콤한 베이커리</span>
+               </div>
+           </div>
+       </div>
+        
+    </body>
+    </html>

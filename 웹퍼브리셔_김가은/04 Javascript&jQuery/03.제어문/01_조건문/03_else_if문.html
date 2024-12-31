@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_else_if문</title>
+    <script>
+        /* 
+        (3) else if문 : 두 가지 이상의 조건식에서 정해놓은 조건을 만족했을 때 실행되는 
+        조건문
+
+        ///// 기본형 ////////////////////
+
+       if(조건식1){
+       실행코드1}
+       else if (조건식2)
+       샐행코드2;
+       else if (조건식3){
+       샐행코드3}
+       else if (조건식n){
+       실행코드n}
+
+        */
+       // 주어진 조건식을 .차례로'
+
+       //else if문 예제 1 - 만족도에 따른 메세지 출력
+
+       //만족도 5점 만점
+     
+      // var score = Number(prompt('서비스에 대한 만족도 테스트')); 
+       //if(score === 0){}
+
+      /* if(score === 5){
+        alert('매우만족')
+       }else if (score === 4){
+        alert('만족')
+       }
+       else if(score === 3){
+        alert('불만족')
+       }
+       else if (score === 0){
+        alert('점수를 바르게 입력해 주세요')
+       } */
+
+       //else if문 예제2 - 입력되는 월에 따라 계절을 화면에 출력하기
+       // 3 - 5월 봄, 6 - 8월 여름, 9-11월 가을, 12-2월 겨울
+
+       var month = Number(prompt('당신이 태어난 달을 입력하세요'));
+
+       if(3 <= month && month <= 5){
+           document.write('당신이 태어날 달은 봄입니다.')
+       }
+       else if(6 <= month && month <= 8){
+           document.write('당신이 태어날 달은 여름입니다.')
+       }
+       else if(9 <= month && month <= 11){
+           document.write('당신이 태어날 달은 가을입니다.')
+       }
+       else if(12 == month || month == 1 || month == 2){
+           document.write('당신이 태어날 달은 겨울입니다.')
+       }
+      
+          </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*실제 슬라이드가 보여지는 부분*/
+.slider_box {
+    width: 960px;
+    height: 400px;
+    margin: 50px auto;
+    border: 3px inset darkseagreen;
+    overflow: hidden;
+}
+
+/*슬라이드 전체를 담아주는 부모요소*/
+.slider_box .slider {
+    /*width: 300%;*/
+    width: 2880px;
+    height: 100%;
+    position: relative;
+}
+
+/* 각 슬라이드 */
+.slider_box .slider .slide {
+    /*width: 33.3333%;*/
+    width: 960px;
+    height: 100%;
+    float: left;
+    position: relative; /*span태그의 기준!*/
+}
+
+.slider_box .slider > div span {
+    background-color: rgba(40,40,40,0.5);
+    color: #fff;
+    text-align: center;
+    
+    /*인라인 요소일 경우, 내용만큼 공간 차지*/
+    /*padding: 20px 40px;*/
+    
+    /*블록요소일 경우 width 값 설정*/
+    display: block;
+    width: 500px;
+    height: 60px;
+    line-height: 60px;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+    /*margin-left: -250px;
+    margin-top: -30px;*/
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

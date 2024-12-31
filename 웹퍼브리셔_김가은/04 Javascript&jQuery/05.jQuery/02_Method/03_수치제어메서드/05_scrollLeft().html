@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_scrollLeft()</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*
+        scrollLeft() : 브라우저의 스크롤바가 수평으로 이동한 위칫값을
+         불러오거나 변경할 때 사용
+         $('선택요소').scrollLeft();
+         $('선택요소').scrollLeft(값);
+
+        */
+       $(document).ready(function(){
+            $('button').click(function(){
+                alert($('.box').scrollLeft());
+
+                $('.box').scrollLeft(200); // 스크롤바가 수평으로 200px 이동!
+            });
+       });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="box">
+        the longest word in the english dictionary is :
+        dkdlgkj;a;gl ;dlkg;lak;glk a;lkdg;l lkl;lk;l;hjhghgjhgdjfkdjf ssueyiuqyiouyetoiquoeiuoqiuetoiqueotiuoqwiuetoiu
+        dghfakjhdkjfhjshdfkjhdjkf dkjfhkajhks kdjhakjfh dkjh jh
+    </div>
+    <button>scrollLeft</button>
+
+    <style>
+
+        div.box {
+            width: 120px;
+            height: 130px;
+            border: 2px solid blue;
+            overflow:auto;
+           overflow: scroll;
+        }
+
+    </style>
+
+</body>
+
+</html>

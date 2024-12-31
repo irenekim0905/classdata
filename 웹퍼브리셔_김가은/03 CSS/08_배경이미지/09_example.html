@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09_example</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol, li {
+        list-style: none;
+    }
+
+    .clear::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+    body {
+        background-image: url(images/backdrop.gif);
+    }
+    .title {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-weight: 600;
+    }
+    .box {
+        width: 800px;
+        height: 600px;
+        border: 2px solid #666;
+        margin: 0 auto;
+    }
+    .topbox {
+        width: 100%;
+      }
+     li {
+       float: left;
+     }
+     li ~ li {
+        margin-left: 2.5%;
+     }
+      .print-01 {
+        width: 31%;
+        background-color: #666;
+        
+      }
+      .print-02 {
+        width: 31%;
+        background-color: #666;
+      }
+      .print-03 {
+        width: 31%;
+        background-color: #666;
+      }
+      
+    .bottombox {
+        width: 100%;
+        margin-top: 30px;
+     
+    }
+    .print-04 {
+        width: 31%;
+        background-color: #666;
+      }
+      .print-05 {
+        width: 31%;
+        background-color: #666;
+      }
+      .print-06 {
+        width: 31%;
+        background-color: #666;
+      }
+      span {
+        
+      }
+     p {
+        color: white;
+        font-size: 14px;
+     }
+     .main {
+        color: #333;
+     }
+
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <div><img src="images/title.gif" alt="Galerie Botanique"></div>
+        <p class="main">개최된 컬렉션에 선택된 고풍스러운 식물 이미지는 다음과 같다.</p>
+    </div>
+
+    <div class="box">
+        <ul class="topbox clear">
+            <li class="print-01"><img src="images/print-01.jpg" alt="해바라기그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>해바라기(Helianthus)</p>
+                </span>
+            </li>
+            <li class="print-02"><img src="images/print-02.jpg" alt="시계꽃그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>시계꽃(passiflora)</p>
+                </span>
+            </li>
+            <li class="print-03"><img src="images/print-03.jpg" alt="닉토칼로스그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>닉토칼로스(Nyctocalos)</p>
+                </span>
+            </li>
+
+        </ul>
+        <ul class="bottombox class">
+            <li class="print-03"><img src="images/print-04.jpg" alt="쏠리안테스그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>폴리안테스(Polianthes)</p>
+                </span>
+            </li>
+            <li class="print-05"><img src="images/print-05.jpg" alt="무화과나무그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>무화과나무(Ficus)</p>
+                </span>
+            </li>
+            <li class="print-06"><img src="images/print-06.jpg" alt="덴드로비움그림"><br>
+                <span><img src="images/icon.png" alt="꽃아이콘">
+                    <p>덴드로비움(Dendrobium)</p>
+                </span>
+            </li> 
+        </ul>
+    </div>
+</body>
+
+</html>

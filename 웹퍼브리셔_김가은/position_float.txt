@@ -1,0 +1,24 @@
+1. position(위치설정)
+(1)relative :상대위치  (absolut 가 있어야 될 공간의 기준)
+(2)absolute: 절대위치/ 기준설정!(부모를 포함한 상위요소에 설정해야되며/ 형제요소는 기준이 될수 없다)
+(3)fixed: 고정! (left or right, top of bottom 값을 주고 그 위치에 고정시키는 css 속성)
+-position 속성이 선행되어야, 좌표사용가능(px, %)
+x축:left, right ( 한개 설정하여 주어야됨
+y축: top, bottom 
+
+2.float
+ : 둥둥 띄우다!
+-left / right 를 기준으로 요소를 "가로나열" 할때 사용 한다.
+-그래서 가운데 정렬은 불가능하다.
+-부모가 float된 자식요소의 높이를 읽을수 없음
+>> float 해제!!
+
+2-overfloat: float 는 사용하면 다음 요소에도 float의 영향을 준다. float의 영향을 이것을 막아준다.
+
+비슷한기능 css 속성은
+display- inline 기능이 있다. 
+1) inline-block 으로 주로 사용 단점: 여백이 생긴다.
+2) float 
+
+
+

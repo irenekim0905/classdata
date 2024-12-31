@@ -1,0 +1,11 @@
+@font-face {
+    font-family: '1HoonSkybori R';
+    src: url('HoonSkybR.eot');
+    src: url('HoonSkybR.eot?#iefix') format('embedded-opentype'),
+        url('HoonSkybR.woff2') format('woff2'),
+        url('HoonSkybR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

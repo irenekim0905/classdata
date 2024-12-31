@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/********  coffeebeanstory.css ******************/
+
+
+nav.breadcrumb {
+  background-color: blueviolet;
+  width: 100%;
+  height: 30px;
+  margin-top: 140px;
+}
+
+main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+article.value {
+    width: 1280px;
+    margin: 0 auto;
+} 
+article.value .value-list {
+    border-bottom: 1px solid blueviolet;
+}
+article.value .value-list li {
+    width: 25%;
+    margin-bottom: 50px;
+}
+article.value .value-list .txt-box {
+    text-align: center;
+}
+article.value .value-list img {
+   margin-left: 70px;
+   margin-bottom: 20px;
+}
+    
+
+article.value .value-list h3 {
+    font-size: 18px;
+    color: blueviolet;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+    margin-bottom: 10px;
+
+
+}
+article.value .value-list dl dt {
+    font-size: 18px;
+    color: blueviolet;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+    margin-bottom: 10px;
+
+}
+article.value .value-list dl .point {
+    color: blueviolet;
+    font-family: "Merriweather", serif;
+}
+
+article .value-des {
+    text-align: center;
+}
+article .value-des p {
+    font-size: 18px;
+    font-weight: 400; 
+    margin-top: 30px;
+}
+
+article .value-des .point {
+    color: rgb(207, 102, 26);
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+article.specialty {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+article.coffee .title {
+    color: rgb(207, 102, 26);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+article.coffee .sub-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "Merriweather", serif;
+    color: rgb(207, 102, 26);
+    font-size: 18px;
+}
+article.coffee .description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+article .img-list {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+article .img-list li {
+    width: 32%;
+    float: left;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+article .img-list li~li {
+    margin-left: 2%;
+}
+article .img-list li img {
+    width: 100%;
+    transition: all 0.5s;
+    display: block;
+}
+article .img-list li:hover img {
+   transform: scale(1.5);
+}
+
+article.tea .title {
+    color: rgb(207, 102, 26);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+article.tea .sub-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "Merriweather", serif;
+    color: rgb(207, 102, 26);
+    font-size: 18px;
+}
+article.tea .description {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+article .btn {
+    background-color: rgb(243,130,0); 
+    font-size: 18px;
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 20px;   
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+}
+article .btn a {
+    color: rgb(255,255,255);
+}
+

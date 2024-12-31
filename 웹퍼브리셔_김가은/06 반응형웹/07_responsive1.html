@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_responsive1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            outline: 2px solid red;
+        }
+
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: lightpink;
+        }
+
+        section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        section nav {
+            width: 30%;
+            height: 500px;
+            background-color: plum;
+            float: left;
+        }
+
+        section article {
+            width: 70%;
+            background-color: lightgreen;
+            height: 500px;
+            float: left;
+        }
+        /**********   노트북  ************/
+        @media all and (max-width:1280px){
+            body {
+                background-color: bisque;
+            }
+            section nav {
+                background-color: darkgreen;
+            }
+            section article {
+                background-color: yellow;
+            }
+        }
+
+        /**********   태블릿  ************/
+        @media (min-width:768px) and (max-width:1024px){
+              #wrap {
+                width: 100%;
+              }
+              header {
+                height: 150px;
+                background-color: greenyellow;
+              }
+              section nav {
+                width: 25%;
+              }
+              section article {
+                width: 75%;
+            
+              }
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+
+            <head>헤더</head>
+        </header>
+
+        <section>
+            <nav>메뉴</nav>
+            <article>본문</article>
+        </section>
+    </div>
+
+</body>
+
+</html>

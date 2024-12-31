@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical-menut</title>
+    <style>
+
+
+#menu .gnb > li {
+  /*  outline: 2px solid lime; */
+}
+#menu .gnb > li > a {
+    line-height: 60px;
+}
+#menu .gnb > li > a:hover {
+    background-color: lightblue;
+    color: dodgerblue;
+}
+
+/*  서브 메뉴 디자인 */
+.lnb {
+    background-color: #d9d9d9;
+    line-height: 50px;
+    /*  구현을 위한 초기설정  */
+    height: 0;
+    color: #f00;
+    transition: height 0.4s;
+    
+}
+
+.lnb a {
+    font-size: 18px;
+}
+.lnb > li > a:hover {
+    background-color: #ccc;
+    color: #000;
+    font-weight: bold;
+}
+
+#menu .gnb > li:nth-child(2):hover .lnb {
+    height: 200px;
+}
+#menu .gnb > li:nth-child(3):hover .lnb {
+    height: 100px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

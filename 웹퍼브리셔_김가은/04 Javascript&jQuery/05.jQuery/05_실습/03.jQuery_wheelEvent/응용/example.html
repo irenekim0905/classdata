@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 2rem;
+            background-color: rgba(162, 148, 249, 0.7);
+            color: #fff;
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+
+        main {
+            width: 100%;
+            height: 1500px;
+            background-color: #F5EFFF;
+        }
+
+        main p {
+            font-size: 2.5rem;
+            padding-top: 300px;
+            text-align: center;
+        }
+
+        section.slide {
+            width: 100%;
+            height: 100%;
+            background-color: #E5D9F2;
+
+            overflow: hidden;
+            outline: 2px solid blueviolet;
+        }
+        section.slide .slide-wrap {
+            width: 500%;
+            height: 100%;
+
+            /* .slide 영역에서 이동할 요소!  */
+            position: relative; 
+            left: 0;
+        }
+        section.slide .slide-wrap .page { /* 각 페이지 */
+            width: 20%;
+            height: 100%;
+
+            float: left;
+
+            text-align: center;
+            line-height: 300px;
+            font-size: 2rem
+        }
+        .s1 {background-color: #FFF0DC;}
+        .s2 {background-color: #E3F0AF;}
+        .s3 {background-color: #FBB4A5;}
+        .s4 {background-color: #5DB996;}
+        .s5 {background-color: #FFE893;}
+
+        section.content {
+            width: 100%;
+            height: 600px;
+            background: #E5D9F2;
+
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        footer {
+            background-color: #A294F9;
+            padding: 80px 0 ;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/example.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <p>Header</p>
+    </header>
+
+    <main>
+        <p>메인 영역</p>
+    </main>
+
+    <section id="viewer" class="slide">
+        <div class="slide-wrap">
+            <article class="page s1">가로슬라이드1</article>
+            <article class="page s2">가로슬라이드2</article>
+            <article class="page s3">가로슬라이드3</article>
+            <article class="page s4">가로슬라이드4</article>
+            <article class="page s5">가로슬라이드5</article>
+        </div>
+    </section>
+
+    <section class="content">
+        <p>Section2</p>
+    </section>
+    <footer>
+        <p>Copyrigth 2024</p>
+    </footer>
+
+</body>
+
+</html>

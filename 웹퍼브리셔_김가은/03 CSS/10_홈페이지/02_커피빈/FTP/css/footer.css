@@ -1,0 +1,105 @@
+@charset "uft-8";
+
+/********** footer.css *********************/
+footer {
+    width: 100%;
+    background-color: lightgray;
+    padding: 60px 0;
+}
+
+footer a {
+    color: #333;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .sitemap {
+    margin-bottom: 30px;
+}
+
+footer .sitemap h3 {
+    font-size: 18px;
+    color: rgb(207, 102, 26);
+    font-weight: 400;
+    font-family: "Merriweather", serif;
+    margin-bottom: 20px;
+}
+
+footer .sitemap .mapbox {
+    width: 16.6%;
+    float: left;
+}
+
+
+footer .sitemap .mapbox ul li {
+    float: none;
+    line-height: 30px;
+}
+
+
+footer .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    position: relative;
+}
+
+footer .footer-bottom .links {
+    margin-bottom: 20px;
+}
+footer .footer-bottom .links a {
+    display: inline-block;
+    margin-right: 8px;
+    padding-right: 10px;
+    position: relative; /* 가상요소 after기준 */
+
+}
+footer .footer-bottom .links a::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: rgb(47,28,17);
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+footer .footer-bottom .sns {
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+footer .footer-bottom .sns a {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+    font-size: 0;
+}
+footer .footer-bottom .sns a img {
+    width: 100%;
+    display: block;
+}
+footer .footer-bottom .sns a:nth-child(2) {
+    background-image: url(../img/ico_sns.png) ;
+    background-repeat: no-repeat;
+    background-position: -40px;
+}
+footer .footer-bottom .sns a:nth-child(3) {
+    background-image: url(../img/ico_blog_hover.png);
+    background-repeat: no-repeat;
+}
+footer .footer-bottom .sns a:nth-child(3):hover {
+    background-position: right;
+}
+footer .footer-bottom .sns a:nth-child(4) {
+    background-image: url(../img/ico_twitter_hover.png);
+    background-repeat: no-repeat;
+}
+footer .footer-bottom .sns a:nth-child(4):hover {
+    background-position: right;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>15_example_application-form</title>
+</head>
+
+<body>
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p>HTML, CSS Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다. </p>
+    <hr>
+    <form action="#" method="post" name="applyfrm">
+        <fieldset>
+            <legend>개인정보</legend>
+            <h2>개인정보</h2>
+            <ul>
+                <li>
+                    <label for="username">이름</label>
+                    <input type="text" name="username" id="username" placeholder="공백없이 입력하시오" autofocus required >
+                </li>
+                <li>
+                    <label for="usertel">전화</label>
+                    <input type="text" name="number" id="usertel" placeholder="-없이 입력하시오" required >
+                </li>
+                <li>
+                    <label for="usermail">메일</label>
+                    <input type="text" name="mail" id="usermail" >
+                </li>
+                <li>
+                    <label for="usercity">지역</label>
+                    <select name="city" id="usercity">
+                        <option value="서울">서울</option>
+                        <option value="강릉">강릉</option>
+                        <option value="부산">부산</option>
+                        <option value="경주">경주</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend>지원동기</legend>
+
+            <h2>지원분야</h2>
+            <ul>
+                <li>
+                    <label><input type="radio" name="field" value="웹퍼블리싱">웹 퍼블리싱</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="field" value="웹애플리케이션">웹 애플리케이션 개발</label>
+                </li>
+                <li>
+                    <label><input type="radio" name="field" value="개발환경개선">개발 환경 개선</label>
+                </li>
+            </ul>
+
+            <h2> <label for="content">지원동기</label> </h2>
+            <textarea name="content" id="content" cols="50" rows="5" placeholder="지원동기를 간략히 입력해 주세요."></textarea>
+
+        </fieldset>
+        <br>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시작성">
+    </form>
+
+</body>
+
+</html>

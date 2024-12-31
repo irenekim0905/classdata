@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_box.</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        .scroll {
+            overflow: scroll;
+        }
+
+        .auto {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>overflow넘치는거 정리</h2>
+    <div class="div1 hidden">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    </div>
+
+    <div class="div1 scroll">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+    </div>
+
+    <div class="div1 auto"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, </div>
+
+    <h2>border-(width/style/color)</h2>
+
+    <h2>border-style</h2>
+    <p class="border2 ridge">ridge</p>
+    <p class="border2 groove">groove</p>
+    <p class="border2 inset">ridge</p>
+    <p class="border2 outset">ridge</p>
+
+    <p>보더 사각형 테두리 border-width : top right bottom left;</p>
+
+    <p class="border">border: width style color; </p>
+
+    <p class="border3">border-(lift/right/top/bottom)</p>
+
+    <style>
+        .border3 {
+            border-left: 2px double green;
+            border-right: 2px double gray;
+            border-bottom: 5px dotted pink;
+            border-top: 3px dashed yellow;
+            border: 2px solid green
+        }
+
+        .border {
+            color: orangered;
+            border: 1px solid;
+            border-width: 10px 20px 50px 15px;
+            border-style: dashed dotted solid double;
+            border-color: red green plum orange;
+            /* border: none; */
+        }
+
+        .border2 {
+            border: 6px orangered;
+        }
+
+        .ridge {
+            border-style: ridge;
+        }
+
+        .groove {
+            border-style: groove;
+        }
+
+        .inset {
+            border-style: inset;
+        }
+
+        .outset {
+            border-style: outset;
+        }
+    </style>
+
+    <h2>padding</h2>
+    <p class="bg padding1">padding: 50px; (네방향 모두 50px 넣어줘)</p>
+    <p class="bg padding2">padding: 20px 40px (위 아래 20px, 좌 우는 40px)</p>
+    <p class="bg padding3">padding 20px 40px 10px(위 20 좌우 40 아래 10)</p>
+    <p class="bg padding4">padding 20px 40px 10px 5px(위 20 오른쪽 40 아래 10 왼쪽5)</p>
+
+    <h2>margin</h2>
+    <h3 class="center">center</h3>
+
+    <p class="margin1">아날로그 신디사이저는 종종 디지털 신디자이저 보다 따듯한 소리가 난다고 한다.</p>
+    <p class="margin2">아날로그 신디사이저는 종종 디지털 신디자이저 보다 따듯한 소리가 난다고 한다.</p>
+    <p class="margin3">아날로그 신디사이저는 종종 디지털 신디자이저 보다 따듯한 소리가 난다고 한다.</p>
+
+    <p>content > padding > border > margin
+    </p>
+
+    <h2>box-sizing</h2>
+    <div class="box">가을이 오고 있어요!!!</div>
+    <div class="box padding">가을이 오고 있어요!!!</div>
+    <div class="box padding sizing">가을이 오고 있어요!!!</div>
+    <div class="box0">추석이 오고 있어요</div>
+
+    <h2>diaplay: block, inline, inline-block</h2>
+    <h3 class="block">나는 블록요소~~~~~~~ 블록 블록 </h3>
+    <a href="#">나는 인라인요소~~~인라인 인라인</a>
+
+    <ul class="inline-block">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+
+    <ul class="inline">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+
+    </ul>
+
+    <h3>inline 요소</h3>
+    <li>img</li>
+    <li>a, span</li>
+    <li>input, textarea, button, label, select</li>
+    <li>b, strong, i, em, sup, sub</li>
+
+    <h3>block 요소 태그</h3>
+    <li>div</li>
+    <li>heading (h1_h6)</li>
+    <li>p</li>
+    <li>ul,ol,li(list-item)</li>
+    <li>form, fieldset</li>
+    <li>header, nav, section, article, aside, footer, main</li>
+    <li>hr</li>
+
+    <img src="/04_박스/snoopy.jpg" alt="snoopy" width="300" height="300">
+    <img src="/04_박스/snoopy.jpg" alt="snoopy">
+    <!-- 인라인 요소는 width, heigh 값을 지정해도 적용되지 않지만. 인라인 요소중 태그의 속성으로 크기 지시가 가능한 요소 img 태그에 width, height 직접 설정 할수 있다.-->
+
+
+    <h2>display: none;</h2>
+    <ul class="display">
+        <li>홈(home)</li>
+        <li>상품(home)</li>
+        <li class="none">서비스</li>
+        <li>소개(home)</li>
+        <li>연락처(home)</li>
+    </ul>
+
+    <h2>box-shadow: x y blur color;</h2>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <h2>border-radius</h2>
+    <p class="radius">pet sounds는 미국의 록 밴드 비치보이스의 열 한번째 정규 음반이다. "1966년 5월 16일 최고의 음반 가운데 하나로 꼽혔다.</p>
+
+    <div class="circle">둥근원</div>
+
+
+    <style>
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 5px solid blue
+            border-redius: 50px 50px 50px 50px; 
+
+
+
+        }
+
+        .radius {
+            border: 5px solid coral;
+            padding: 20px;
+            width: 300px;
+            border-radius: 30px 0px 30px 0px;
+        }
+
+
+
+        .box1,
+        .box2,
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            margin-bottom: 20px;
+            margin-left: 50px;
+
+        }
+
+        .box1 {
+            box-shadow: 5px 5px 0 #a7a3a3;
+        }
+
+        .box2 {
+            box-shadow: 4px 4px 0 #d9d9d9;
+        }
+
+        .box3 {
+            box-shadow: -10px -10px 3px goldenrod;
+            box-shadow: 0 0 8px red;
+        }
+
+        .display {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .display li {
+            background-color: coral;
+            padding: 10px;
+            display: inline-block;
+            line-height: 80px;
+
+        }
+
+        .display .none {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        /* visibility: hedden; 
+            display: none; 원래 없던 요소처럼 자리가 없어짐
+            visibility: hidden;
+            opacity: 0;*/
+
+        img {
+            width: 300;
+            height: 300;
+        }
+
+        .inline li {
+            background-color: aqua;
+            width: 200px;
+            height: 100px;
+            padding: 30px;
+            padding: 30px;
+            margin: 20px;
+            display: inline;
+        }
+
+
+        .inline-block {
+            list-style: none
+        }
+
+        .inline-block li {
+            background-color: blueviolet;
+            padding: 0;
+            width: 200px;
+            height: 100px;
+            padding: 30px;
+            margin: 20px;
+            display: inline;
+        }
+
+        /* 
+       일라인 요소는~~~~ 
+       width heigh가 적용되지 않고 인라인 요소가 기본으로 갖는 크기가 우선적용 !
+       크기가 정확하지 않으므로 margin값이 제대로 적용되지 않음
+       인라인 요소가 기본으로 갖는 여백이 있음
+       */
+        .block {
+            background-color: burlywood;
+            display: inline;
+        }
+
+        .a {
+            background-color: brown;
+            display: block;
+        }
+
+        .box0 {
+            padding: 50px 100px;
+            border: 10px solid gray;
+            background-color: lightgreen;
+            /* width: 100%; */
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 5px solid #000;
+            background-color: pink;
+            margin-bottom: 30px;
+        }
+
+        .padding {
+            padding: 20px 30px
+        }
+
+        .sizing {
+            box-sizing: border-box;
+        }
+
+        .margin1 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        .margin2 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 50px;
+        }
+
+        .margin3 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .bg {
+            background-color: greenyellow;
+            border: 2px solid;
+        }
+
+        .padding1 {
+            padding: 50px;
+        }
+
+        .padding2 {
+            padding: 20px 40px;
+        }
+
+        .padding3 {
+            padding: 20px 40px 10px;
+        }
+
+        .padding4 {
+            padding: 20px 40px 10px 15px;
+        }
+
+        .center {
+            border-bottom: 2px solid lightgrey;
+            width: 70%;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>

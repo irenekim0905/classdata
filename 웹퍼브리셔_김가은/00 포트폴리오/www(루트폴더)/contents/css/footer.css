@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*******   footer   ***** */
+
+footer {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    /* height: 120px; */
+    padding: 60px 0 80px;
+    background-color: rgb(41, 37, 36);
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+}
+/* 공통!!!! */
+footer b {
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    margin-right: 5px;
+}
+
+footer .inbox {
+    width: 80%;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+footer .footer-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer .info {
+    float: left;
+}
+
+footer .info .info-box {}
+footer .info .info-box .des {}
+footer .info .info-box .des p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+footer .contact {
+    float: right;
+}
+footer .contact p {
+    /* display: inline-block; */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_slideDown_slideUp()</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+        /* 
+
+        slideOut(소요시간, 가속도, 콜백함수)
+         : 숨겨진 요소가 아래로 접히면서 
+        : 효과대상의 height값을 원래 높잇감으로 변경
+          display를 none이 아닌 원래 값으로 변경
+
+        slideUp(소요시간, 가속도, 콜백함수)
+        : 요소가 위로 접히면서 숨겨짐
+        : 효과대상의 height값을 0으로 변경된 후
+          display:none 으로 변경
+
+
+
+        */
+
+        $(function(){
+            $('#flip1').click(function(){
+                $('#panel1').slideDown(1000);
+
+            });
+            $('#flip2').click(function(){
+                    $('#panel2').slideUp(1000);
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <div class="slide1">
+        <div id="flip1">click to slideDown</div>
+        <div id="panel1">hello world</div>
+
+    </div>
+
+    <div class="slide2">
+        <div id="flip2">click to slideUp</div>
+        <div id="panel2">good vye world</div>
+    </div>
+
+    <style>
+
+        #flip1, #panel1 {
+            border: 1px solid #c3c3c3;
+            background-color: aqua;
+            padding: 5px;
+            font-size: 24px;
+            text-align: center;
+
+        }
+
+        #flip1 {
+            cursor: pointer;
+
+        }
+        #panel1 {
+            padding: 50px;
+            border-top: none;
+            display: none;
+        }
+
+        .slide2 {
+            margin-top: 50px;
+        }
+
+        #flip2, #panel2 {
+            border: 1px solid #c3c3c3;
+            background-color: aqua;
+            padding: 5px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #flip2 {
+            cursor: pointer;
+        }
+        #panel2 {
+            padding: 50px;
+            border-top: 0;
+        }
+
+    </style>
+    
+</body>
+</html>

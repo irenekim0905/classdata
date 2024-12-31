@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>05-하위요소선택자</title>
+
+        <style>
+            /* 하위요소 선택자 */
+            .container ul { 
+                border: 3px solid blue;
+             }
+             /* 자식요소 선택자 */
+             .container > ul {
+                border: 3px solid red ;
+             }
+
+        </style>
+
+    </head>
+    <body>
+     <div class="container">
+        <h1>주문방법 및 요금</h1>
+        <p>산지 직송 싱싱한 제주도 감귤을 주문하세요!</p>
+
+        <ul>
+            <li>주문방법</li>
+            <ul>
+                <li>직접통화</li>
+                <li>문자주문</li>
+            </ul>
+
+            <li>요금</li>
+            <ul>
+                <li>1kg : 10,000</li>
+                <li>2kg : 20,000</li>
+                <li>3kg : 30,000</li>
+                <li>4kg : 40,000</li>
+            </ul>
+        </ul>
+
+     </div>
+        
+    </body>
+</html>

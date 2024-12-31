@@ -1,0 +1,59 @@
+@charst "utf-8";
+/***************** commom *********************/
+/* 공동으로 사용할 css를 모아놓은 파일! */
+/* float 해제를 위한 가상요소 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 안쪽에서 컨텐츠 너비를 잡아줄때 사용할 클래스! */
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* 구글웹폰트 */
+/* 
+1) merriweather 웹폰트 사용
+ font-family: "Merriweather", serif;
+ font-weight: 300 : 400 : 700: 900; 
+ 2) 나눔고딕
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400 : 700 :800; 
+ */
+ .sec-tit {
+    color: rgb(207,102,26);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+
+ }
+ .eng {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+ }
+
+ body {
+    font-family: "Nanum Gothic";
+    font-weight: 400;
+    color: #333;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

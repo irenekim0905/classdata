@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: Noto Sans KR, sans-serif;
+
+}
+
+.menu {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+.menu .top {
+    margin-bottom: 40px;
+}
+
+.menu .top .title {
+    font-family: "fredoka", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 600;
+    float: left;
+    height: 60px;
+    background-image: url(/07_레이아웃응용/img/example3/bul_tit.png);
+    /* 이미지 채움 지정이미지로 끝까지 */
+    background-repeat: no-repeat;
+    /* 이미지 한개만 남겨줘 */
+    padding: 0 20px;
+}
+
+.menu .top .tabmenu {
+    float: right;
+    line-height: 60px;
+    /* h2의 높이값과 동일하게 설정 */
+}
+
+.menu .top .tabmenu li {
+    display: inline-block;
+    /* li를 가로정렬 - 하나의 블록으로 한줄로 가로정열 명령어 */
+    position: relative;
+    /* 가상요소 after의 기준 */
+}
+
+.menu .top .tabmenu li~li {
+    margin-left: 30px;
+}
+
+.menu .top .tabmenu li::after {
+    content: "";
+    /* 컨텐츠 이미지 삽입 */
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #b2b2b2;
+    position: absolute;
+    left: -16px;
+    top: 24px;
+}
+
+.menu .top .tabmenu li:first-child::after {
+    display: none;
+}
+
+.menu .top .tabmenu li a {
+    color: #b2b2b2;
+}
+
+.menu .top .tabmenu li.active a {
+    color: #009132;
+    font-weight: 600;
+}
+
+.menu .content {
+
+    position: relative;
+}
+
+.menu .content .btn {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+
+}
+.menu .content .btn.prev {
+    left: -50px;
+}
+
+.menu .content .btn.next {
+   right: -50px;
+}
+
+.menu .content .btn a {
+    /* 글자 없애기 */
+    font-size: 0;
+    /* opacity: 0; */
+    /* text-indent: -9999px; */
+    display: block;
+    background-image: url(/07_레이아웃응용/img/example3/icon_event_slider_arr.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.menu .content .prev a {
+    background-position: left top;
+}
+
+.menu .content .prev:hover a {
+    background-position: left bottom;
+}
+
+.menu .content .next a {
+    background-position: right top;
+}
+
+.menu .content .next:hover a {
+    background-position: right bottom;
+}
+
+
+.menu .content .menu-wrap {
+
+    width: 100%;
+}
+
+.menu .content .menu-wrap li {
+    width: 25%;
+
+    text-align: center;
+    float: left;
+}
+
+.menu .content .menu-wrap li h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu .content .menu-wrap li p {
+    letter-spacing: -0.6px;
+    color: #999;
+    line-height: 1.4;
+    padding: 0 20px;
+    word-break: keep-all;
+    /* 띄어쓰기 기준으로 줄바꿈 명령어 */
+
+}
+
+.menu .content .menu-wrap li a {
+    display: block;
+    /* 그안의 요소를 한 덩어리로 만듬 */
+}
+
+.menu .content .menu-wrap li a img {
+    width: 100%;
+}

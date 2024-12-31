@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabmenu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .container {
+            width: 800px;
+            margin: 50px auto;
+        }
+
+        .container>div {
+          /*  outline: 2px solid red; */
+        }
+
+        .tabmenu {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .tabmenu ul {}
+
+        .tabmenu ul li {
+            font-size: 18px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0 5px;
+            /*   탭메뉴 디자인  */
+            border: 2px solid #ccc;
+            border-radius: 50px;
+            padding: 8px 18px;
+
+        }
+
+        .tabmenu ul li a {
+            color: #ccc;
+        }
+
+        .tabmenu ul li.on {
+            background-color: tomato;
+            border: 2px solid tomato;
+        }
+
+        .tabmenu ul li.on a {
+            color: #fff;
+        }
+
+        .content-box {
+            border: 2px solid #ccc;
+            padding: 30px;
+
+        }
+
+        .content-box>div {
+            width: 100%;
+
+            /* 탭메뉴규현을 위한 초기설정  */
+            display: none;
+        }
+
+        .content-box>div.on {
+            display: block;
+        }
+
+        .content-box h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 20px;
+        }
+
+        .content-box img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // 1. 인덱스 번호 활용
+
+            /*     $('.tabmenu a').click(function(e){
+                     e.preventDefault();
+     
+                     //1. 클릭된 a태그의 부모 li에 on 클래스 적용하기 (선택된 탭메뉴 디자인 적용)
+                     $(this).parent().addClass('on').siblings().removeClass('on');
+     
+                     //2. 클릭된 메뉴와 컨텐츠 내용 매치하기
+                     var idx = $(this).parent().index();
+                     console.log(idx);
+     
+                     $('.content-box > div').eq(idx).addClass('on').siblings().removeClass('on');
+     
+                 }); 
+                 
+                 */
+
+            //2. id값 활용
+            $('.tabmenu a').click(function (e) {
+
+                e.preventDefault();
+
+                var aHref = $(this).attr('href');
+                console.log(aHref);
+
+                // 선택된 탭메뉴 디자인 변경
+                $(this).parent().addClass('on').siblings().removeClass('on');
+
+                // 내용변겅
+                $(aHref).addClass('on').siblings().removeClass('on');
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        
+        <!--   탭메뉴 덩어리   -->
+        <div class="tabmenu">
+            <ul>
+                <li class="on"><a href="#box1">menu1</a></li>
+                <li><a href="#box2">menu2</a></li>
+                <li><a href="#box3">menu3</a></li>
+                <li><a href="#box4">menu4</a></li>
+            </ul>
+        </div>
+
+
+        <!--  내용이 보여질 덩어리  -->
+        <div class="content-box">
+            <div id="box1" class="con1 on">
+                <h2>메뉴1 내용</h2>
+                <p>재미있는 탭메뉴 구현하기</p>
+            </div>
+
+            <div id="box2" class="con2">
+                <h2>메뉴2 내용</h2>
+                <div class="txt-box">
+                    <p>Il vasto territorio comunale (oltre 29 km²) è situato al confine con la regione Piemonte
+                        (località ponte di Oleggio) e con la Provincia di Milano, all'estremità sud ovest della
+                        Provincia di Varese. Il centro abitato di Lonate Pozzolo è situato a 205 metri di altezza, e la
+                        particolare orografia del terreno varia dai 142 metri sul livello del mare della località ponte
+                        di Oleggio ai 210 del punto più alto. Lonate Pozzolo si trova inoltre nelle vicinanze di
+                        numerose città. Dista infatti 6 km da Busto Arsizio, 9 km da Gallarate, 27 km da Novara e 35 km
+                        da Varese.</p>
+                    <p>Lonate Pozzolo (Lonaa Pozzoeu in dialetto locale[4][5][6], AFI: [luˈnɑː puˈʦøː]) è un comune
+                        italiano di 11 365 abitanti in provincia di Varese in Lombardia.</p>
+                </div>
+            </div>
+
+            <div id="box3" class="con3">
+                <h2>메뉴3 내용</h2>
+                <div class="">
+                    <p>귀여운 이미지</p>
+                    <img src="https://www.urbanbrush.net/web/wp-content/uploads/edd/2023/03/urban-20230310112234917676.jpg"
+                        alt="귀여운이미지">
+
+                </div>
+            </div>
+
+            <div id="box4" class="con4">
+                <h2>메뉴4 내용</h2>
+                <p>오늘도 좋은하루 되세요!</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

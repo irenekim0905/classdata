@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_media-query_m</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: #fff;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 100px;
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+
+        }
+
+        section {
+            margin-top: 100px;
+        }
+
+        article.main {
+            width: 100%;
+            height: 700px;
+            background: url(images/irene.jpg) no-repeat top / cover;
+            text-indent: -9999px;
+        }
+
+        article.album {
+            margin-top: 60px;
+        }
+
+        article.album h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        article.album .album-thumb {
+            width: 100%;
+        }
+
+        article .album-thumb a {
+            /* 앨범커버를 담은 박스!  */
+            display: block;
+            width: 100%;
+        }
+
+        article.album-thumb a img {
+            width: 100%;
+            display: block;
+        }
+
+
+        article.banner {
+            width: 100%;
+            background-color: tomato;
+            color: #fff;
+            font-size: 1.3rem;
+            padding: 40px 0;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            width: 100%;
+            padding: 30px 0;
+            background-color: gray;
+            text-align: center;
+
+        }
+
+        /*  미디어쿼리 해상도 768px / 1024px   */
+        @media all and (min-width: 768px) {
+            article.main {
+                height: 500px;
+                background-image: url(images/redvelvet2.jpg);
+
+            }
+
+            article.album .album-thumb a {
+                width: 50%;
+                float: left;
+            }
+
+            article.banner {
+                clear: both;
+                background-color: violet;
+            }
+
+        }
+
+        @media all and (min-width: 1024px) {
+            article.main {
+                background-image: url(images/redvelvet.jpg);
+                height: 600px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>SM Town</header>
+
+    <section>
+        <article class="main">
+            레드벨벳 화보이미지
+        </article>
+
+
+        <article class="album">
+            <h2>new album</h2>
+            <div class="album-thumb">
+                <a href="#"><img src="images/album1.jpg" alt=""></a>
+                <a href="#"><img src="images/album2.jpg" alt=""></a>
+            </div>
+        </article>
+
+        <article class="banner">
+            red velvet
+        </article>
+    </section>
+
+    <footer>&copy; copyright2024</footer>
+</body>
+
+</html>

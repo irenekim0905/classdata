@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>dropdown_menu2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* float해제를 위한 클래스! */
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        header {
+            width: 100%;
+            background-color: #fff;
+
+            position: relative; /* .smenu의 기준!! */
+        }
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            /* outline: 2px solid red; */
+        }
+        nav ul.gnb {
+            background-color: rgb(147,233,228);
+        }
+        nav ul.gnb li {
+            /* outline: 1px solid blue; */
+
+            float: left;
+            width: 16.66%;
+            
+            font-size: 18px;
+            font-weight: bold;
+
+            text-align: center;
+        }
+        nav ul.gnb li a {
+            display: block;
+            padding: 15px 0;
+        }
+        nav ul.gnb li a:hover {
+            background-color: cadetblue;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        nav div.smenu {
+            width: 100%;
+            background-color: lightgoldenrodyellow;
+
+            position: absolute;
+            left: 0;
+
+            padding: 15px 10%;
+            box-sizing: border-box;
+
+            display: none;
+        }
+        nav div.smenu ul {
+            float: left;
+            width: 16.66%;
+            /* outline: 2px solid plum; */
+        }
+        nav div.smenu ul li {
+            text-align: center;
+        }
+        nav div.smenu ul li a {
+            line-height: 1.4;
+        }
+        nav div.smenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+            //mouseenter(), mouseleave() 사용
+            $('.gnb li').mouseenter(function(){
+                $('div.smenu').slideDown();
+            });
+
+            /* $('.gnb li').mouseleave(function(){
+                $('div.smenu').slideUp();
+            }); */
+
+            $('nav').mouseleave(function(){
+                $('div.smenu').stop().slideUp();
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <!-- 대메뉴와 서브메뉴 별도 구성 -->
+
+        <nav>
+            <!-- 대메뉴 -->
+            <ul class="gnb clear">
+                <li><a href="#">Main-menu1</a></li>
+                <li><a href="#">Main-menu2</a></li>
+                <li><a href="#">Main-menu3</a></li>
+                <li><a href="#">Main-menu4</a></li>
+                <li><a href="#">Main-menu5</a></li>
+                <li><a href="#">Main-menu6</a></li>
+            </ul>
+
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+                <ul>
+                    <li><a href="#">Sub-menu1</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Sub-menu2</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Sub-menu3</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Sub-menu4</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Sub-menu5</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Sub-menu6</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                    <li><a href="#">Sub-menu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+</body>
+</html>

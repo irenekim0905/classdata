@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>banapresso</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+            font-weight: 400;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .inner {
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+        .noto-sans-kr {
+            font-family: "Noto Sans KR", serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        /**************  본문 css   *************/
+
+        body {
+            width: 100%;
+        }
+
+        header .logo {
+            text-align: center;
+            margin: 10px 0px 20px 0px;
+        }
+
+        section .title {
+            border-bottom: 1px solid rgba(133, 127, 127, 0.3);
+            margin-bottom: 50px;
+        }
+
+        section .title h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0px 20px 0px;
+        }
+
+        article .content {
+            width: 100%;
+        }
+
+        article .content .box01 {
+            width: 100%;
+            margin: 40px 0px 50px 0px;
+        }
+
+        article .content .box02 {
+            width: 100%;
+            margin: 50px 0px 50px 0px;
+        }
+
+        article .content .box03 {
+            width: 100%;
+            margin: 50px 0px 50px 0px;
+            position: relative;
+        }
+
+        article .content .box04 {
+            width: 100%;
+            margin: 50px 0px 50px 0px;
+            
+        }
+
+
+        article .content .img-box {
+            width: 50%;
+            float: left;
+        }
+
+        article .content .img-box img {
+            width: 100%;
+            border-radius: 25px;
+        }
+
+        article .content .title-box {
+            width: 50%;
+            float: left;
+            padding-top: 40px;
+        }
+     
+        article .content .title-box01 {
+            position: absolute;
+            right: 28%;
+            top: 58%;
+        }
+
+        article .content .title-box03 {
+            position: absolute;
+            right: 12%;
+            bottom: 20%;
+        }
+
+        article .content .title-box h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        article .content .title-box01 h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        article .content .title-box03 h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        span {
+            color: rgb(214, 97, 116);
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(245, 105, 128);
+
+        }
+
+        footer p {
+            text-align: center;
+            color: #fff;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="#"><img src="images/banapresso_logo.png" alt=""></a></div>
+        <div class="img-top"><img src="images/introduce-top-visual.png" alt=""></div>
+    </header>
+
+    <section class="inner">
+        <article>
+            <div class="title">
+                <h1>바나프레소 소개</h1>
+            </div>
+
+            <div class="content">
+
+                <div class="box01 clearfix">
+                    <div class="img-box">
+                        <img src="images/img-introdue-1.png" alt="사진1">
+                    </div>
+                    <div class="title-box01">
+                        <h2>IT & EAT</h2>
+                        <p>바나프레소는 <span>잇(IT)과 잇(EAT)의<br>
+                                혁신적인 만남을 통해 탄생</span>했습니다.<br>
+                            우리의 꿈은 단순한 기술과 카페의 접점을 넘어서<br>
+                            <span>인간의 궁극적 갈등을 해결하는 것</span>이었습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box02 clearfix">
+
+                    <div class="title-box">
+                        <h2>해소의 공간</h2>
+                        <p>사람들은 존재의 근본적인 의미와 가치,<br>
+                            그리고 그에 따른 갈등을 항상 안고 살아가고 있습니다.<br>
+                            <span>바나프레소는 이러한 인간의 깊은 고민과 갈등을<br>
+                                이해하고 그 해소의 공간</span>을 제공합니다.
+                        </p>
+                    </div>
+                    <div class="img-box">
+                        <img src="images/img-introdue-2.png" alt="사진1">
+                    </div>
+
+                </div>
+
+                <div class="box03 clearfix">
+                    <div class="img-box">
+                        <img src="images/img-introdue-3.png" alt="사진1">
+                    </div>
+                    <div class="title-box03">
+                        <h2>핵심 가치</h2>
+                        <p>우리는 고객의 시간과 기대를 가장 중요하게 생각합니다.<br>
+                            <span>'빠르게'와 '품질'이라는 두 가지 핵심 가치</span> 아래<br>
+                            항상 고객의 만족을 최우선으로 생각하며,<br>
+                            더 나은 서비스와 경험을 제공하기 위해 노력합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box04 clearfix">
+
+                    <div class="title-box">
+                        <h2>성장</h2>
+                        <p>바나프레소는 단순한 카페가 아닌, <span>사람들의 삶과 소통,<br>
+                                그리고 행복을 위한 공간을 만들어가는 기업입니다.</span><br>
+                            우리는 이러한 핵심가치와 미션을 바탕으로, 고객들과<br>
+                            함께하는 미래를 꿈꾸며 계속 성장해 나갈 것입니다.
+                        </p>
+                    </div>
+                    <div class="img-box">
+                        <img src="images/img-introdue-4.png" alt="사진1">
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <div class="copy">
+            <p>Copyright2024</p>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

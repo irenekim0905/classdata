@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>09_example</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(images/backdrop.gif);
+        }
+
+        .title {
+            /* outline: 2px solid red; */
+
+            margin: 30px 0 50px;
+            /* text-align: center; */
+        }
+        .title h1 {
+            height: 122px; /* 배경이미지의 높이만큼! */
+            
+            /* background-image: url(images/title.gif);
+            background-repeat: no-repeat;
+            background-position: center top; */
+            background: url(images/title.gif) no-repeat center top;
+
+            font-size: 0;
+            margin-bottom: 10px;
+        }
+        .title p {
+            text-align: center;
+        }
+
+        .content {
+            /* outline: 2px solid blue; */
+
+            width: 700px;
+            margin: 0 auto;
+        }
+        .content::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 
+        margin: 0 auto;를 이용해 요소를 문서의 가운데에 배치하려면
+        1) width 값 설정 필요 (100% 작게)
+        2) 블록요소에 적용 가능 
+        */
+
+        .content .box {
+            background-color: gray;
+            width: 200px;
+            padding: 10px;
+            /* .box의 총 너비값 : 220px(10+200+10) */
+
+            float: left;
+            /* display: inline-block; */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content .box~.box {
+            margin-left: 20px;
+        }
+        .content .box:nth-child(3n+1) {
+            margin-left: 0;
+        }
+
+        .content .box img {}
+        .content .box p {
+            /* text-align: center; */
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: -0.6px;
+
+            background-image: url(images/icon.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+
+            display: inline-block;
+            padding-left: 20px;
+
+            /* outline: 2px solid lime; */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <!-- <h1><img src="images/title.gif" alt="Galerie Botanique"></h1> -->
+        <h1>Galerie Botanique</h1>
+        <p>개최된 컬렉션에 선택된 고풍스러운 식물 이미지는 다음과 같다.</p>
+    </div>
+
+    <div class="content">
+        <div class="box">
+            <img src="images/print-01.jpg" alt="">
+            <p>해바라기(Helianthus)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-02.jpg" alt="">
+            <p>시계꽃(passiflora)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-03.jpg" alt="">
+            <p>닉토칼로스(Nyctocalos)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-04.jpg" alt="">
+            <p>폴리안테스(Polianthes)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-05.jpg" alt="">
+            <p>무화과나무(Ficus)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-06.jpg" alt="">
+            <p>덴드로비움(Dendrobium)</p>
+        </div>
+
+        <!-- !!!!!!!추가!!!!!!!! -->
+        <div class="box">
+            <img src="images/print-01.jpg" alt="">
+            <p>해바라기(Helianthus)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-02.jpg" alt="">
+            <p>시계꽃(passiflora)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-03.jpg" alt="">
+            <p>닉토칼로스(Nyctocalos)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-04.jpg" alt="">
+            <p>폴리안테스(Polianthes)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-05.jpg" alt="">
+            <p>무화과나무(Ficus)</p>
+        </div>
+
+        <div class="box">
+            <img src="images/print-06.jpg" alt="">
+            <p>덴드로비움(Dendrobium)</p>
+        </div>
+
+    </div>
+
+
+    <!-- 목록 태그 사용 -->
+    <!-- <ul>
+        <li>
+            <img src="" alt="">
+            <p></p>
+        </li>
+        <li>
+            <img src="" alt="">
+            <p></p>
+        </li>
+        <li>
+            <img src="" alt="">
+            <p></p>
+        </li>
+    </ul> -->
+
+    <!-- figure 태그 사용 -->
+    <!-- <div>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div> -->
+</body>
+</html>

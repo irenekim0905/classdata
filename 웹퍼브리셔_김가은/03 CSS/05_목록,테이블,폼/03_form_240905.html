@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>03_form</title>
+
+        <style>
+            /* input */
+            input[placeholder] {
+                /* background-color: yellow; */
+                color: red;
+            }
+
+            /* input::placeholder {
+                color: blue;
+            } */
+
+            ::placeholder {
+                color: palevioletred;
+            }
+
+            .input-box input:focus {
+                background-color: rgba(255,0,0,0.1);
+                outline: none;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <!-- input -->
+        <p class="input-box">
+            <input type="text" placeholder="검색어 입력" >
+        </p>
+
+        <textarea cols="50" rows="5" placeholder="내용을 입력하세요."></textarea>
+
+        <!-- cursor -->
+        <p class="crosshair">crosshair</p>
+        <p class="default">default (기본값)</p>
+        <p class="help">help</p>
+        <p class="move">move</p>
+        <p class="pointer">pointer (!!!!!) </p>
+        <p class="progress">progress</p>
+        <p class="wait">wait</p>
+        <p class="text">text</p>
+
+        <style>
+            .crosshair {cursor: crosshair;}
+            .default {cursor: default;}
+            .help {cursor: help;}
+            .move {cursor: move;}
+            .pointer {cursor: pointer;}
+            .progress {cursor: progress;}
+            .wait {cursor: wait;}
+            .text {cursor: text;}
+        </style>
+        
+    </body>
+</html>

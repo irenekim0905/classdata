@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horizontalSroll</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+            display: block;
+        }
+
+        .container {
+            width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+
+            outline: 2px solid blue;
+        }
+
+        #content {
+            margin-bottom: 10px;
+        }
+
+        #content {
+            margin-bottom: 10px;
+
+            position: relative;
+            left: 0; /* 이동을 위한 좌표 */
+        }
+
+        #scroll {
+            width: 100%;
+            height: 20px;
+            background-color: black;
+
+            position: relative; /* #bar의 기준!!! */
+        }
+
+        #bar {
+            width: 100px;
+            height: 20px;
+            background-color: tomato;
+
+            position: absolute; 
+            left: 0; /*  기준요소로부터 위치 설정 */
+        }
+    </style>
+
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery-ui-1.12.1.min.js"></script> <!-- 스크롤바 나 드래그 기능 사용을 휘해서는 jquery  ui 라이브러리 연결 -->
+
+    <script>
+        $(function () {
+
+            // 먼저 스크롤바의 드레그 기능 만들기
+            $('#bar').draggable({
+                axis: 'x',  // x축으로만 움직이겠다로 설정함
+                containment: 'parent' // 작동범위 부모요소만큼 움직이라는 명령!
+
+            });
+
+            /*  
+            스크롤바(#bar)가 이동할 때 사진 이동시키기 (비례식)
+
+            스크롤바 최대 이동값 : 스크롤바 이동값 = 컨텐츠(사진) 최대 이동값 : 사진 이동값
+            스크롤바 최대 이동값 * 사진 이동값 = 스크롤바 이동값 * 사진 최대이동값
+
+            사진 이동값 = 스크롤바 이동값 * 사진 최대이동값 / 스크롤바 최대 이동값 
+
+            imgMove = barMove * imgMax / barMax
+            */
+
+            //전역변수 선언!!!
+            
+            var barMax = 700; //스크롤바 최대 이동값, #scroll 전체너비(800) - #bar너비(100) = 700
+            var barMove = 0; //스크롤바 이동값 (초기값 0)
+
+            var imgMax = 480; // 사진의 최대 이동값, 이미지크기 1280px - 실제 보여지는 공간 800px = 480 숨겨진부분사이즈는 480임
+            var imgMove = 0; // 사진 이동값 (초기값 0)
+
+            $('#bar').on('drag', function(){
+                
+               // 스크롤바 이동값 구하기
+               barMove = $(this).position().left;
+               console.log('스크롤바 이동값:' + barMove);
+
+               // 사진의 이동값 구하기
+               imgMove = barMove * imgMax / barMax
+               console.log('사진 이동값:' + imgMove);
+
+               $('#content').css({
+
+                    left: -imgMove + 'px'
+               });
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- content 보여지는 내용-->
+        <div id="content">
+            <img src="suzy.jpg" alt="수지4컷슬라이드사진">
+        </div>
+
+        <!-- 스코롤바 -->
+        <div id="scroll">
+            <div id="bar"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

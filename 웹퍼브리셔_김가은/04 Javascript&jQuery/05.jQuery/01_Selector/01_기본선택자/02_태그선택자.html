@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_태그선택자</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        /* 
+        text() 메서드
+        - 기본형 : $(선택자).text('변경할 내용');
+       -  선택한 요소의 텍스트 반환
+
+        */
+        $(document).ready(function () {
+            var title = $('.title').text();
+            console.log(title);
+
+            $('.title').css('background-color', 'greenyellow');
+
+
+            $('.list li').click(function(){
+                //$('.list li').text('겨울이닷!');
+
+                $(this).text('겨울이닷!!');
+
+            });
+            
+
+            /* $('.list li').css({
+                fontSize: '40px',
+                color: 'red',
+                transition: 'all 0.5s'
+            });
+ */
+
+        });
+
+        // 변경대상 : .list li 중에 내가 클릭한 li 
+        // this >> 클릭당한 li
+
+        /* $(this).text('겨울이닷!');
+         $('.title').css('background-color','greenyelly');
+         $('.list li').click(function(){
+            $(this).text('겨울이닷').css({
+            fontSize: '40px',
+            color: 'red',
+            transition: 'all 0.5s'
+            });
+         }); */
+
+
+    </script>
+
+    <script>
+        /*         
+          click() 이벤트 메서드 
+          - 기본형 : $(선택자/이벤트 대상).click(실행코드/함수명);
+          - 선택요소를 클릭하면 실행코드(또는 함수) 실행!
+          - 선택요소를 '클릭'했다 >> 이벤트가 발생 !!!
+    
+        */
+        $(function () {
+            $('h1').css('cursor', 'pointer');
+
+            // h1태그를 클릭하면 li색을 변경하세요
+            $('h1').click(function () {
+                $('li').css({
+                    backgroundColor: 'yellow',
+                    color: 'red',
+                    fontWeight: 'bold'
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1 class="title">한국의 4계절(클릭!)</h1>
+    <ul class="list">
+        <li id="spring">봄</li>
+        <li id="sommer">여름</li>
+        <li id="fall">가을</li>
+        <li id="winter">겨울</li>
+    </ul>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>07-1_위치선택자(배수)</title>
+
+    <style>
+        /* 
+        :nth-child(2n) 2의 배수
+        :nth-child(3n) 3의 배수
+        .
+        .
+        */
+
+        /* 5의 배수 */
+        li:nth-child(5n) {
+            color: red;
+        }
+
+        /* 
+        짝수, 홀수 선택하기 
+        홀수 - odd / 짝수 - even
+        */
+        li:nth-child(odd) {
+            background-color: yellow;
+        }
+        li:nth-child(even) {
+            background-color: lightpink;
+        }
+
+        li:nth-child(2n) {
+            font-weight: bold;
+        }
+        li:nth-child(2n+1) {
+            color: blue;
+        }
+        li:nth-child(2n-1) {
+            font-style: italic;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ol>
+    
+</body>
+</html>

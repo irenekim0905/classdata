@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>02_position-absolute1</title>
+        <style>
+         /*
+         absolute(앱솔루트) : 절대위치 
+         (부모를 포함한) 상위요소를 기준으로 요소의 위치를 지정
+         기준이 되는 상위요소에 position: relative; 선언
+         기준이 되는 상위요소가 없을 경우 문서 전체(body)를 기준으로 위치 이동 
+         left right top bottom 좌표 사용 가능
+         */
+
+.box1 {
+    background-color: rgb(184, 37, 122);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 200px;
+    
+
+}
+.box2 {
+    background-color: rgb(104, 104, 221);
+    width: 200px;
+    height: 200px;
+}
+
+.parent {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    position: relative;
+    left: 200px;
+    top: 200px;
+
+}
+        </style>
+    </head>
+    <body>
+    <div class="box1">box1</div>
+    <div class="parent">
+        <div class="box2">box2</div>
+    </div>
+  
+
+        
+    </body>
+</html>

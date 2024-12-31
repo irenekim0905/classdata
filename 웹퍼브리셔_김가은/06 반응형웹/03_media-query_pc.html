@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_media-query_m</title>
+
+    <style>
+        /*   
+        pc 화면을 기준으로 css 작성
+        미디어 퀴리로 태블릿, 모바일 css 설정
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: #fff;
+            font-size: 2.4rem;
+            text-align: center;
+            line-height: 100px;
+
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        section {
+            margin-top: 100px;
+        }
+
+        section article.main {
+            width: 100%;
+            height: 700px;
+            background-image: url(images/irene.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-indent: -9999px;
+        }
+        article.album {
+            margin-bottom: 100px;
+        }
+        article.album h2 {
+           margin-top: 30px;
+           font-size: 2rem;
+           text-align: center;
+           margin-bottom: 30px;
+
+        }
+
+        article.album .album-thumb { 
+           width: 100%;
+           margin-bottom: 20px;
+        }
+        article.album .album-thumb::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        article.album .album-thumb a {
+            width: 25%;
+            float: left;
+        }
+        article.album .album-thumb a img {
+            width: 100%;
+            display: block;
+        }
+        article.album .btn {
+            font-size: 1.2rem;
+            border: 2px solid #666;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 16px 0;
+            color: #666;
+        }
+        article.album .btn:hover {
+            background-color: tomato;
+            color: #fff;
+        }
+        article.banner {
+           width: 100%;
+           background-color: rebeccapurple;
+           color: white;
+           font-size: 1.6rem;
+           font-weight: bold;
+           height: 120px;
+           line-height: 120px;
+           letter-spacing: 2px;
+           text-align: center;
+            
+            
+
+        }
+
+        footer {
+            width: 100%;
+            padding: 40px 0 60px;
+            background-color: lightgray;
+            color: #666;
+            text-align: center;
+            
+        }
+
+        /******** 모바일 미디어쿼리 태블릿 직전까지 모바일 ul적용!!! 0~767px *******/
+
+        @media all and (max-width:767px) {
+            article.main {
+                height: 700px;
+                background-image: url(images/irene.jpg);
+            }
+            article.album .album-thumb {
+                overflow: hidden;
+            }
+            article.album .album-thumb .box-wrap {
+                width: 400%;
+            }
+            article.album .album-thumb a {
+              /*  width: 100%;
+                float: none; 
+                슬라이드구현을 위한 */
+                width: 25%;
+
+            }
+            article.album .btn {
+                width: 90%;
+            }
+            article.banner {
+                background-color: tomato;
+                
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>SM Town</header>
+
+    <section>
+
+        <article class="main">
+            레드벨벳 화보이미지
+        </article>
+
+
+        <article class="album">
+            <h2>New Album</h2>
+            <div class="album-thumb">
+                <div class="box-wrap"> <!--슬라이드 구현을 위해 추가함-->
+                <a href="#"><img src="images/album1.jpg" alt=""></a>
+                <a href="#"><img src="images/album2.jpg" alt=""></a>
+                <a href="#"><img src="images/album1.jpg" alt=""></a>
+                <a href="#"><img src="images/album2.jpg" alt=""></a>
+            </div>
+            </div>
+            <a href="#" class="btn">지난앨범 보러가기</a>
+        </article>
+
+        <article class="banner">
+           red velvet
+        </article>
+
+    </section>
+
+    <footer>&copy; copyright2024</footer>
+</body>
+
+</html>
